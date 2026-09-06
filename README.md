@@ -37,3 +37,19 @@ Every idea follows the same template so they can be compared side by side:
 9. Score and verdict
 
 Sources are listed at the end of each file.
+
+## Data and tooling
+
+| File | What it is |
+|---|---|
+| [research/scores.json](research/scores.json) | The six criterion scores, ARPU, MVP weeks and verdict for every idea (the single source for the scorecard) |
+| [research/ideas.json](research/ideas.json) | scores.json plus each idea's one-line pitch, used by the browsable scorecard |
+| [research/tools/build_scorecard.py](research/tools/build_scorecard.py) | Regenerates 09-scorecard.md from scores.json |
+| [research/tools/extract_oneliners.py](research/tools/extract_oneliners.py) | Builds ideas.json from scores.json and the chapter files |
+| [research/tools/build_artifact.py](research/tools/build_artifact.py) | Builds the browsable HTML scorecard from ideas.json and the template |
+
+To change a score: edit `research/scores.json`, then run the three scripts in that order.
+
+## Method and limits
+
+Research was done in September 2026 by web search and direct fetches of pricing pages, regulator sites and statistics offices, then written up against a fixed template. Every fact that could be sourced has a URL in the chapter's source list; facts that could not be verified are marked as estimates or "not found" in the text. Scores are judgement calls informed by that research, meant to make the ranking arguable rather than to measure it. No customer interviews were done; the overview says what to validate before building anything.

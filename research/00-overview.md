@@ -95,6 +95,10 @@ Honourable mentions with a specific condition attached: [43. Nordic AI phone rec
 2. Put a landing page up with the price on it and the regulation date in the headline. Aim for 20 sign-ups from the interviewees' networks.
 3. Only then start the 12-week playbook in [07-building-with-ai.md](07-building-with-ai.md#3-the-generic-mvp-playbook-12-weeks).
 
-### Ideas to drop
+### How the 50 split
 
-Sixteen ideas score 17 or below and are not worth a solo founder's year, for reasons that are structural rather than fixable: free incumbents (6, 12, 14, 15, 27, 37), a platform that blocks or bundles the product (19, 36, 41), a certification gate a solo founder cannot pass cheaply (31), a locked or tiny market (11, 35), a cancelled regulatory wave (29), or a category where the product is a feature of something bigger (5, 17, 25, 22). They are documented in full so the reasoning can be checked, and so they are not re-proposed in six months.
+- **Six ideas score 21 or more** and are shortlist-grade: 23, 42, 21, 8, 24, 33. They are the table above plus the DMARC warm-up product.
+- **Twenty-four score 18–20** and are viable with a specific condition attached (a partner channel, a platform's goodwill, a feasibility spike, a lawyer). The condition is named in each verdict. The strongest of them: 1 and 4 (agriculture, via advisors), 28, 30, 32 and 26 (compliance for SMEs), 43 (Nordic voice), 46 (clinic recall), 18 (Supabase security).
+- **Twenty score 17 or below** and are not worth a solo founder's year, for reasons that are structural rather than fixable: free or entrenched incumbents (6, 12, 14, 15, 27, 37, 44, 45, 50), a platform that blocks, bundles or owns distribution (19, 36, 41, 49), a certification gate a solo founder cannot pass cheaply (31), a locked or tiny market (11, 35), a regulatory wave that was cancelled (29), a feature rather than a product (5, 22), or a shrinking channel with price-sensitive buyers (2). They are documented in full so the reasoning can be checked and so they are not re-proposed in six months.
+
+The complete ranking with all six criteria is in [09-scorecard.md](09-scorecard.md).

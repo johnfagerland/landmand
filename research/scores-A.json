@@ -1,9 +1,0 @@
-[
-{"n":1,"name":"Farm compliance and subsidy record-keeper","cluster":"A","file":"01-agriculture-rural.md","pain":4,"solo":3,"ai":5,"gap":3,"wtp":2,"reach":3,"arpu_eur":20,"mvp_weeks":10,"verdict":"2026 e-records rules force a purchase; voice-to-record is real AI; sell via advisors"},
-{"n":2,"name":"Small-farm direct sales and box-scheme manager","cluster":"A","file":"01-agriculture-rural.md","pain":2,"solo":4,"ai":3,"gap":3,"wtp":2,"reach":3,"arpu_eur":40,"mvp_weeks":6,"verdict":"Nordic gap but shrinking channel and price-sensitive buyers"},
-{"n":3,"name":"Livestock health, medication and withdrawal-period records","cluster":"A","file":"01-agriculture-rural.md","pain":4,"solo":3,"ai":4,"gap":2,"wtp":2,"reach":3,"arpu_eur":20,"mvp_weeks":8,"verdict":"Real pain, held back by near-free co-op systems"},
-{"n":4,"name":"Agricultural contractor job scheduling, machine hours and invoicing","cluster":"A","file":"01-agriculture-rural.md","pain":3,"solo":3,"ai":4,"gap":3,"wtp":4,"reach":3,"arpu_eur":90,"mvp_weeks":8,"verdict":"Business-grade WTP, dated incumbent exiting Nov 2026; small market"},
-{"n":5,"name":"Spray-window and field-operation decision assistant","cluster":"A","file":"01-agriculture-rural.md","pain":3,"solo":2,"ai":3,"gap":3,"wtp":2,"reach":3,"arpu_eur":15,"mvp_weeks":4,"verdict":"Not a product; a module for idea 1"},
-{"n":6,"name":"Small forest owner management","cluster":"A","file":"01-agriculture-rural.md","pain":2,"solo":3,"ai":3,"gap":2,"wtp":1,"reach":2,"arpu_eur":8,"mvp_weeks":6,"verdict":"Free state and co-op tools; not a business"},
-{"n":7,"name":"Rural and agricultural grant finder with AI eligibility screening and drafting","cluster":"A","file":"01-agriculture-rural.md","pain":3,"solo":3,"ai":4,"gap":3,"wtp":3,"reach":2,"arpu_eur":60,"mvp_weeks":8,"verdict":"No paid ag finder exists; test with advisory offices first"}
-]

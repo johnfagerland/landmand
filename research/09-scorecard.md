@@ -20,35 +20,42 @@ Six criteria, each 1–5, summed to a score out of 30. Definitions are in [00-ov
 | 12 | [30. Web accessibility monitor with AI-generated fix pull requests](04-compliance-finance-legal-hr.md#30-web-accessibility-monitor-with-ai-generated-fix-pull-requests) | D | 3 | 4 | 4 | 3 | 3 | 3 | **20** | 80 | 62 | 125 | 7 |
 | 13 | [32. GDPR records-of-processing and data-subject-request automation for small companies](04-compliance-finance-legal-hr.md#32-gdpr-records-of-processing-and-data-subject-request-automation-for-small-companies) | D | 3 | 4 | 4 | 3 | 3 | 3 | **20** | 90 | 56 | 111 | 6 |
 | 14 | [43. AI phone receptionist for small service businesses in Nordic languages](05-marketing-sales-content.md#43-ai-phone-receptionist-for-small-service-businesses-in-nordic-languages) | E | 3 | 3 | 5 | 2 | 4 | 3 | **20** | 200 | 25 | 50 | 6 |
-| 15 | [9. Roof, fence and solar measurement with instant quotes from aerial imagery](02-trades-field-service-property.md#9-roof-fence-and-solar-measurement-with-instant-quotes-from-aerial-imagery) | B | 3 | 3 | 4 | 2 | 4 | 3 | **19** | 120 | 42 | 83 | 8 |
-| 16 | [10. Subcontractor compliance tracker for small general contractors](02-trades-field-service-property.md#10-subcontractor-compliance-tracker-for-small-general-contractors) | B | 4 | 3 | 4 | 3 | 3 | 2 | **19** | 120 | 42 | 83 | 7 |
-| 17 | [16. Housing cooperative and condominium board management](02-trades-field-service-property.md#16-housing-cooperative-and-condominium-board-management) | B | 3 | 4 | 4 | 2 | 3 | 3 | **19** | 40 | 125 | 250 | 8 |
-| 18 | [20. Cron and background job monitoring with AI root cause](03-developer-tools.md#20-cron-and-background-job-monitoring-with-ai-root-cause) | C | 3 | 5 | 3 | 2 | 2 | 4 | **19** | 15 | 333 | 667 | 5 |
-| 19 | [34. Employee policy and handbook generator with acknowledgement tracking](04-compliance-finance-legal-hr.md#34-employee-policy-and-handbook-generator-with-acknowledgement-tracking) | D | 3 | 3 | 4 | 3 | 3 | 3 | **19** | 90 | 56 | 111 | 6 |
-| 20 | [38. Competitor pricing-page and feature-change monitor with structured AI diffs](05-marketing-sales-content.md#38-competitor-pricing-page-and-feature-change-monitor-with-structured-ai-diffs) | E | 2 | 4 | 4 | 3 | 3 | 3 | **19** | 60 | 83 | 167 | 5 |
-| 21 | [39. Newsletter sponsorship operations for independent newsletters](05-marketing-sales-content.md#39-newsletter-sponsorship-operations-for-independent-newsletters) | E | 3 | 4 | 3 | 2 | 3 | 4 | **19** | 70 | 71 | 143 | 5 |
-| 22 | [40. Recipe costing, batch production and label compliance for small food producers](05-marketing-sales-content.md#40-recipe-costing-batch-production-and-label-compliance-for-small-food-producers) | E | 3 | 3 | 4 | 4 | 2 | 3 | **19** | 45 | 111 | 222 | 7 |
-| 23 | [3. Livestock health, medication and withdrawal-period records](01-agriculture-rural.md#3-livestock-health-medication-and-withdrawal-period-records) | A | 4 | 3 | 4 | 2 | 2 | 3 | **18** | 20 | 250 | 500 | 8 |
-| 24 | [7. Rural and agricultural grant finder with AI eligibility screening and drafting](01-agriculture-rural.md#7-rural-and-agricultural-grant-finder-with-ai-eligibility-screening-and-drafting) | A | 3 | 3 | 4 | 3 | 3 | 2 | **18** | 60 | 83 | 167 | 8 |
-| 25 | [13. Property inventory and condition reports with AI photo comparison](02-trades-field-service-property.md#13-property-inventory-and-condition-reports-with-ai-photo-comparison) | B | 3 | 4 | 4 | 2 | 2 | 3 | **18** | 40 | 125 | 250 | 6 |
-| 26 | [17. AI changelog and release notes from merged PRs](03-developer-tools.md#17-ai-changelog-and-release-notes-from-merged-prs) | C | 2 | 5 | 4 | 1 | 2 | 4 | **18** | 25 | 200 | 400 | 4 |
-| 27 | [25. Status page and incident communications with AI-drafted updates](03-developer-tools.md#25-status-page-and-incident-communications-with-ai-drafted-updates) | C | 2 | 5 | 3 | 2 | 2 | 4 | **18** | 25 | 200 | 400 | 4 |
-| 28 | [2. Small-farm direct sales and box-scheme manager](01-agriculture-rural.md#2-small-farm-direct-sales-and-box-scheme-manager) | A | 2 | 4 | 3 | 3 | 2 | 3 | **17** | 40 | 125 | 250 | 6 |
-| 29 | [11. Home inspection report generator with AI photo-to-defect narration](02-trades-field-service-property.md#11-home-inspection-report-generator-with-ai-photo-to-defect-narration) | B | 3 | 2 | 5 | 1 | 4 | 2 | **17** | 100 | 50 | 100 | 8 |
-| 30 | [22. Webhook inbox: receive, verify, queue, retry, replay, fan out](03-developer-tools.md#22-webhook-inbox-receive-verify-queue-retry-replay-fan-out) | C | 3 | 3 | 2 | 3 | 3 | 3 | **17** | 40 | 125 | 250 | 6 |
-| 31 | [27. Working-time registration compliance for SMEs](04-compliance-finance-legal-hr.md#27-working-time-registration-compliance-for-smes) | D | 4 | 4 | 3 | 1 | 2 | 3 | **17** | 40 | 125 | 250 | 5 |
-| 32 | [29. VSME sustainability report and supplier ESG questionnaire responder for SMEs](04-compliance-finance-legal-hr.md#29-vsme-sustainability-report-and-supplier-esg-questionnaire-responder-for-smes) | D | 2 | 3 | 4 | 2 | 3 | 3 | **17** | 150 | 33 | 67 | 8 |
-| 33 | [36. Google Business Profile automation for multi-location businesses and agencies](05-marketing-sales-content.md#36-google-business-profile-automation-for-multi-location-businesses-and-agencies) | E | 3 | 2 | 4 | 2 | 3 | 3 | **17** | 60 | 83 | 167 | 5 |
-| 34 | [37. Testimonial capture, case-study generation and social-proof widgets](05-marketing-sales-content.md#37-testimonial-capture-case-study-generation-and-social-proof-widgets) | E | 2 | 5 | 3 | 1 | 2 | 4 | **17** | 30 | 167 | 333 | 4 |
-| 35 | [5. Spray-window and field-operation decision assistant](01-agriculture-rural.md#5-spray-window-and-field-operation-decision-assistant) | A | 3 | 2 | 3 | 3 | 2 | 3 | **16** | 15 | 333 | 667 | 4 |
-| 36 | [12. Small fleet daily vehicle inspection and defect workflow](02-trades-field-service-property.md#12-small-fleet-daily-vehicle-inspection-and-defect-workflow) | B | 3 | 4 | 3 | 1 | 2 | 3 | **16** | 40 | 125 | 250 | 5 |
-| 37 | [19. LLM application observability for small teams](03-developer-tools.md#19-llm-application-observability-for-small-teams) | C | 3 | 3 | 3 | 1 | 3 | 3 | **16** | 50 | 100 | 200 | 8 |
-| 38 | [35. Cap table, convertible and option-plan manager for Nordic early-stage startups](04-compliance-finance-legal-hr.md#35-cap-table-convertible-and-option-plan-manager-for-nordic-early-stage-startups) | D | 3 | 3 | 3 | 2 | 3 | 2 | **16** | 120 | 42 | 83 | 8 |
-| 39 | [41. Programmatic SEO page factory for niche directories and comparison sites](05-marketing-sales-content.md#41-programmatic-seo-page-factory-for-niche-directories-and-comparison-sites) | E | 2 | 4 | 3 | 2 | 2 | 3 | **16** | 80 | 62 | 125 | 5 |
-| 40 | [14. Small private landlord manager (1–10 units)](02-trades-field-service-property.md#14-small-private-landlord-manager-110-units) | B | 3 | 3 | 3 | 1 | 2 | 3 | **15** | 12 | 417 | 833 | 8 |
-| 41 | [15. Short-term rental turnover operations](02-trades-field-service-property.md#15-short-term-rental-turnover-operations) | B | 2 | 4 | 3 | 1 | 2 | 3 | **15** | 15 | 333 | 667 | 5 |
-| 42 | [31. E-invoicing gateway for freelancers and micro-businesses](04-compliance-finance-legal-hr.md#31-e-invoicing-gateway-for-freelancers-and-micro-businesses) | D | 4 | 2 | 2 | 2 | 2 | 3 | **15** | 12 | 417 | 833 | 8 |
-| 43 | [6. Small forest owner management](01-agriculture-rural.md#6-small-forest-owner-management) | A | 2 | 3 | 3 | 2 | 1 | 2 | **13** | 8 | 625 | 1250 | 6 |
+| 15 | [46. Small clinic recall and no-show reduction](06-vertical-saas.md#46-small-clinic-recall-and-no-show-reduction) | F | 4 | 3 | 4 | 2 | 4 | 3 | **20** | 150 | 33 | 67 | 7 |
+| 16 | [9. Roof, fence and solar measurement with instant quotes from aerial imagery](02-trades-field-service-property.md#9-roof-fence-and-solar-measurement-with-instant-quotes-from-aerial-imagery) | B | 3 | 3 | 4 | 2 | 4 | 3 | **19** | 120 | 42 | 83 | 8 |
+| 17 | [10. Subcontractor compliance tracker for small general contractors](02-trades-field-service-property.md#10-subcontractor-compliance-tracker-for-small-general-contractors) | B | 4 | 3 | 4 | 3 | 3 | 2 | **19** | 120 | 42 | 83 | 7 |
+| 18 | [16. Housing cooperative and condominium board management](02-trades-field-service-property.md#16-housing-cooperative-and-condominium-board-management) | B | 3 | 4 | 4 | 2 | 3 | 3 | **19** | 40 | 125 | 250 | 8 |
+| 19 | [20. Cron and background job monitoring with AI root cause](03-developer-tools.md#20-cron-and-background-job-monitoring-with-ai-root-cause) | C | 3 | 5 | 3 | 2 | 2 | 4 | **19** | 15 | 333 | 667 | 5 |
+| 20 | [34. Employee policy and handbook generator with acknowledgement tracking](04-compliance-finance-legal-hr.md#34-employee-policy-and-handbook-generator-with-acknowledgement-tracking) | D | 3 | 3 | 4 | 3 | 3 | 3 | **19** | 90 | 56 | 111 | 6 |
+| 21 | [38. Competitor pricing-page and feature-change monitor with structured AI diffs](05-marketing-sales-content.md#38-competitor-pricing-page-and-feature-change-monitor-with-structured-ai-diffs) | E | 2 | 4 | 4 | 3 | 3 | 3 | **19** | 60 | 83 | 167 | 5 |
+| 22 | [39. Newsletter sponsorship operations for independent newsletters](05-marketing-sales-content.md#39-newsletter-sponsorship-operations-for-independent-newsletters) | E | 3 | 4 | 3 | 2 | 3 | 4 | **19** | 70 | 71 | 143 | 5 |
+| 23 | [40. Recipe costing, batch production and label compliance for small food producers](05-marketing-sales-content.md#40-recipe-costing-batch-production-and-label-compliance-for-small-food-producers) | E | 3 | 3 | 4 | 4 | 2 | 3 | **19** | 45 | 111 | 222 | 7 |
+| 24 | [3. Livestock health, medication and withdrawal-period records](01-agriculture-rural.md#3-livestock-health-medication-and-withdrawal-period-records) | A | 4 | 3 | 4 | 2 | 2 | 3 | **18** | 20 | 250 | 500 | 8 |
+| 25 | [7. Rural and agricultural grant finder with AI eligibility screening and drafting](01-agriculture-rural.md#7-rural-and-agricultural-grant-finder-with-ai-eligibility-screening-and-drafting) | A | 3 | 3 | 4 | 3 | 3 | 2 | **18** | 60 | 83 | 167 | 8 |
+| 26 | [13. Property inventory and condition reports with AI photo comparison](02-trades-field-service-property.md#13-property-inventory-and-condition-reports-with-ai-photo-comparison) | B | 3 | 4 | 4 | 2 | 2 | 3 | **18** | 40 | 125 | 250 | 6 |
+| 27 | [17. AI changelog and release notes from merged PRs](03-developer-tools.md#17-ai-changelog-and-release-notes-from-merged-prs) | C | 2 | 5 | 4 | 1 | 2 | 4 | **18** | 25 | 200 | 400 | 4 |
+| 28 | [25. Status page and incident communications with AI-drafted updates](03-developer-tools.md#25-status-page-and-incident-communications-with-ai-drafted-updates) | C | 2 | 5 | 3 | 2 | 2 | 4 | **18** | 25 | 200 | 400 | 4 |
+| 29 | [47. Restaurant allergen matrix and menu compliance](06-vertical-saas.md#47-restaurant-allergen-matrix-and-menu-compliance) | F | 3 | 3 | 4 | 3 | 2 | 3 | **18** | 40 | 125 | 250 | 6 |
+| 30 | [48. Nonprofit grant discovery, deadline tracking and AI proposal drafting](06-vertical-saas.md#48-nonprofit-grant-discovery-deadline-tracking-and-ai-proposal-drafting) | F | 3 | 3 | 4 | 3 | 2 | 3 | **18** | 60 | 83 | 167 | 7 |
+| 31 | [2. Small-farm direct sales and box-scheme manager](01-agriculture-rural.md#2-small-farm-direct-sales-and-box-scheme-manager) | A | 2 | 4 | 3 | 3 | 2 | 3 | **17** | 40 | 125 | 250 | 6 |
+| 32 | [11. Home inspection report generator with AI photo-to-defect narration](02-trades-field-service-property.md#11-home-inspection-report-generator-with-ai-photo-to-defect-narration) | B | 3 | 2 | 5 | 1 | 4 | 2 | **17** | 100 | 50 | 100 | 8 |
+| 33 | [22. Webhook inbox: receive, verify, queue, retry, replay, fan out](03-developer-tools.md#22-webhook-inbox-receive-verify-queue-retry-replay-fan-out) | C | 3 | 3 | 2 | 3 | 3 | 3 | **17** | 40 | 125 | 250 | 6 |
+| 34 | [27. Working-time registration compliance for SMEs](04-compliance-finance-legal-hr.md#27-working-time-registration-compliance-for-smes) | D | 4 | 4 | 3 | 1 | 2 | 3 | **17** | 40 | 125 | 250 | 5 |
+| 35 | [29. VSME sustainability report and supplier ESG questionnaire responder for SMEs](04-compliance-finance-legal-hr.md#29-vsme-sustainability-report-and-supplier-esg-questionnaire-responder-for-smes) | D | 2 | 3 | 4 | 2 | 3 | 3 | **17** | 150 | 33 | 67 | 8 |
+| 36 | [36. Google Business Profile automation for multi-location businesses and agencies](05-marketing-sales-content.md#36-google-business-profile-automation-for-multi-location-businesses-and-agencies) | E | 3 | 2 | 4 | 2 | 3 | 3 | **17** | 60 | 83 | 167 | 5 |
+| 37 | [37. Testimonial capture, case-study generation and social-proof widgets](05-marketing-sales-content.md#37-testimonial-capture-case-study-generation-and-social-proof-widgets) | E | 2 | 5 | 3 | 1 | 2 | 4 | **17** | 30 | 167 | 333 | 4 |
+| 38 | [45. Independent tutor and music teacher management](06-vertical-saas.md#45-independent-tutor-and-music-teacher-management) | F | 2 | 5 | 3 | 2 | 2 | 3 | **17** | 17 | 294 | 588 | 5 |
+| 39 | [49. Small tour and activity operator booking, waivers and capacity](06-vertical-saas.md#49-small-tour-and-activity-operator-booking-waivers-and-capacity) | F | 3 | 3 | 3 | 2 | 3 | 3 | **17** | 90 | 56 | 111 | 7 |
+| 40 | [5. Spray-window and field-operation decision assistant](01-agriculture-rural.md#5-spray-window-and-field-operation-decision-assistant) | A | 3 | 2 | 3 | 3 | 2 | 3 | **16** | 15 | 333 | 667 | 4 |
+| 41 | [12. Small fleet daily vehicle inspection and defect workflow](02-trades-field-service-property.md#12-small-fleet-daily-vehicle-inspection-and-defect-workflow) | B | 3 | 4 | 3 | 1 | 2 | 3 | **16** | 40 | 125 | 250 | 5 |
+| 42 | [19. LLM application observability for small teams](03-developer-tools.md#19-llm-application-observability-for-small-teams) | C | 3 | 3 | 3 | 1 | 3 | 3 | **16** | 50 | 100 | 200 | 8 |
+| 43 | [35. Cap table, convertible and option-plan manager for Nordic early-stage startups](04-compliance-finance-legal-hr.md#35-cap-table-convertible-and-option-plan-manager-for-nordic-early-stage-startups) | D | 3 | 3 | 3 | 2 | 3 | 2 | **16** | 120 | 42 | 83 | 8 |
+| 44 | [41. Programmatic SEO page factory for niche directories and comparison sites](05-marketing-sales-content.md#41-programmatic-seo-page-factory-for-niche-directories-and-comparison-sites) | E | 2 | 4 | 3 | 2 | 2 | 3 | **16** | 80 | 62 | 125 | 5 |
+| 45 | [14. Small private landlord manager (1–10 units)](02-trades-field-service-property.md#14-small-private-landlord-manager-110-units) | B | 3 | 3 | 3 | 1 | 2 | 3 | **15** | 12 | 417 | 833 | 8 |
+| 46 | [15. Short-term rental turnover operations](02-trades-field-service-property.md#15-short-term-rental-turnover-operations) | B | 2 | 4 | 3 | 1 | 2 | 3 | **15** | 15 | 333 | 667 | 5 |
+| 47 | [31. E-invoicing gateway for freelancers and micro-businesses](04-compliance-finance-legal-hr.md#31-e-invoicing-gateway-for-freelancers-and-micro-businesses) | D | 4 | 2 | 2 | 2 | 2 | 3 | **15** | 12 | 417 | 833 | 8 |
+| 48 | [50. Club and association membership, dues and volunteer scheduling](06-vertical-saas.md#50-club-and-association-membership-dues-and-volunteer-scheduling) | F | 2 | 3 | 3 | 1 | 2 | 4 | **15** | 40 | 125 | 250 | 7 |
+| 49 | [44. Physiotherapy home-exercise programme builder](06-vertical-saas.md#44-physiotherapy-home-exercise-programme-builder) | F | 3 | 2 | 3 | 1 | 2 | 3 | **14** | 18 | 278 | 556 | 10 |
+| 50 | [6. Small forest owner management](01-agriculture-rural.md#6-small-forest-owner-management) | A | 2 | 3 | 3 | 2 | 1 | 2 | **13** | 8 | 625 | 1250 | 6 |
 
 ## By cluster
 
@@ -124,10 +131,17 @@ Six criteria, each 1–5, summed to a score out of 30. Definitions are in [00-ov
 
 | # | Idea | Total | ARPU € | to €10k | MVP wks | Verdict |
 |---|---|---|---|---|---|---|
+| 44 | [44. Physiotherapy home-exercise programme builder](06-vertical-saas.md#44-physiotherapy-home-exercise-programme-builder) | **14** | 18 | 556 | 10 | Mature, gated by medical-device rules and a video-library moat; skip |
+| 45 | [45. Independent tutor and music teacher management](06-vertical-saas.md#45-independent-tutor-and-music-teacher-management) | **17** | 17 | 588 | 5 | Easy, pleasant, too small |
+| 46 | [46. Small clinic recall and no-show reduction](06-vertical-saas.md#46-small-clinic-recall-and-no-show-reduction) | **20** | 150 | 67 | 7 | Clinical evidence, business-grade pricing, two-way AI wedge; the practice-system integration gate decides it |
+| 47 | [47. Restaurant allergen matrix and menu compliance](06-vertical-saas.md#47-restaurant-allergen-matrix-and-menu-compliance) | **18** | 40 | 250 | 6 | Real extraction problem, dated incumbents, churning low-paying buyers; better as a module of 40 |
+| 48 | [48. Nonprofit grant discovery, deadline tracking and AI proposal drafting](06-vertical-saas.md#48-nonprofit-grant-discovery-deadline-tracking-and-ai-proposal-drafting) | **18** | 60 | 167 | 7 | Genuine Nordic gap (a printed book is the incumbent), weak WTP; merge with idea 7 |
+| 49 | [49. Small tour and activity operator booking, waivers and capacity](06-vertical-saas.md#49-small-tour-and-activity-operator-booking-waivers-and-capacity) | **17** | 90 | 111 | 7 | Fee-driven switching market being absorbed by online travel agencies; skip |
+| 50 | [50. Club and association membership, dues and volunteer scheduling](06-vertical-saas.md#50-club-and-association-membership-dues-and-volunteer-scheduling) | **15** | 40 | 250 | 7 | Reachable, lovable, already served for free; skip |
 
 ## Distribution of scores
 
 - **25–30**: 0 ideas ()
 - **21–24**: 6 ideas (8, 21, 23, 24, 33, 42)
-- **17–20**: 28 ideas (1, 2, 3, 4, 7, 9, 10, 11, 13, 16, 17, 18, 20, 22, 25, 26, 27, 28, 29, 30, 32, 34, 36, 37, 38, 39, 40, 43)
-- **≤16**: 9 ideas (5, 6, 12, 14, 15, 19, 31, 35, 41)
+- **17–20**: 33 ideas (1, 2, 3, 4, 7, 9, 10, 11, 13, 16, 17, 18, 20, 22, 25, 26, 27, 28, 29, 30, 32, 34, 36, 37, 38, 39, 40, 43, 45, 46, 47, 48, 49)
+- **≤16**: 11 ideas (5, 6, 12, 14, 15, 19, 31, 35, 41, 44, 50)
