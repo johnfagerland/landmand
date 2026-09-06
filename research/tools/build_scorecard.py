@@ -26,11 +26,14 @@ CLUSTERS = {
     "F": "Vertical SaaS: health, education, hospitality, associations",
 }
 
+def gh_slug(text):
+    """Mimic GitHub's heading anchor: lowercase, drop punctuation except spaces and hyphens, spaces to hyphens."""
+    text = text.lower()
+    text = "".join(ch for ch in text if ch.isalnum() or ch in " -")
+    return text.replace(" ", "-")
+
 def link(i):
-    slug = f"{i['n']}-" + "".join(ch if ch.isalnum() else "-" for ch in i["name"].lower()).strip("-")
-    while "--" in slug:
-        slug = slug.replace("--", "-")
-    return f"[{i['n']}. {i['name']}]({i['file']}#{slug})"
+    return f"[{i['n']}. {i['name']}]({i['file']}#{gh_slug(str(i['n']) + '. ' + i['name'])})"
 
 out = []
 out.append("# 09 — Scorecard: all 50 ideas\n")

@@ -51,6 +51,50 @@ You asked for deep research on a new SaaS product you could build yourself, with
 - Churn for SMB SaaS of 3–5% per month unless the product holds compliance records (then 1–2%). This matters: at 5% monthly churn you must add 50 customers a month just to hold 1,000.
 - Founder time is free in year one; the goal is to reach €5k MRR within 12 months of launch.
 
-## 6. Shortlist and recommendation
+## 6. What the research found
 
-*(Filled in after the research passes; see section 6 below once complete.)*
+Six patterns hold across all 50 ideas and should shape whatever you pick.
+
+1. **Regulation beats everything else as a demand source.** The highest-scoring ideas all have a legal instrument with a date behind them: the Cyber Resilience Act (reporting from 11 September 2026, full application 11 December 2027), NIS2 supply-chain questionnaires, the European Accessibility Act, GDPR, EU pesticide-record rules from January 2026. Regulation creates a deadline, a defined buyer and a budget line. The full calendar is in [08-regulatory-calendar.md](08-regulatory-calendar.md).
+2. **Business buyers pay ten times what households and micro-vendors pay.** Trades firms accept $29–49 a month AI add-ons; contractors pay DKK 1,660 per user a year; security-questionnaire tools sell at $300–1,300 a month. Farmers pay NOK 950–4,000 a *year*, landlords expect free, hosts pay $10 per property. The number of customers needed to reach €10k MRR ranges from 40 (ideas 28, 42) to 1,250 (idea 6). Pick a buyer who already pays business prices.
+3. **The AI that works is extraction and drafting, not chat.** Every idea's AI feature that survived scrutiny is one of: turn a document, photo or voice note into structured data; draft a document from structured data; classify or diff. These are cheap (a three-page document costs $0.001–0.01 to extract; see [07-building-with-ai.md](07-building-with-ai.md#45-in-product-ai-costs-september-2026-list-prices)) and reliable with a human confirm step. "AI insights", "AI scores" and "chat with your data" were gimmicks in every category.
+4. **Incumbents are one release away in horizontal categories, and absent in Nordic ones.** Jobber, Tradify, Spectora, Canny, Visualping and incident.io all shipped AI features in 2024–26. The gaps that remain are national: Nordic languages, Nordic registers (Brønnøysund, Altinn, Gårdskart, CHR), Nordic accounting systems (Fiken, Tripletex, e-conomic, Dinero), and Nordic laws. A Nordic founder's edge is the wedge the US incumbents cannot copy cheaply.
+5. **Distribution is the constraint, not building.** Cold email replies at 0.45%; organic click-through on AI-Overview queries halved; paid search is unaffordable below €100 ARPU. What works for a solo founder is a register-derived buyer list (every 50+ employee company, every housing association, every contractor is in a public register), a partner channel (accountants, advisors, associations), a marketplace with checkout (GitHub, Shopify, Atlassian), or a free tool as lead magnet.
+6. **Several categories that look promising were killed by 2025–26 events.** CSRD's SME cascade was gutted by the Omnibus (29); Google removed the Business Profile Q&A API and gates access against multi-tenant SaaS (36); the whistleblower market was bought in 2023–24 (26); e-invoicing is bundled into every accounting suite and gated by certification (31); 365FarmNet, Harvie and Plantevernguiden shut down, which opens gaps (1, 2, 4, 5) but also shows how thin the margins are.
+
+## 7. Shortlist and recommendation
+
+### The thesis: sell trust evidence to small software vendors
+
+Three of the top ideas sell to the same buyer, the CTO or founder of a 5–50 person software company, and solve the same problem, proving to customers and regulators that the company is safe to buy from:
+
+| Idea | What the buyer gets | Score | ARPU € | Customers to €10k MRR | MVP weeks |
+|---|---|---|---|---|---|
+| [23. CRA evidence pack](03-developer-tools.md#23-dependency-licence-and-sbom-compliance-for-small-software-vendors-eu-cyber-resilience-act) | SBOM on every release, licence policy, vulnerability tracking, the technical documentation the Cyber Resilience Act requires | 23 | 90 | 111 | 8 |
+| [42. Security questionnaire auto-responder](05-marketing-sales-content.md#42-rfp-and-security-questionnaire-auto-responder-for-small-vendors) | The 300-row spreadsheet from the enterprise buyer, answered with citations in an hour | 22 | 250 | 40 | 7 |
+| [28. NIS2 supplier profile](04-compliance-finance-legal-hr.md#28-nis2-ready-supplier-profile-and-cyber-hygiene-tracker-for-small-suppliers) | A control checklist, policies and evidence that answer the questionnaire before it is sent | 20 | 250 | 40 | 8 |
+
+Why this founder: a solo developer is the most credible person to sell to other small software companies, speaks the buyer's language, distributes through GitHub Marketplace and developer communities, and can dogfood every feature. The AI is pure document generation and retrieval, which is the reliable kind. The regulatory dates (11 September 2026, 11 December 2027, NIS2 transposition through 2026) pull demand forward for the next 18 months. The three products share a codebase (repo connector, document store, policy templates, evidence export) and a trust gate (the vendor's own ISO 27001 or SOC 2 evidence), so the gate is paid for once.
+
+**Recommendation: start with idea 23, the CRA evidence pack.** It has the hardest deadline, the emptiest price band (nothing between free GitHub SBOM export and $25-per-developer security suites that gate SBOM to enterprise), and the lowest trust gate (an SBOM is not a secret; a security policy is). Once 30 customers are paying, add the questionnaire responder (42) as the upsell to the same accounts, then the NIS2 supplier profile (28).
+
+### Four alternatives, each the best of its kind
+
+| If you want... | Pick | Why | Score |
+|---|---|---|---|
+| The fastest first revenue | [33. Vendor contract and renewal tracker](04-compliance-finance-legal-hr.md#33-vendor-contract-and-saas-renewal-tracker-with-ai-clause-extraction) | Five weeks to build, extraction is cents per contract, accountants are the channel, Nordic accounting integrations are the moat | 21 |
+| A GitHub-native product riding an incumbent price shock | [21. PR-driven AI localisation](03-developer-tools.md#21-pull-request-driven-localisation-with-context-aware-ai-translation) | Lokalise and Phrase removed their cheap tiers in 2025–26; small teams are actively searching for alternatives | 22 |
+| The biggest pain in a Nordic vertical | [8. AI trades quoting from photos and voice](02-trades-field-service-property.md#8-ai-estimating-and-quoting-for-small-trades-from-photos-and-voice) | Tradespeople lose 5–8 hours a week to admin; nobody does photo-and-voice capture in Norwegian or Danish; needs two accounting-firm partners | 21 |
+| To stay close to agriculture (the name of this repository) | [1. Farm compliance record-keeper](01-agriculture-rural.md#1-farm-compliance-and-subsidy-record-keeper) with [5](01-agriculture-rural.md#5-spray-window-and-field-operation-decision-assistant) as a module | Mandatory electronic pesticide records from January 2026, Norway's new fertiliser journal, 365FarmNet closing in November 2026; low farmer willingness to pay means selling through advisors | 20 |
+
+Honourable mentions with a specific condition attached: [43. Nordic AI phone receptionist](05-marketing-sales-content.md#43-ai-phone-receptionist-for-small-service-businesses-in-nordic-languages) has the best unit economics of all 50 (25 customers to €5k MRR) but already a dozen local entrants, so only with a vertical integration; [30. Accessibility fix PRs](04-compliance-finance-legal-hr.md#30-web-accessibility-monitor-with-ai-generated-fix-pull-requests) if you want to sell to web agencies; [24. DMARC monitoring](03-developer-tools.md#24-dmarc-spf-and-dkim-monitoring-with-guided-fixes-for-smbs-and-agencies) as a four-week warm-up product.
+
+### What to do in the next two weeks, whichever you pick
+
+1. Find 15 people who match the buyer and talk to 10 of them. For idea 23, that is CTOs of Nordic software companies with a shipped product; ask whether a customer has asked for an SBOM yet and who owns "CRA" internally. Kill the idea if fewer than five describe the problem unprompted.
+2. Put a landing page up with the price on it and the regulation date in the headline. Aim for 20 sign-ups from the interviewees' networks.
+3. Only then start the 12-week playbook in [07-building-with-ai.md](07-building-with-ai.md#3-the-generic-mvp-playbook-12-weeks).
+
+### Ideas to drop
+
+Sixteen ideas score 17 or below and are not worth a solo founder's year, for reasons that are structural rather than fixable: free incumbents (6, 12, 14, 15, 27, 37), a platform that blocks or bundles the product (19, 36, 41), a certification gate a solo founder cannot pass cheaply (31), a locked or tiny market (11, 35), a cancelled regulatory wave (29), or a category where the product is a feature of something bigger (5, 17, 25, 22). They are documented in full so the reasoning can be checked, and so they are not re-proposed in six months.
