@@ -9,7 +9,7 @@ Research date: September 2026. Founder assumption: one developer, Nordic-based, 
 | File | What it is |
 |---|---|
 | [research/00-overview.md](research/00-overview.md) | Scope (what we are / are not doing), method, scoring framework, **shortlist and recommendation** |
-| [research/09-scorecard.md](research/09-scorecard.md) | All 50 ideas scored on six criteria, sortable table |
+| [research/09-scorecard.md](research/09-scorecard.md) | All 50 ideas scored on six criteria; a sortable, filterable version is published at https://claude.ai/code/artifact/c9482619-c4d7-4d87-8231-1f979cde0c1a |
 | [research/07-building-with-ai.md](research/07-building-with-ai.md) | Where AI is used to *build* the product, the reference stack, costs, and the generic MVP playbook |
 | [research/08-regulatory-calendar.md](research/08-regulatory-calendar.md) | EU regulatory dates 2025–2027 that create demand for several ideas |
 
