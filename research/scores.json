@@ -1,52 +1,52 @@
 [
  {
   "n": 1,
-  "name": "Farm compliance and subsidy record-keeper",
+  "name": "Farm compliance record-keeper",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
   "pain": 4,
   "solo": 3,
   "ai": 5,
   "gap": 3,
-  "wtp": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 20,
+  "arpu_eur": 79,
   "mvp_weeks": 10,
-  "verdict": "2026 e-records rules force a purchase; voice-to-record is real AI; sell via advisors"
+  "verdict": "Layered dated compliance burden, farms already pay $99–299 for weaker tools, voice-and-weather records nobody has"
  },
  {
   "n": 2,
-  "name": "Small-farm direct sales and box-scheme manager",
+  "name": "Small-farm direct sales and CSA manager",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
   "pain": 2,
   "solo": 4,
   "ai": 3,
-  "gap": 3,
+  "gap": 1,
   "wtp": 2,
   "reach": 3,
-  "arpu_eur": 40,
+  "arpu_eur": 45,
   "mvp_weeks": 6,
-  "verdict": "Nordic gap but shrinking channel and price-sensitive buyers"
+  "verdict": "Validated, crowded, price-compressed; skip"
  },
  {
   "n": 3,
-  "name": "Livestock health, medication and withdrawal-period records",
+  "name": "Livestock treatment, withdrawal and movement records",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
-  "pain": 4,
+  "pain": 3,
   "solo": 3,
   "ai": 4,
   "gap": 2,
-  "wtp": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 20,
+  "arpu_eur": 49,
   "mvp_weeks": 8,
-  "verdict": "Real pain, held back by near-free co-op systems"
+  "verdict": "Real chute-side AI workflow and a fresh EID chore; feedlot end taken, small end cheap"
  },
  {
   "n": 4,
-  "name": "Agricultural contractor job scheduling, machine hours and invoicing",
+  "name": "Custom applicator and custom harvester scheduling, field mapping and billing",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
   "pain": 3,
@@ -54,14 +54,14 @@
   "ai": 4,
   "gap": 3,
   "wtp": 4,
-  "reach": 3,
-  "arpu_eur": 90,
+  "reach": 2,
+  "arpu_eur": 150,
   "mvp_weeks": 8,
-  "verdict": "Business-grade WTP, dated incumbent exiting Nov 2026; small market"
+  "verdict": "Business-grade WTP and no tool for independents; small seasonal market"
  },
  {
   "n": 5,
-  "name": "Spray-window and field-operation decision assistant",
+  "name": "Spray-window and label-constraint assistant",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
   "pain": 3,
@@ -70,28 +70,13 @@
   "gap": 3,
   "wtp": 2,
   "reach": 3,
-  "arpu_eur": 15,
+  "arpu_eur": 20,
   "mvp_weeks": 4,
-  "verdict": "Not a product; a module for idea 1"
+  "verdict": "Not a product; a strong module for idea 1, made timely by the dicamba label"
  },
  {
   "n": 6,
-  "name": "Small forest owner management",
-  "cluster": "A",
-  "file": "01-agriculture-rural.md",
-  "pain": 2,
-  "solo": 3,
-  "ai": 3,
-  "gap": 2,
-  "wtp": 1,
-  "reach": 2,
-  "arpu_eur": 8,
-  "mvp_weeks": 6,
-  "verdict": "Free state and co-op tools; not a business"
- },
- {
-  "n": 7,
-  "name": "Rural and agricultural grant finder with AI eligibility screening and drafting",
+  "name": "FSMA 204 food-traceability records for small produce growers, packers and food hubs",
   "cluster": "A",
   "file": "01-agriculture-rural.md",
   "pain": 3,
@@ -99,10 +84,25 @@
   "ai": 4,
   "gap": 3,
   "wtp": 3,
-  "reach": 2,
-  "arpu_eur": 60,
+  "reach": 3,
+  "arpu_eur": 149,
   "mvp_weeks": 8,
-  "verdict": "No paid ag finder exists; test with advisory offices first"
+  "verdict": "Dated federal rule, $570M cost pool, retailers enforcing early, no SMB tool; the slipping date is the risk"
+ },
+ {
+  "n": 7,
+  "name": "Farm grant and cost-share finder with AI eligibility screening and drafting",
+  "cluster": "A",
+  "file": "01-agriculture-rural.md",
+  "pain": 3,
+  "solo": 3,
+  "ai": 4,
+  "gap": 1,
+  "wtp": 2,
+  "reach": 2,
+  "arpu_eur": 40,
+  "mvp_weeks": 8,
+  "verdict": "Two funded companies pivoted away from exactly this; fold drafting into idea 1"
  },
  {
   "n": 8,
@@ -112,12 +112,12 @@
   "pain": 4,
   "solo": 3,
   "ai": 5,
-  "gap": 2,
-  "wtp": 4,
+  "gap": 1,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 70,
+  "arpu_eur": 59,
   "mvp_weeks": 8,
-  "verdict": "Validated pain, AI-enabled workflow, empty in the Nordics; needs accountant partners"
+  "verdict": "Validated pain, but AI-native entrants already sell it at $10–30 and platforms are one release away"
  },
  {
   "n": 9,
@@ -132,22 +132,22 @@
   "reach": 3,
   "arpu_eur": 120,
   "mvp_weeks": 8,
-  "verdict": "High WTP, free public imagery, small seasonal market; run a feasibility spike"
+  "verdict": "High WTP and free federal data against litigious incumbents; start with fences"
  },
  {
   "n": 10,
-  "name": "Subcontractor compliance tracker for small general contractors",
+  "name": "Subcontractor certificate-of-insurance and compliance tracker for small general contractors",
   "cluster": "B",
   "file": "02-trades-field-service-property.md",
-  "pain": 4,
+  "pain": 3,
   "solo": 3,
   "ai": 4,
   "gap": 3,
   "wtp": 3,
   "reach": 2,
-  "arpu_eur": 120,
+  "arpu_eur": 99,
   "mvp_weeks": 7,
-  "verdict": "Nordic legal duty with no contractor-side tool; slow sales cycle"
+  "verdict": "Price gap under enterprise minimums; slow buyer, no statutory driver"
  },
  {
   "n": 11,
@@ -155,21 +155,21 @@
   "cluster": "B",
   "file": "02-trades-field-service-property.md",
   "pain": 3,
-  "solo": 2,
+  "solo": 3,
   "ai": 5,
   "gap": 1,
   "wtp": 4,
-  "reach": 2,
-  "arpu_eur": 100,
+  "reach": 3,
+  "arpu_eur": 89,
   "mvp_weeks": 8,
-  "verdict": "Superb AI fit, locked tiny market"
+  "verdict": "Superb AI fit in an open US market the leader is consolidating; good business, not a large one"
  },
  {
   "n": 12,
   "name": "Small fleet daily vehicle inspection and defect workflow",
   "cluster": "B",
   "file": "02-trades-field-service-property.md",
-  "pain": 3,
+  "pain": 4,
   "solo": 4,
   "ai": 3,
   "gap": 1,
@@ -177,22 +177,22 @@
   "reach": 3,
   "arpu_eur": 40,
   "mvp_weeks": 5,
-  "verdict": "Mature, crowded, cheap; skip"
+  "verdict": "Strong federal mandate, saturated market; skip"
  },
  {
   "n": 13,
-  "name": "Property inventory and condition reports with AI photo comparison",
+  "name": "Move-in and move-out inspections with AI photo comparison and state-deadline compliance",
   "cluster": "B",
   "file": "02-trades-field-service-property.md",
-  "pain": 3,
+  "pain": 4,
   "solo": 4,
   "ai": 4,
   "gap": 2,
-  "wtp": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 40,
+  "arpu_eur": 75,
   "mvp_weeks": 6,
-  "verdict": "Good product, will be table stakes in landlord platforms soon"
+  "verdict": "California's 2025 photo mandate, forfeiture and treble-damage states, and a small-manager segment incumbents price out"
  },
  {
   "n": 14,
@@ -226,18 +226,18 @@
  },
  {
   "n": 16,
-  "name": "Housing cooperative and condominium board management",
+  "name": "HOA and condo board management with reserve-study and filing compliance",
   "cluster": "B",
   "file": "02-trades-field-service-property.md",
-  "pain": 3,
+  "pain": 4,
   "solo": 4,
   "ai": 4,
   "gap": 2,
   "wtp": 3,
   "reach": 3,
-  "arpu_eur": 40,
+  "arpu_eur": 79,
   "mvp_weeks": 8,
-  "verdict": "Reachable buyers, statutory needs, sticky data, clear AI differentiator; slow to sell"
+  "verdict": "Florida deadlines with personal liability for 27,537 boards, reachable buyers, sticky data; slow to sell, solid once sold"
  },
  {
   "n": 17,
@@ -252,11 +252,11 @@
   "reach": 4,
   "arpu_eur": 25,
   "mvp_weeks": 4,
-  "verdict": "Easy to build, hard to make matter; weekend project or feature"
+  "verdict": "Easy to build, hard to make matter; GitHub Marketplace needs 100 installs before you can charge"
  },
  {
   "n": 18,
-  "name": "Postgres/Supabase row-level-security auditor and test harness",
+  "name": "Postgres/Supabase row-level-security auditor and CI test harness",
   "cluster": "C",
   "file": "03-developer-tools.md",
   "pain": 4,
@@ -267,7 +267,7 @@
   "reach": 4,
   "arpu_eur": 25,
   "mvp_weeks": 6,
-  "verdict": "Real pain, single-platform risk; fast launch with a 12-month horizon"
+  "verdict": "Real pain, clear AI angle; Supabase shipped an RLS Tester preview in April 2026, so plan a 12-month horizon"
  },
  {
   "n": 19,
@@ -282,7 +282,7 @@
   "reach": 3,
   "arpu_eur": 50,
   "mvp_weeks": 8,
-  "verdict": "Funded incumbents with free tiers; not a solo bet"
+  "verdict": "Funded owners, free tiers, SOC 2 cost; skip"
  },
  {
   "n": 20,
@@ -297,7 +297,7 @@
   "reach": 4,
   "arpu_eur": 15,
   "mvp_weeks": 5,
-  "verdict": "Proven micro-SaaS economics, slow compounding; second product"
+  "verdict": "Proven micro-SaaS economics, slow compounding, Vercel marketplace channel; second product"
  },
  {
   "n": 21,
@@ -307,12 +307,12 @@
   "pain": 3,
   "solo": 4,
   "ai": 5,
-  "gap": 3,
+  "gap": 2,
   "wtp": 3,
   "reach": 4,
   "arpu_eur": 60,
   "mvp_weeks": 6,
-  "verdict": "Incumbent price shock plus GitHub distribution; strong second-tier pick"
+  "verdict": "Incumbent price shock and a US Spanish driver; a funded AI-native competitor already sits in the slot"
  },
  {
   "n": 22,
@@ -331,22 +331,22 @@
  },
  {
   "n": 23,
-  "name": "Dependency licence and SBOM compliance for small software vendors (EU Cyber Resilience Act)",
+  "name": "SBOM and software supply-chain evidence for small vendors selling to medical-device, federal and EU markets",
   "cluster": "C",
   "file": "03-developer-tools.md",
-  "pain": 4,
+  "pain": 3,
   "solo": 4,
   "ai": 4,
-  "gap": 4,
+  "gap": 3,
   "wtp": 4,
   "reach": 3,
-  "arpu_eur": 90,
+  "arpu_eur": 149,
   "mvp_weeks": 8,
-  "verdict": "Hard deadline, empty price band, document-generation AI; best devtool idea"
+  "verdict": "Federal mandate withdrawn Jan 2026; anchored now on FDA's statutory SBOM rule and the EU deadline; smaller buyer that pays more"
  },
  {
   "n": 24,
-  "name": "DMARC, SPF and DKIM monitoring with guided fixes for SMBs and agencies",
+  "name": "DMARC, SPF and DKIM monitoring with guided fixes for SMBs and managed service providers",
   "cluster": "C",
   "file": "03-developer-tools.md",
   "pain": 4,
@@ -354,14 +354,14 @@
   "ai": 3,
   "gap": 2,
   "wtp": 3,
-  "reach": 4,
+  "reach": 3,
   "arpu_eur": 35,
   "mvp_weeks": 4,
-  "verdict": "Fastest cheapest build with a platform-policy driver; modest ceiling"
+  "verdict": "Fastest cheapest build with a platform-policy driver; MSP marketplaces already occupied"
  },
  {
   "n": 25,
-  "name": "Status page and incident communications with AI-drafted updates",
+  "name": "Status page and incident communications with AI-drafted updates and SLA reports",
   "cluster": "C",
   "file": "03-developer-tools.md",
   "pain": 2,
@@ -370,43 +370,43 @@
   "gap": 2,
   "wtp": 2,
   "reach": 4,
-  "arpu_eur": 25,
+  "arpu_eur": 30,
   "mvp_weeks": 4,
-  "verdict": "Easy, pleasant, crowded; only bundled with 20 or 24"
+  "verdict": "Easy, crowded; the private-page price cliff and SLA reports are a narrow gap; bundle with 20 or 24"
  },
  {
   "n": 26,
-  "name": "Whistleblower reporting channel for 50–249 employee companies",
+  "name": "Product regulatory compliance screening for small consumer brands",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
   "pain": 4,
-  "solo": 4,
-  "ai": 3,
-  "gap": 2,
+  "solo": 3,
+  "ai": 4,
+  "gap": 3,
   "wtp": 3,
   "reach": 4,
-  "arpu_eur": 100,
-  "mvp_weeks": 5,
-  "verdict": "Cheapest compliance SaaS to build, market already bought; monthly billing and Norwegian small-firm wedge"
+  "arpu_eur": 99,
+  "mvp_weeks": 7,
+  "verdict": "Privately enforced regime with 5,000 notices a year, a 2028 label transition, an empty SMB band and a Shopify channel"
  },
  {
   "n": 27,
-  "name": "Working-time registration compliance for SMEs",
+  "name": "Written information security plan and Safeguards Rule compliance for tax preparers, accountants and small financial firms",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
-  "pain": 4,
-  "solo": 4,
-  "ai": 3,
-  "gap": 1,
+  "pain": 3,
+  "solo": 5,
+  "ai": 4,
+  "gap": 3,
   "wtp": 2,
-  "reach": 3,
-  "arpu_eur": 40,
-  "mvp_weeks": 5,
-  "verdict": "Real mandate, saturated market; watch Germany"
+  "reach": 4,
+  "arpu_eur": 29,
+  "mvp_weeks": 4,
+  "verdict": "Cheapest build in the chapter, 880,000 reachable buyers with an annual attestation; low ARPU and seasonal"
  },
  {
   "n": 28,
-  "name": "NIS2-ready supplier profile and cyber-hygiene tracker for small suppliers",
+  "name": "CMMC Level 1 and Level 2 readiness for small defense subcontractors",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
   "pain": 4,
@@ -415,69 +415,69 @@
   "gap": 2,
   "wtp": 4,
   "reach": 3,
-  "arpu_eur": 250,
+  "arpu_eur": 199,
   "mvp_weeks": 8,
-  "verdict": "Live expanding driver, high WTP, under-served supplier segment; Cyberday is the shadow"
+  "verdict": "Statutory dates and 229,818 small entities; certification phase suspended July 2026 and a transparent incumbent at $99"
  },
  {
   "n": 29,
-  "name": "VSME sustainability report and supplier ESG questionnaire responder for SMEs",
+  "name": "HIPAA Security Rule compliance kit for small practices and health-tech vendors",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
-  "pain": 2,
+  "pain": 3,
   "solo": 3,
   "ai": 4,
-  "gap": 2,
+  "gap": 3,
   "wtp": 3,
   "reach": 3,
-  "arpu_eur": 150,
-  "mvp_weeks": 8,
-  "verdict": "The 2026 wave was cancelled by the Omnibus; revisit in 2027"
+  "arpu_eur": 79,
+  "mvp_weeks": 7,
+  "verdict": "Evergreen duty with live enforcement and an open $49–99 band; the final rule slipped to 2027"
  },
  {
   "n": 30,
   "name": "Web accessibility monitor with AI-generated fix pull requests",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
-  "pain": 3,
+  "pain": 4,
   "solo": 4,
   "ai": 4,
   "gap": 3,
   "wtp": 3,
   "reach": 3,
-  "arpu_eur": 80,
+  "arpu_eur": 99,
   "mvp_weeks": 7,
-  "verdict": "Live regulation, 96% non-compliance, discredited overlays, scan-and-fix wedge nobody sells at agency prices"
+  "verdict": "5,000 suits a year, discredited overlays, hard public deadlines, a scan-and-fix wedge nobody sells at agency prices"
  },
  {
   "n": 31,
-  "name": "E-invoicing gateway for freelancers and micro-businesses",
+  "name": "Sales-tax exemption certificate management for small B2B and e-commerce sellers",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
-  "pain": 4,
-  "solo": 2,
-  "ai": 2,
+  "pain": 3,
+  "solo": 3,
+  "ai": 4,
   "gap": 2,
-  "wtp": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 12,
-  "mvp_weeks": 8,
-  "verdict": "Strongest wave, worst place for a solo founder; certification gates and bundling"
+  "arpu_eur": 99,
+  "mvp_weeks": 6,
+  "verdict": "Real niche being absorbed as a free feature by funded filing tools; Shopify B2B app only"
  },
  {
   "n": 32,
-  "name": "GDPR records-of-processing and data-subject-request automation for small companies",
+  "name": "State privacy-law compliance for small businesses",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
   "pain": 3,
   "solo": 4,
   "ai": 4,
-  "gap": 3,
-  "wtp": 3,
+  "gap": 2,
+  "wtp": 2,
   "reach": 3,
-  "arpu_eur": 90,
+  "arpu_eur": 39,
   "mvp_weeks": 6,
-  "verdict": "Evergreen regulation, price gap under €100 in Nordic languages; steady"
+  "verdict": "Growing regime served by a crowd of $7–60 tools; skip standalone"
  },
  {
   "n": 33,
@@ -487,16 +487,16 @@
   "pain": 3,
   "solo": 4,
   "ai": 5,
-  "gap": 3,
+  "gap": 2,
   "wtp": 3,
   "reach": 3,
   "arpu_eur": 120,
   "mvp_weeks": 5,
-  "verdict": "Cheapest clearest extraction product, SMB price gap, Nordic accounting integrations as moat"
+  "verdict": "Clearest extraction product, now facing Ramp's free tier; good fast first product for the ACH-and-invoice segment"
  },
  {
   "n": 34,
-  "name": "Employee policy and handbook generator with acknowledgement tracking",
+  "name": "Employee handbook and policy generator with acknowledgement tracking (50 states)",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
   "pain": 3,
@@ -505,24 +505,24 @@
   "gap": 3,
   "wtp": 3,
   "reach": 3,
-  "arpu_eur": 90,
+  "arpu_eur": 79,
   "mvp_weeks": 6,
-  "verdict": "Good with a lawyer partner; content treadmill is the cost; pairs with 26 and 32"
+  "verdict": "Empty sub-$100 band, 2.2M reachable firms, a real legal treadmill; needs an attorney partner"
  },
  {
   "n": 35,
-  "name": "Cap table, convertible and option-plan manager for Nordic early-stage startups",
+  "name": "Business licence and permit renewal tracker for multi-location businesses and franchises",
   "cluster": "D",
   "file": "04-compliance-finance-legal-hr.md",
   "pain": 3,
   "solo": 3,
-  "ai": 3,
-  "gap": 2,
+  "ai": 4,
+  "gap": 3,
   "wtp": 3,
-  "reach": 2,
-  "arpu_eur": 120,
-  "mvp_weeks": 8,
-  "verdict": "Validated globally, occupied locally; skip"
+  "reach": 3,
+  "arpu_eur": 149,
+  "mvp_weeks": 6,
+  "verdict": "Transparent per-location SaaS unproven in a managed-service category; franchise channel makes it worth a test"
  },
  {
   "n": 36,
@@ -541,18 +541,18 @@
  },
  {
   "n": 37,
-  "name": "Testimonial capture, case-study generation and social-proof widgets",
+  "name": "Testimonial capture, case-study generation and FTC-compliant social proof",
   "cluster": "E",
   "file": "05-marketing-sales-content.md",
-  "pain": 2,
+  "pain": 3,
   "solo": 5,
   "ai": 3,
-  "gap": 1,
+  "gap": 2,
   "wtp": 2,
   "reach": 4,
-  "arpu_eur": 30,
+  "arpu_eur": 35,
   "mvp_weeks": 4,
-  "verdict": "Proven demand, saturated supply; skip"
+  "verdict": "Saturated supply plus a 2024–26 FTC compliance driver nobody has productised; vertical play only"
  },
  {
   "n": 38,
@@ -580,24 +580,24 @@
   "gap": 2,
   "wtp": 3,
   "reach": 4,
-  "arpu_eur": 70,
+  "arpu_eur": 75,
   "mvp_weeks": 5,
   "verdict": "Proven niche, modest ceiling, beehiiv bundling"
  },
  {
   "n": 40,
-  "name": "Recipe costing, batch production and label compliance for small food producers",
+  "name": "Recipe costing, batch tracking and label compliance for small food producers and cottage-food businesses",
   "cluster": "E",
   "file": "05-marketing-sales-content.md",
   "pain": 3,
   "solo": 3,
   "ai": 4,
-  "gap": 4,
+  "gap": 3,
   "wtp": 2,
   "reach": 3,
-  "arpu_eur": 45,
+  "arpu_eur": 40,
   "mvp_weeks": 7,
-  "verdict": "No EU-native tool exists; friendly community, compliance hook, low ARPU"
+  "verdict": "Nobody does 50-state cottage rules; large uncounted community, lab-cost umbrella, low ARPU"
  },
  {
   "n": 41,
@@ -627,37 +627,37 @@
   "reach": 3,
   "arpu_eur": 250,
   "mvp_weeks": 7,
-  "verdict": "High pain, high price, AI-native, empty SMB tier; needs ISO 27001 for trust"
+  "verdict": "High pain, high price, AI-native, empty SMB tier; needs SOC 2 for trust"
  },
  {
   "n": 43,
-  "name": "AI phone receptionist for small service businesses in Nordic languages",
+  "name": "Bilingual (English/Spanish) AI phone receptionist for home-service trades",
   "cluster": "E",
   "file": "05-marketing-sales-content.md",
   "pain": 3,
   "solo": 3,
   "ai": 5,
-  "gap": 2,
+  "gap": 1,
   "wtp": 4,
   "reach": 3,
-  "arpu_eur": 200,
+  "arpu_eur": 149,
   "mvp_weeks": 6,
-  "verdict": "Excellent unit economics and language moat; already a dozen local entrants, win with vertical depth"
+  "verdict": "Great unit economics; bilingual is already a $25 checkbox and platforms bundle their own; trade-specific depth or nothing"
  },
  {
   "n": 44,
-  "name": "Physiotherapy home-exercise programme builder",
+  "name": "Home-exercise programme builder with Remote Therapeutic Monitoring billing",
   "cluster": "F",
   "file": "06-vertical-saas.md",
   "pain": 3,
   "solo": 2,
   "ai": 3,
-  "gap": 1,
-  "wtp": 2,
+  "gap": 2,
+  "wtp": 4,
   "reach": 3,
-  "arpu_eur": 18,
+  "arpu_eur": 150,
   "mvp_weeks": 10,
-  "verdict": "Mature, gated by medical-device rules and a video-library moat; skip"
+  "verdict": "Reimbursement lifts WTP, but content, HIPAA and billing gates keep it out of solo range"
  },
  {
   "n": 45,
@@ -670,7 +670,7 @@
   "gap": 2,
   "wtp": 2,
   "reach": 3,
-  "arpu_eur": 17,
+  "arpu_eur": 18,
   "mvp_weeks": 5,
   "verdict": "Easy, pleasant, too small"
  },
@@ -685,9 +685,9 @@
   "gap": 2,
   "wtp": 4,
   "reach": 3,
-  "arpu_eur": 150,
+  "arpu_eur": 200,
   "mvp_weeks": 7,
-  "verdict": "Clinical evidence, business-grade pricing, two-way AI wedge; the practice-system integration gate decides it"
+  "verdict": "Clinical evidence, $150–300 price points, two-way AI wedge; integration access decides it"
  },
  {
   "n": 47,
@@ -698,11 +698,11 @@
   "solo": 3,
   "ai": 4,
   "gap": 3,
-  "wtp": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 40,
+  "arpu_eur": 120,
   "mvp_weeks": 6,
-  "verdict": "Real extraction problem, dated incumbents, churning low-paying buyers; better as a module of 40"
+  "verdict": "Dated incumbents plus California SB 68 deadline July 2026; sell to regional chains"
  },
  {
   "n": 48,
@@ -712,12 +712,12 @@
   "pain": 3,
   "solo": 3,
   "ai": 4,
-  "gap": 3,
-  "wtp": 2,
+  "gap": 2,
+  "wtp": 3,
   "reach": 3,
-  "arpu_eur": 60,
+  "arpu_eur": 80,
   "mvp_weeks": 7,
-  "verdict": "Genuine Nordic gap (a printed book is the incumbent), weak WTP; merge with idea 7"
+  "verdict": "Large, distressed, reachable base behind two data-rich incumbents; drafting-first for the long tail"
  },
  {
   "n": 49,
@@ -730,22 +730,22 @@
   "gap": 2,
   "wtp": 3,
   "reach": 3,
-  "arpu_eur": 90,
+  "arpu_eur": 99,
   "mvp_weeks": 7,
-  "verdict": "Fee-driven switching market being absorbed by online travel agencies; skip"
+  "verdict": "Fee-driven switching market being absorbed by OTAs; skip"
  },
  {
   "n": 50,
-  "name": "Club and association membership, dues and volunteer scheduling",
+  "name": "Club, league and association membership, dues and volunteer scheduling",
   "cluster": "F",
   "file": "06-vertical-saas.md",
   "pain": 2,
   "solo": 3,
   "ai": 3,
-  "gap": 1,
+  "gap": 2,
   "wtp": 2,
-  "reach": 4,
-  "arpu_eur": 40,
+  "reach": 3,
+  "arpu_eur": 50,
   "mvp_weeks": 7,
   "verdict": "Reachable, lovable, already served for free; skip"
  }

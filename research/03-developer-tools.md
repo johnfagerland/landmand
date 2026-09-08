@@ -1,6 +1,6 @@
 # 03 — Developer & technical tools (ideas 17–25)
 
-Nine ideas where the buyer is a developer or a small engineering team. Common traits: easy to reach (GitHub Marketplace, Hacker News, dev communities, SEO on "X alternative"), fast to build, but price-compressed by free tiers and open source. The two standouts are the ones with a regulatory or platform-policy driver behind them (23 and 24) and the one riding an incumbent price shock (21).
+Nine ideas where the buyer is a developer or a small engineering team. These products are global by nature; the US lens changes distribution (GitHub Marketplace pays 95% but requires 100 installs before a paid plan; Vercel's marketplace is a free lead channel), the trust gate (83% of enterprise buyers require SOC 2 from SaaS vendors), and the regulatory driver behind idea 23, which weakened in January 2026 when the White House budget office rescinded the federal software-attestation memos and moved SBOMs to "on request", while the FDA's medical-device SBOM requirement stayed statutory. The strongest developer ideas remain the ones with a policy driver (23 for medical-device software, 24 for email senders) and the one riding an incumbent price shock (21).
 
 Scores use the framework in [00-overview.md](00-overview.md#4-scoring-framework); the full ranking is in [09-scorecard.md](09-scorecard.md).
 
@@ -11,538 +11,496 @@ Scores use the framework in [00-overview.md](00-overview.md#4-scoring-framework)
 **One-liner.** Connect a GitHub repo; every merged PR becomes a customer-facing changelog entry, in-app "what's new" widget and monthly email, drafted by AI and approved by a human.
 
 ### Problem statement
-Product teams ship weekly but write changelogs rarely, because turning PR titles into customer prose is tedious. GitHub's automatic release notes are a developer-facing list of PRs, not something a customer reads. The category leader has shipped nothing new since 2021, and the mid-market tools meter on monthly active users, which punishes small apps.
+Product teams ship weekly but write changelogs rarely, because turning PR titles into customer prose is tedious. GitHub's automatic release notes are a developer-facing list, not something a customer reads. The category leader has shipped nothing since 2021; the mid-market tools meter on monthly active users. Two AI-native GitHub Apps show the demand and its size: after months on the Marketplace they have 33 and 80 installs, both below the 100-install threshold GitHub requires before a paid plan can be listed. A 2025 roundup prices seven tools between free and $49 a month.
 
 ### Who experiences the problem
-Product-led SaaS teams of 2–20 where a PM or founder owns the changelog; solo SaaS founders who skip changelogs entirely. The buyer and user are the same person. No reliable count of such teams exists; the incumbents each claim thousands of customers.
+Product-led SaaS teams of 2–20; the buyer and user are the same person. No count of US SaaS companies exists; the proxy is 1.69 million US software developers.
 
 ### Value of solving it
-One or two hours per release, plus the retention effect of visible momentum. Nobody has quantified it, which is itself a warning: this is a "nice to have" and will churn like one.
+An hour or two per release plus the retention effect of visible momentum. Nobody has quantified it, which is a warning about churn.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| Headway | Simple changelog + widget | Free; Pro $29/mo | No features since 2021, no AI |
-| Beamer | Changelog + feedback + NPS | Starter $59/mo (5k MAU) to Scale $299/mo; add-ons $99/mo each | MAU metering, expensive for small apps |
-| Canny | Feedback + changelog, "Autopilot" AI | Free (25 tracked users); Pro $79/mo annual | Tracked-user metering |
-| Featurebase | Feedback/support suite | Growth $29/seat/mo; $0.49 per AI resolution | Per seat; pivoted to support |
-| AnnounceKit | Announcements | $79–$399/mo, AI editor on all paid plans | Price |
-| Worknotes, ReleaseGlow, ReleasePad | AI-native 2025–26 entrants | $19–$29/mo flat; ReleasePad free GitHub App (33 installs) | Tiny traction, proves the price ceiling |
+| Headway | Simple changelog | Free; Pro $29/mo | No features since 2021 |
+| Beamer | Changelog plus feedback | $49–$299/mo, MAU-metered | Expensive for small apps |
+| Canny | Feedback with AI | Free; Pro $79/mo annual | Tracked-user metering |
+| Featurebase, AnnounceKit, Olvy | Suites | $29–$399/mo | Per seat or price |
+| Worknotes, ReleaseGlow, ProductFlare, Changelogfy | AI-native or cheap | $19–$49/mo | Prove the ceiling |
+| AI Release Notes, ReleasePad (GitHub Apps) | Free | 80 and 33 installs | The marketplace gate |
 
 ### Pricing model
-Flat monthly per workspace, $19–$49, unlimited seats. Do not meter on MAU or seats; that is the incumbents' weakness. A free tier is unavoidable given Headway and ReleasePad.
+Flat $19–$49 per workspace, unlimited seats, free tier unavoidable.
 
 ### Path to profitability
-At €25 ARPU you need 200 customers for €5k MRR and 400 for €10k. Distribution is GitHub Marketplace plus "Beamer alternative" SEO. Running cost is trivial (LLM cost per changelog entry is under a cent). The problem is not cost but churn: low-urgency tools lose 5–7% per month, so 400 customers need 25–30 new signups a month forever. Realistic ceiling for a solo founder: €3–5k MRR.
+At $25 ARPU you need 200 customers for $5k MRR and 400 for $10k. Low-urgency tools lose 5–7% a month. Realistic ceiling $3–5k MRR.
 
 ### Where AI is used
-- **In the product:** rewriting PR titles and diffs into customer language, classifying entries (feature, fix, breaking), producing per-audience versions, drafting the digest email. Straightforward and reliable with today's models.
-- **To build it:** the whole thing is a well-trodden pattern (GitHub App, webhook handler, CRUD, embeddable widget, email). A coding agent produces 80% of it from a spec.
+Rewriting PR titles and diffs into customer language, classifying entries, per-audience versions, digest emails. Reliable and cheap.
 
 ### MVP
-- **Doing:** GitHub App install, merged-PR webhook, AI draft with human approve, hosted changelog page on a custom domain, embeddable widget, monthly email digest.
-- **Not doing:** feedback boards, NPS, roadmap voting, GitLab/Jira/Linear sources (v2), in-app segmentation.
+- **Doing:** GitHub App, merged-PR webhook, AI draft with approve, hosted page, widget, monthly email.
+- **Not doing:** feedback boards, roadmap voting, GitLab, Linear and Jira sources (v2).
 - **Effort:** 4 weeks.
-- **Dependencies:** GitHub App permissions, Resend/Postmark, custom domain SSL (Vercel handles it), LLM API.
-- **Hardest part:** the widget (must be light, must not break customer sites) and getting a free-tier product to convert.
+- **Dependencies:** GitHub App, email, custom domains, LLM.
+- **Hardest part:** converting a free-tier product, and reaching 100 installs before you can charge on the Marketplace.
 
 ### Score and verdict
-Pain 2 · Solo 5 · AI 4 · Gap 1 · WTP 2 · Reach 4 = **18/30**. Easy to build, hard to make matter. Build it only as a weekend project or as a feature inside something bigger.
+Pain 2 · Solo 5 · AI 4 · Gap 1 · WTP 2 · Reach 4 = **18/30**. Easy to build, hard to make matter. A weekend project or a feature inside something bigger.
 
 ---
 
-## 18. Postgres/Supabase row-level-security auditor and test harness
+## 18. Postgres/Supabase row-level-security auditor and CI test harness
 
 **One-liner.** Connect a Supabase project; the tool infers the intended access model, generates behavioural tests that log in as different tenants, runs them in CI on every migration, and explains each policy in plain language.
 
 ### Problem statement
-Row-level security (RLS) is the only thing standing between a Supabase app's data and anyone with the public anon key. In May 2025 a disclosed vulnerability (CVE-2025-48757) found 170+ AI-generated apps and 303 endpoints leaking data because RLS was never enabled; roughly one in ten Lovable-built apps was affected and one leak exposed 13,000 users. Supabase responded with RLS-on-by-default, warning labels and a security advisor, but the advisor is a static linter: it says "RLS is enabled with no policy", not "user A can read user B's invoices". The open-source testing tools (pgTAP, supabase-test-helpers, rlsautotest) are thin and manual.
+Row-level security is the only thing between a Supabase app's data and anyone with the public key. In 2025 a disclosed vulnerability found 170+ AI-generated apps leaking data, and an August 2026 scan found 57% of reachable Supabase-backed "vibe-coded" apps allowing unauthenticated table reads. Supabase responded with RLS-on-by-default, advisor emails and, on 24 April 2026, an "RLS Tester" dashboard preview that runs SELECT queries as a chosen role; the fuller CI test harness promised in its 2025 security retrospective has not shipped as of August 2026. Five paid scanners launched at $9–49 a month; none does CI-integrated behavioural tests with generated fixtures.
 
 ### Who experiences the problem
-Solo developers and small teams building on Supabase, especially those using coding agents; agencies shipping many client projects. Supabase reports about 10 million developers and says Claude Code is now the single largest creator of its databases. The buyer is the tech lead or founder; for agencies, the owner.
+Solo developers, agencies and AI-assisted builders on Supabase (about 10 million developers, with coding agents now the largest creator of databases). The buyer is the tech lead or agency owner. US exposure runs through state breach-notification laws and FTC enforcement.
 
 ### Value of solving it
-Breach avoidance. One vendor frames it as "at $20–30 a month it's worthwhile if it prevents a single breach". The GDPR exposure of a leak (notification, reputational damage) dwarfs any subscription. No hours-saved data exists.
+Breach avoidance; one vendor frames $20–30 a month as worthwhile if it prevents one breach.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| Supabase Security Advisor / Splinter | Bundled static lints (30 rules) | Free | No behavioural tests, no CI gate |
-| pgTAP + supabase-test-helpers, rlsautotest | Open-source test tooling | Free | Manual, boilerplate, single maintainers |
-| GuardLayer | Scans Next.js+Supabase on every push | Free 1 repo; $19/mo for 5 | Static |
-| Vibe App Scanner, SafeToShip, Ubserve, SupaExplorer | Black-box "vibe-coded app" scanners | $9–$49/mo; $187 lifetime | Scan, not test; no CI |
+| Supabase Security Advisor, RLS Tester preview | Bundled lints and a SELECT-only tester | Free | No CI, no behavioural tests, no fixtures |
+| pgTAP, supabase-test-helpers, rlsautotest | Open source | Free | Manual, thin |
+| GuardLayer, Vibe App Scanner, SafeToShip, Ubserve, SupaExplorer | Scanners | $7–$49/mo; lifetime deals | Scan, not test |
 | Bytebase | Schema change management | From $20 | Not security-focused |
 
 ### Pricing model
-Per project: $19/mo for 3 projects, $49/mo for 15 (agency tier), with a free single-project tier. One-time "audit report" at $39 as a lead magnet.
+Per project: $19/mo for 3 projects, $49/mo for 15 (agencies), free single project; $39 one-time audit as lead magnet.
 
 ### Path to profitability
-At €25 ARPU you need 200 customers for €5k MRR and 400 for €10k. Agencies are the better buyer: one agency at €49 is worth three hobbyists and churns less. Distribution: Supabase integrations directory, Supabase Discord/discussions, SEO on "Supabase RLS", a free GitHub Action that upsells to the hosted dashboard. Costs are negligible. Realistic ceiling €5–8k MRR unless it expands beyond Supabase.
+At $25 ARPU you need 200 customers for $5k MRR and 400 for $10k; agencies are the better buyer. Distribution: a free GitHub Action, the Supabase partner directory, YouTube and SEO around "Lovable and Bolt security", Hacker News. Ceiling $5–8k MRR unless it expands beyond Supabase. Plan for a 12-month window: the platform has said it will build the test harness.
 
 ### Where AI is used
-- **In the product:** inferring the intended access model from schema, foreign keys and auth setup, then generating pgTAP tests and corrected policies (including the `(select auth.uid())` performance fix); plain-language explanation of each policy. This is genuinely valuable and not something a linter can do.
-- **To build it:** the Supabase Management API client, pgTAP generation templates, the GitHub Action, and the dashboard are all agent-friendly. The agent should also be used to generate a corpus of deliberately broken schemas as test fixtures.
+- **In the product:** inferring the intended access model from schema and auth, generating pgTAP tests and corrected policies, plain-language explanations. Genuinely beyond a linter.
+- **To build it:** Management API client, test generation, GitHub Action and dashboard are agent-friendly; use the agent to generate a corpus of deliberately broken schemas as fixtures.
 
 ### MVP
-- **Doing:** Supabase OAuth connect, read `pg_policies` and table metadata, AI-inferred access model with a confirm step, generated pgTAP suite runnable locally and as a GitHub Action, dashboard with pass/fail per table, plain-language policy explanations.
-- **Not doing:** generic Postgres (v2), storage bucket policies, edge-function auditing, runtime traffic analysis.
+- **Doing:** Supabase OAuth connect, policy and metadata read, AI-inferred access model with confirm, generated pgTAP suite runnable locally and in a GitHub Action, dashboard, policy explanations.
+- **Not doing:** generic Postgres, storage bucket policies, runtime traffic analysis.
 - **Effort:** 6 weeks.
-- **Dependencies:** Supabase Management API and OAuth app, pgTAP, Supabase CLI for local runs, GitHub Action, LLM API.
-- **Hardest part:** inference quality on messy schemas, and the fact that Supabase's own 2026 roadmap lists "a security-focused test harness".
+- **Dependencies:** Supabase Management API and OAuth app, pgTAP, Supabase CLI, GitHub Action, LLM.
+- **Hardest part:** inference quality on messy schemas, and the platform's roadmap.
 
 ### Score and verdict
-Pain 4 · Solo 4 · AI 4 · Gap 2 · WTP 2 · Reach 4 = **20/30**. Real pain and a clear AI angle, but a single-platform dependency where the platform has announced it will build the same thing. Good as a fast, cheap launch with an explicit 12-month horizon; not a long-term business on its own.
+Pain 4 · Solo 4 · AI 4 · Gap 2 · WTP 2 · Reach 4 = **20/30**. Real pain, a clear AI angle, and a single-platform dependency whose owner has started to bundle. A fast, cheap launch with an explicit horizon.
 
 ---
 
 ## 19. LLM application observability for small teams
 
-**One-liner.** Drop-in tracing for LLM apps with cost, latency, and quality drift alerts, priced flat with no "units" to decode.
+**One-liner.** Drop-in tracing for LLM apps with cost, latency and quality-drift alerts, flat pricing with no "units", and SOC 2 from day one.
 
 ### Problem statement
-Teams shipping LLM features need to see cost, latency and output quality per feature, and to catch regressions before users do. The two most SMB-friendly independents were acquired in Q1 2026 (Langfuse by ClickHouse, Helicone by Mintlify), and pricing across the category is opaque: LangSmith charges per seat plus per trace, Langfuse bills in "units" that customers say they cannot predict. From 2 August 2026 the EU AI Act's transparency duties apply, and deployers of high-risk systems will need to retain logs for at least six months from late 2027.
+Teams shipping LLM features need cost, latency and output-quality visibility. The two most SMB-friendly independents were acquired in Q1 2026 (Langfuse by ClickHouse, Helicone by Mintlify); pricing is opaque (per seat plus per trace at LangSmith, "units" at Langfuse); and compliance is tiered by price: Langfuse offers SOC 2 and HIPAA only from its $199 tier plus a $300 a month add-on for SSO, Helicone from $799. Datadog anchors the enterprise at $160 a month for 100,000 spans. In the US, 83% of enterprise buyers require SOC 2 from SaaS vendors, which splits the market into pre-SOC 2 small deals and everything else.
 
 ### Who experiences the problem
-Teams of 1–10 building agents, RAG or chat features, with no platform team. The buyer is the founder or engineering lead. Helicone processed 14 trillion tokens in three years and Langfuse was estimated at about $1.1M ARR in 2024, which shows the demand exists and also how modest the independent revenue was.
+Teams of 1–10 building agents, RAG or chat, with no platform team. The buyer is the founder or engineering lead.
 
 ### Value of solving it
-Model spend control and regression detection. Nobody publishes savings figures. Future value: AI Act log retention as a compliance argument for EU customers.
+Model-spend control and regression detection; nobody publishes savings figures.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Langfuse | Open-source tracing, now ClickHouse-owned | Free 50k units; Core $29/mo; Pro $199/mo | Unit metering |
-| Helicone | Proxy-based, now Mintlify-owned | Free 10k requests; Pro $79/mo | Proxy architecture |
-| LangSmith | LangChain-native | $39/seat + $2.50 per 1k traces | Per seat, LangChain-centric |
-| Braintrust | Eval-first | Pro $249/mo flat | Expensive for tiny teams |
-| Portkey, Lunary, Laminar | Gateway/observability | $20–$49/mo entry | Similar to each other |
-| Arize Phoenix, OpenLLMetry | Open source | Free | Self-host burden |
-| PostHog | Bundled LLM analytics | Per event, first 100k free | Bundling threat |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Langfuse (ClickHouse) | Free; $29; $199 with SOC 2; $300/mo SSO add-on | Unit metering |
+| Helicone (Mintlify) | $79; $799 with SOC 2 and HIPAA | Proxy architecture |
+| LangSmith | $39 per seat plus traces | LangChain-centric |
+| Braintrust | Free with SOC 2; Pro $249 | Eval-first |
+| Arize AX, Lunary, Portkey, Laminar | $20–$50 entry | Similar |
+| Datadog Agent Observability | $160/mo per 100k spans | Bundling |
+| Arize Phoenix, OpenLLMetry | Open source | Self-host |
 
 ### Pricing model
-Flat €29–€79/mo with generous trace limits and unlimited seats, plus EU-only hosting as the differentiator. Usage add-on only above a high ceiling.
+Flat $29–$79 with unlimited seats and SOC 2 included, which implies $10–20k a year of audit overhead.
 
 ### Path to profitability
-At €50 ARPU you need 100 customers for €5k MRR and 200 for €10k. Storage cost grows with retention, so margins are thinner than other ideas here. Distribution: OpenTelemetry-compatible SDK, "Langfuse alternative" and "EU-hosted LLM observability" SEO, integrations with Vercel AI SDK. Ceiling is capped by free open-source alternatives and by PostHog bundling.
+At $50 ARPU you need 100 customers for $5k MRR and 200 for $10k, against free open source and funded owners, with storage costs that grow with retention. Not a solo bet.
 
 ### Where AI is used
-- **In the product:** LLM-as-judge on sampled traffic to detect quality drift, clustering of failure modes, natural-language explanation of cost anomalies. Valuable when done well; requires a good eval design.
-- **To build it:** SDK, ingestion pipeline and dashboards are standard. The agent will need guidance on the ClickHouse/Timescale schema and on OpenTelemetry GenAI semantic conventions, which are still moving.
+LLM-as-judge drift detection, failure clustering, cost-anomaly explanation. Valuable when the eval design is good.
 
 ### MVP
-- **Doing:** OpenTelemetry-compatible ingestion, trace viewer, cost per feature using provider price tables, latency percentiles, a single "quality judge" you configure per feature with Slack/email alerts, EU hosting.
-- **Not doing:** prompt management, playgrounds, dataset/eval suites (v2), fine-tuning, gateway/proxy.
+- **Doing / not doing:** not recommended; if pursued, OpenTelemetry ingestion, cost per feature, one configurable quality judge, alerts.
 - **Effort:** 8 weeks.
-- **Dependencies:** OpenTelemetry/OpenLLMetry SDKs, ClickHouse or Timescale, provider price tables, judge-model API, Slack API.
-- **Hardest part:** competing with free, and keeping up with fast-moving standards while alone.
+- **Dependencies:** OpenTelemetry SDKs, ClickHouse or Timescale, judge model, SOC 2 audit.
+- **Hardest part:** competing with free while paying for SOC 2.
 
 ### Score and verdict
-Pain 3 · Solo 3 · AI 3 · Gap 1 · WTP 3 · Reach 3 = **16/30**. A validated category owned by well-funded players with free tiers. The EU-hosting and flat-price angle is real but thin. Not recommended as a solo bet.
+Pain 3 · Solo 3 · AI 3 · Gap 1 · WTP 3 · Reach 3 = **16/30**. Owned by well-funded players with free tiers. Skip.
 
 ---
 
 ## 20. Cron and background job monitoring with AI root cause
 
-**One-liner.** Heartbeat monitoring for scheduled jobs that also captures the job's output and, when a run fails or goes missing, writes a one-paragraph likely cause and fix.
+**One-liner.** Heartbeat monitoring for scheduled jobs that also captures the job's output and, when a run fails or goes missing, writes a one-paragraph likely cause and fix; listed natively on Vercel.
 
 ### Problem statement
-Backups, billing runs, ETL and queue workers fail silently. Heartbeat monitors (ping a URL when the job finishes) solve detection, but not diagnosis: you get an alert at 3 a.m. and then go read logs. Incumbents are now adding AI root cause at the top end (Sentry Seer, Better Stack AI SRE), but the cheap heartbeat tools do not have logs at all.
+Backups, billing runs and queue workers fail silently. Heartbeat monitors solve detection, not diagnosis. The bootstrapped incumbents publish their numbers (Healthchecks.io at $14k MRR and 652 paying customers in 2024 as a one-person business that will not raise prices; Cronitor with 70,000 developers), the open-source alternative has 90,000 stars, new entrants sell unlimited monitors for $5, and the suites sell AI root cause at cents per event. New US distribution has formalised: Vercel's observability marketplace bills natively for launch partners like Checkly and showcases solo-built cron monitors.
 
 ### Who experiences the problem
-Developers and DevOps at small companies, plus homelab users on free tiers. Cronitor reports "over 70,000 developers"; Healthchecks.io had 652 paying customers in mid-2024. The buyer is the developer.
+Developers and DevOps at small companies, homelab users on free tiers. The buyer is the developer.
 
 ### Value of solving it
-Avoiding silent failures (a missed backup is a disaster you discover months later; an unbilled invoice run is lost revenue). Triage time is reduced by the AI summary but incumbents already price that at cents per event.
+Avoided silent failures; triage time.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Healthchecks.io | One-person business, open source | Free 20 checks; $5, $20, $80/mo; $14k MRR in 2024 | Minimal UI, no logs or root cause; states it will never raise prices |
-| Cronitor | Bootstrapped since 2014 | Free 5 monitors; $2/monitor + $5/user | Adds up; no AI |
-| Dead Man's Snitch | Original heartbeat tool | $5–$49/mo | Dated |
-| Better Stack | Monitoring suite | Free 10 heartbeats; Responder $34/mo; AI SRE $5 per million tokens | Cost grows per responder |
-| Sentry Crons | Bundled with Sentry | 1 monitor included; $0.78 per extra; Seer AI $40/contributor | Needs Sentry SDK |
-| Uptime Kuma | Open source, 90k+ stars | Free | Self-host, no root cause |
-| CronAlert, CronSignal (2026) | Micro-entrants | $5/mo unlimited | Price floor collapsing |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Healthchecks.io | Free 20 checks; $5–$80/mo | No logs or root cause |
+| Cronitor | $2 per monitor plus $5 per user | No AI |
+| Better Stack | Free 10 heartbeats; $34/mo; AI SRE $5 per million tokens | Cost per responder |
+| Sentry Crons | $0.78 per monitor; Seer $40 per contributor | Needs Sentry |
+| Uptime Kuma | Free, open source | Self-host |
+| CronAlert, CronSignal, Tickstem | $5/mo | Price floor |
+| Checkly | Vercel-native billing | Price not fetched |
 
 ### Pricing model
-Flat tiers by monitor count: free 10, $9 for 50, $29 for 250, with AI root cause included (not metered). Do not compete on price with the $5 entrants; compete on "it tells you why".
+Flat tiers by monitor count with AI root cause included: free 10, $9 for 50, $29 for 250.
 
 ### Path to profitability
-At €15 ARPU you need 333 customers for €5k MRR and 667 for €10k. That is a lot of developers for a solo founder, and the reference point (Healthchecks.io at $14k MRR after nine years) shows how slow this category compounds. Ingest cost is low but not zero at scale. Distribution: SEO on "cron monitoring", integrations with GitHub Actions/Supabase cron/Vercel cron, open-source CLI wrapper. Ceiling around €5k MRR after 2–3 years.
+At $15 ARPU you need 333 customers for $5k MRR and 667 for $10k; Healthchecks.io took nine years to reach $14k MRR. Distribution: Vercel and GitHub marketplaces, integrations with Vercel and Supabase cron, an open-source wrapper CLI. Ceiling about $5k MRR after 2–3 years.
 
 ### Where AI is used
-- **In the product:** correlating a missed or failed run with captured stdout/exit codes and producing a likely cause with a fix; duration anomaly detection. Valuable, and absent from the cheap tools.
-- **To build it:** ingest endpoint, CLI wrapper (`cronwrap -- your-command` that captures output), alert routing and dashboard are agent-friendly. The high-throughput ingest path needs care.
+Correlating a failed run with captured output and producing cause and fix; duration anomaly detection. Absent from the cheap tools.
 
 ### MVP
-- **Doing:** heartbeat URLs, a CLI wrapper that captures output and exit code, missed/failed/slow alerts via email and Slack, AI root-cause summary on failure, simple dashboard.
-- **Not doing:** uptime/HTTP monitoring, status pages, on-call rotations, log search.
+- **Doing:** heartbeat URLs, a CLI wrapper capturing output and exit code, alerts, AI root-cause summary, dashboard.
+- **Not doing:** uptime monitoring, status pages, on-call.
 - **Effort:** 5 weeks.
-- **Dependencies:** Edge ingest, queue, Slack/Twilio/PagerDuty integrations, LLM API.
-- **Hardest part:** reliability expectations (a monitoring tool that goes down is worse than none) and the collapsing price floor.
+- **Dependencies:** ingest, queue, Slack and PagerDuty integrations, LLM.
+- **Hardest part:** reliability expectations and a collapsing price floor.
 
 ### Score and verdict
-Pain 3 · Solo 5 · AI 3 · Gap 2 · WTP 2 · Reach 4 = **19/30**. Proven, honest micro-SaaS economics with a genuine AI wedge, but slow compounding and low ARPU. Fine as a second product; weak as the main bet.
+Pain 3 · Solo 5 · AI 3 · Gap 2 · WTP 2 · Reach 4 = **19/30**. Proven, honest micro-SaaS economics; slow compounding. A second product.
 
 ---
 
 ## 21. Pull-request-driven localisation with context-aware AI translation
 
-**One-liner.** A GitHub App that translates only the strings that changed in a PR, using your glossary, screenshots and per-key notes, and opens the translations as review comments; flat price, unlimited seats.
+**One-liner.** A GitHub App that translates only the strings that changed in a PR, using your glossary, screenshots and per-key notes, with US Spanish variant control, and opens the translations as review comments; flat price, unlimited seats.
 
 ### Problem statement
-The incumbent translation management systems repriced upward in 2025–26: Lokalise removed its free plan and moved to processed-word billing with its cheapest plan at $144/mo (June 2026); Phrase removed its $135 starter and now starts at $525/mo for product teams. Small teams shipping in several languages are priced out and are switching to cheaper tools. Meanwhile AI translation quality is good enough that the labour is now review, not translation, but generic AI translation lacks context (placeholders, length limits, tone, what the screen shows).
+The incumbents repriced upward in 2025–26: Lokalise removed its free plan and moved to processed-word billing from $144 a month (live June 2026); Phrase's cheapest product-team plan is $525. Small teams are switching. The US trigger is Spanish: 44.9 million people speak Spanish at home and 18.4 million of them speak English less than very well; Hispanic households reached 10.2 million homeowners in 2025. The AI-native wedge is already occupied by a funded, three-person competitor (Lingo.dev, $4.7 million raised, customers including Mistral and Cal.com, 5,400 GitHub stars), and coding agents can translate a file ad hoc, so the product must win on workflow.
 
 ### Who experiences the problem
-Development teams shipping web and mobile apps in more than one language: the EU has 24 official languages, and any Nordic company sells in at least two. Indie developers localising Next.js or React Native apps; agencies. The buyer is the engineering lead or founder.
+US development teams adding Spanish, then French, German, Portuguese and Japanese; indie Next.js and React Native developers; agencies. The buyer is the engineering lead or founder.
 
 ### Value of solving it
-Lingo.dev's own calculator prices 50,000 words per month into 10 locales at about $215 all-in, versus $375–$1,245 per month for a TMS licence before any translation cost. For a small team, the saving is several hundred euros a month plus the hours of copy-pasting.
+Lingo.dev's calculator prices 50,000 words a month into ten locales at about $215 all-in versus $375–1,245 a month for a TMS licence before translation.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Lokalise | Enterprise TMS | Explorer $144, Growth $375, Advanced from $999/mo (annual) | Word metering, price hike churn |
-| Phrase | Enterprise TMS | $525–$1,245/mo | Enterprise only |
-| Crowdin | TMS | Free; Pro $59; Team $179/mo | Hosted-words metering |
-| Tolgee | Open source, in-context editing | Free 500 keys; €49–€499/mo | Key caps |
-| Lingo.dev | AI-native, GitHub Action, 5.4k stars | $99/mo + $2 per million tokens | Usage complexity |
-| Languine | Open source, from $19/mo | Cheap | Small |
-| i18nexus, SimpleLocalize, Localazy, locize | Indie tools | €12–€199/mo | Similar; validate the price band |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Lokalise | $144–$999+/mo, processed words | Price hike churn |
+| Phrase | $525–$1,245/mo | Enterprise only |
+| Crowdin | $59–$450/mo | Word metering |
+| Tolgee | Free; €49–€499 | Key caps |
+| Lingo.dev | $99/mo plus $2 per million tokens; GitHub Action | Occupies the wedge |
+| Languine, i18nexus, SimpleLocalize, Localazy, locize | $12–$199/mo | Similar |
 
 ### Pricing model
-Flat €29/€79/€199 per month by number of source strings, unlimited seats and languages, AI translation included up to a fair-use cap. Bring-your-own LLM key as an option to remove margin risk.
+Flat $29/$79/$199 by source strings, unlimited seats and languages, AI included to a fair-use cap, bring-your-own key optional.
 
 ### Path to profitability
-At €60 ARPU you need 84 customers for €5k MRR and 167 for €10k. LLM cost per customer is small (translation of diffs only). Distribution: GitHub Marketplace, "Lokalise alternative" SEO which is currently very active, Next.js/next-intl community, and Nordic dev agencies. A realistic 12-month target is €5k MRR; the ceiling depends on moving up to €199 tiers with agencies.
+At $60 ARPU you need 84 customers for $5k MRR and 167 for $10k. Distribution: GitHub Marketplace (after 100 installs), "Lokalise alternative" search demand, Next.js community, US agencies serving Hispanic markets. A realistic 12-month target is $5k MRR.
 
 ### Where AI is used
-- **In the product:** translation with glossary, screenshot context (Playwright captures the screen where the key appears), placeholder and length validation, tone consistency, and diff-only translation at PR time. This is the whole product and is clearly valuable.
-- **To build it:** GitHub App, file-format parsers (JSON, YAML, .po, .strings, .xml, ARB), check runs and review comments are all standard. The agent is also the right tool to generate parser test fixtures across formats.
+- **In the product:** translation with glossary, screenshot context, placeholder and length validation, diff-only translation at PR time, and Spanish variant control (neutral Latin American, Mexican, Puerto Rican register). This is the whole product.
+- **To build it:** GitHub App, file parsers, check runs and review comments are standard.
 
 ### MVP
-- **Doing:** GitHub App, diff detection of changed keys in JSON/YAML/ARB, AI translation with glossary and per-key notes, translations opened as a review comment or a follow-up commit, glossary UI, simple web dashboard.
-- **Not doing:** a full translation editor, translator marketplace, Figma plugin, mobile string formats beyond ARB (v2), over-the-air delivery.
+- **Doing:** GitHub App, diff detection in JSON, YAML and ARB, AI translation with glossary and notes, review-comment or follow-up-commit output, glossary UI, dashboard.
+- **Not doing:** full translation editor, translator marketplace, Figma plugin, over-the-air delivery.
 - **Effort:** 6 weeks.
-- **Dependencies:** GitHub App permissions (contents, pull requests, checks), LLM API, Playwright for screenshots, optional DeepL.
-- **Hardest part:** screenshot-context capture across arbitrary apps; and the fact that Cursor or Claude Code can translate a file ad hoc, so the product must win on workflow (diff-only, review, glossary enforcement), not on translation.
+- **Dependencies:** GitHub App, LLM, Playwright, optional DeepL.
+- **Hardest part:** a funded AI-native competitor in the same slot.
 
 ### Score and verdict
-Pain 3 · Solo 4 · AI 5 · Gap 3 · WTP 3 · Reach 4 = **22/30**. A live incumbent price shock, a GitHub-native distribution channel, and an AI-first product. Strong second-tier pick; the moat is thin, so speed matters.
+Pain 3 · Solo 4 · AI 5 · Gap 2 · WTP 3 · Reach 4 = **21/30**. A live incumbent price shock, a GitHub-native channel, a US Spanish driver. The moat is thin and Lingo.dev is already there, so speed and workflow decide it.
 
 ---
 
 ## 22. Webhook inbox: receive, verify, queue, retry, replay, fan out
 
-**One-liner.** A hosted endpoint that receives webhooks from Stripe, Shopify, GitHub and others, verifies signatures, stores them durably, retries delivery to your backend, and lets you replay any event, with a flat price and 30-day retention.
+**One-liner.** A hosted endpoint that receives webhooks from Stripe, Shopify and GitHub, verifies signatures, stores them durably, retries delivery to your backend and lets you replay any event, at a flat $15 with 30-day retention.
 
 ### Problem statement
-Receiving webhooks reliably is harder than it looks: serverless cold starts and timeouts, spikes, provider retries that create duplicates, and no way to replay a missed event. The market has a price cliff: Hookdeck's Team plan starts at $39/mo with 7-day retention, Svix jumps from free to $490/mo, Convoy from free self-host to $999/mo. The Standard Webhooks spec (Zapier, Twilio, Supabase, Svix, Kong and 40+ implementations) is making signature verification uniform, which lowers the build cost.
+Receiving webhooks reliably is harder than it looks on serverless platforms. The market has a price cliff: Hookdeck's Team plan starts at $39 with 7-day retention, Svix jumps from free to $490, Convoy to $999. The receiving-side leader (Hookdeck) has raised only $2.7 million; Svix ($13 million, a16z) is outbound-first and lists on Vercel's marketplace as a free lead channel. The Standard Webhooks spec makes signature verification uniform.
 
 ### Who experiences the problem
-Developers integrating payment and e-commerce webhooks into small backends or serverless functions on Vercel or Supabase Edge. The buyer is the developer. Hookdeck claims "thousands of companies".
+Developers integrating payment and e-commerce webhooks into small backends. The buyer is the developer.
 
 ### Value of solving it
-Vendor-reported: 160+ engineering hours saved for one customer, zero data loss across millions of Shopify events for another. For a solo SaaS the value is not losing a paid-invoice event.
+Vendor-reported: 160+ engineering hours saved; zero data loss across millions of events.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Hookdeck | Inbound webhook infrastructure | Free 10k events, 3-day retention; Team $39+/mo, 7-day; Growth $499+ | Metering complexity, short retention on cheap tiers |
-| Svix | Outbound-first, now also ingest; 3.4k stars | Free 50k msgs; Pro from $490/mo | Price cliff |
-| Convoy | Open-source gateway, 2.9k stars | Self-host free; Premium $999/mo | No SMB tier |
-| Inngest, Trigger.dev | Durable functions (adjacent) | $10–$99/mo | Not an inbox |
-| Pipedream, Zapier | Workflow tools | Not verified | Different job |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Hookdeck | Free 10k events; Team $39+; Growth $499+ | Metering, short retention |
+| Svix | Free 50k; Pro from $490 | Price cliff |
+| Convoy, Hook0 | Open source; Premium $999 | No SMB tier |
+| Inngest, Trigger.dev | $10–$99 | Adjacent |
 
 ### Pricing model
-Flat €15/mo for 100k events with 30-day replay, €49/mo for 1M events; usage only above that. The point is to be the boring, predictable option under the price cliff.
+Flat $15 for 100k events with 30-day replay, $49 for 1M.
 
 ### Path to profitability
-At €40 ARPU you need 125 customers for €5k MRR and 250 for €10k. Infrastructure cost is real (durable queue, storage, egress) but small at this scale. Distribution: Stripe/Shopify developer communities, "Hookdeck alternative" SEO, Supabase and Vercel integration listings. Ceiling around €5–10k MRR; the risk is that a platform (Supabase Queues, Svix Ingest) bundles it.
+At $40 ARPU you need 125 customers for $5k MRR and 250 for $10k. Real infrastructure cost and reliability expectations; SOC 2 expected once payment webhooks from mid-market customers flow through. Distribution: Stripe and Shopify developer communities, Vercel and Supabase listings.
 
 ### Where AI is used
-- **In the product:** generating a transform from a sample payload to a target schema, explaining failed deliveries, grouping error patterns. Useful but secondary; this is an infrastructure product.
-- **To build it:** the ingest endpoints, signature verifiers per provider, retry and backoff logic, and the replay UI are all well-documented patterns.
+Generating transforms from sample payloads, explaining failed deliveries. Secondary.
 
 ### MVP
-- **Doing:** per-source ingest URLs, signature verification for Stripe, Shopify, GitHub and Standard Webhooks, durable storage, delivery with retries and backoff, replay, a simple event browser, EU hosting.
-- **Not doing:** outbound webhook sending (Svix's job), transformations (v2), multiple destinations, SLAs beyond "best effort".
+- **Doing:** per-source ingest URLs, signature verification for Stripe, Shopify, GitHub and Standard Webhooks, durable storage, retries, replay, event browser, US and EU regions.
+- **Not doing:** outbound sending, transformations (v2), SLAs beyond best effort.
 - **Effort:** 6 weeks.
-- **Dependencies:** Edge ingest, Postgres or Redis-backed queue, static egress IPs, provider signature schemes.
-- **Hardest part:** reliability. A webhook inbox that drops events is worse than nothing, and 99.99% availability as a solo operator is a lifestyle choice.
+- **Dependencies:** edge ingest, Postgres or Redis queue, static egress IPs.
+- **Hardest part:** reliability as a solo operator.
 
 ### Score and verdict
-Pain 3 · Solo 3 · AI 2 · Gap 3 · WTP 3 · Reach 3 = **17/30**. A real gap under the price cliff, but an operations burden that fits a solo founder poorly and offers little AI leverage.
+Pain 3 · Solo 3 · AI 2 · Gap 3 · WTP 3 · Reach 3 = **17/30**. A real gap under the price cliff, an operations burden that fits a solo founder poorly, little AI leverage.
 
 ---
 
-## 23. Dependency licence and SBOM compliance for small software vendors (EU Cyber Resilience Act)
+## 23. SBOM and software supply-chain evidence for small vendors selling to medical-device, federal and EU markets
 
-**One-liner.** A GitHub App that generates a valid SBOM on every release, keeps a licence policy, tracks vulnerabilities, and assembles the "CRA evidence pack" (SBOM, vulnerability-handling policy, support-period statement, technical documentation drafts) a small vendor needs to keep selling into the EU.
+**One-liner.** A GitHub App that generates an SBOM meeting the 2026 CISA minimum elements on every release, tracks vulnerabilities, and assembles the evidence buyers now ask for: the FDA premarket cybersecurity addendum (per-component support level, end-of-support date, vulnerability risk assessment), an agency-specific attestation draft, and the EU Cyber Resilience Act technical file for exporters.
 
 ### Problem statement
-The EU Cyber Resilience Act (Regulation 2024/2847) entered into force on 10 December 2024. Its vulnerability and incident reporting obligations apply from **11 September 2026** (early warning within 24 hours, notification within 72 hours, final report within 14 days), and it applies in full on **11 December 2027**, including the requirement that manufacturers generate a machine-readable software bill of materials, provide security updates for at least five years and produce technical documentation. Fines reach €15 million or 2.5% of worldwide turnover. The Commission published practical guidance on 27 July 2026. Every software vendor placing a product on the EU market is a "manufacturer", including tiny SaaS companies shipping a desktop agent, a mobile app or an on-prem component, and their enterprise customers have already started asking for SBOMs in procurement.
+The US federal driver weakened in January 2026: OMB memo M-26-05 rescinded the 2022–23 self-attestation mandates, made the CISA attestation form optional and moved SBOMs to "upon request" at agency discretion, with law firms expecting a sprawl of per-agency templates. Two drivers remain firm. First, FDA: since March 2023, section 524B of the Food, Drug and Cosmetic Act requires every premarket submission for a "cyber device" to include an SBOM of commercial, open-source and off-the-shelf components; FDA's guidance (revised June 2025, superseded 3 February 2026) asks for machine-readable SBOMs with per-component support level and end-of-support date, known vulnerabilities with a risk assessment, and delivery to users. FDA made 3,225 510(k) decisions in 2025 (295 AI-enabled devices). Second, CISA, NSA, FBI and 15 foreign agencies published the final 2026 SBOM Minimum Elements on 29 July 2026, adding hashes, licences, signatures and generation metadata; the EU Cyber Resilience Act's reporting duties start 11 September 2026 and full application (with mandatory SBOM) on 11 December 2027. The security suites gate SBOM and licence features to enterprise tiers; Interlynk packages FDA and CRA compliance quote-only with a free tier; sbomify sells a CRA wizard at $159 a month; nobody sells a $49–199 flat evidence pack with the FDA addendum.
 
 ### Who experiences the problem
-EU and exporting makers of "products with digital elements": software vendors, IoT and hardware firms, agencies delivering software, and their suppliers. The Commission's own NIS2 simplification materials reference about 28,700 affected companies including 6,200 micro and small ones, which gives a floor on the number of SMEs facing overlapping obligations. The buyer is the CTO or the person who owns compliance; the users are developers.
+Medical-device software makers (over 6,500 US device companies, more than 80% under 50 employees; 156,264 device listings by US establishments), software vendors selling to federal agencies (1,895 software publishers and 3,927 IT-services firms received prime awards in 2025, plus subcontractors), and any US vendor exporting to the EU. The buyer is the regulatory or quality lead at a device maker or the CTO at a software vendor; the users are developers.
 
 ### Value of solving it
-Market access (CE marking depends on it), fines avoided, enterprise deals won when a customer asks for an SBOM. Security suites that include licence and SBOM features charge $25–$105 per developer per month and gate SBOM export to enterprise tiers; the value to a five-person vendor is a few thousand euros a year in tooling avoided plus the deals that would otherwise stall.
+For device makers, avoided deficiency letters on submissions whose median clearance time was 142 days in 2025; for federal sellers, staying eligible when an agency invokes its discretion; for exporters, €15 million fines. Enterprise suites charge $25–105 per developer per month for the same artefacts.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| Snyk | Developer security suite | Free 200 tests; Team $25+/dev/mo; licence compliance enterprise-only | SBOM gated to enterprise |
-| FOSSA | Licence + SBOM | Free 5 projects; Business $20/project/mo | Project caps, US-centric |
-| Socket | Supply-chain security | Team $25/dev (min 5); Business $50/dev (min 20) | Minimum seats |
-| Mend | Enterprise AppSec | Up to $1,000/dev/yr | Enterprise |
-| sbomify | SBOM hub with "CRA Compliance Wizard" | Community free; Business $159/mo | Closest competitor; early stage |
-| GitHub SBOM export, Dependabot, Syft, Trivy, Dependency-Track | Free baseline | Free | Raw output, no policy, no evidence pack |
-| Manifest Cyber, Cybeats, Interlynk | Enterprise SBOM platforms | Quote-only | Not for SMEs |
+| Snyk, Socket, Mend | Developer security suites | $25–$105 per developer/mo; SBOM and licence at enterprise tiers | Gated |
+| FOSSA | Licence and SBOM | Free 5 projects; $20 per project/mo | Project caps |
+| sbomify | SBOM hub with CRA wizard | Free; $159/mo | No FDA module |
+| Interlynk | SBOM automation with FDA 524B and CRA packaging | Free tier; paid quote-only | Closest competitor |
+| Endor Labs | AI-native supply-chain security, GitHub agent app | Seat-priced, unpublished | Enterprise |
+| Anchore, Chainguard | Government and container-focused | Quote; from $19k | Enterprise |
+| Xygeni | Supply-chain security with SBOM and VDR | About $180/mo | Security-first |
+| GitHub SBOM export, Syft, Trivy, Dependency-Track | Free baseline | Free | Raw output, no evidence pack |
 
 ### Pricing model
-Flat per company: €49/mo (3 products), €149/mo (10 products), €399/mo (agencies and multi-product vendors). Includes SBOM generation, vulnerability tracking, and the evidence pack. Price on the compliance outcome, not on developers.
+Flat per company: $79/mo (3 products), $199/mo (10 products, FDA addendum), $499/mo (agencies and multi-product vendors). Priced on the compliance outcome.
 
 ### Path to profitability
-At €90 ARPU you need 56 customers for €5k MRR and 111 for €10k. Compliance products churn slowly because the artefacts must be maintained. Costs: vulnerability database sync, scanning compute, LLM drafting (small). Distribution: the 11 September 2026 and 11 December 2027 dates are news hooks; content on "CRA for small software vendors"; partnerships with Nordic software associations and CE-marking consultants; GitHub Marketplace. A realistic 12-month target is €5k MRR with the December 2027 deadline pulling demand forward through 2027.
+At $149 ARPU you need 34 customers for $5k MRR and 67 for $10k. Compliance artefacts churn slowly. Costs: vulnerability database sync, scanning compute, LLM drafting (small). Distribution: medical-device regulatory consultants and quality-system vendors (the device maker's trusted channel), FDA-cybersecurity content, GitHub Marketplace, CRA content for exporters. Timing: the FDA driver is now and continuous; the EU date is December 2027; the federal driver is opportunistic.
 
 ### Where AI is used
-- **In the product:** summarising licence obligations per component; drafting the vulnerability-handling policy, the support-period statement and technical-documentation sections from the SBOM and repo metadata; triaging CVEs with reachability context; answering customer security questionnaires from the SBOM. All of this is document generation from structured data, where models excel.
-- **To build it:** wrapping Syft/Trivy/cdxgen, ingesting OSV and GitHub Advisory data, SPDX and CycloneDX validation and the GitHub App are all well-documented. The agent should be pointed at the EUR-Lex text and the Commission guidance to generate the checklist model, and a human must review it.
+- **In the product:** generating the FDA per-component support and end-of-support assessments and vulnerability risk narratives, mapping repo evidence to SSDF practices and drafting per-agency attestation answers (the post-rescission template sprawl is the opportunity), VEX statements, licence-obligation summaries, CRA technical-file drafts. Document generation from structured data, where models excel.
+- **To build it:** wrapping Syft or Trivy, ingesting OSV, NVD, GitHub Advisory and CISA KEV, validating SPDX and CycloneDX against the 2026 elements, the GitHub App and PDF export are all documented.
 
 ### MVP
-- **Doing:** GitHub App, SBOM generation (CycloneDX and SPDX) on each release, licence policy with allow/deny lists and CI check, vulnerability tracking against OSV, a per-product "CRA readiness" checklist mapped to Annex I, and the evidence-pack PDF export.
-- **Not doing:** reporting to ENISA's single reporting platform (v2, once the platform's API is public), reachability analysis, container image scanning beyond what Syft gives, conformity assessment for critical products.
+- **Doing:** GitHub App, SBOM generation (CycloneDX and SPDX) with the 2026 minimum elements on each release, vulnerability tracking, end-of-support data, the FDA cybersecurity addendum export (support levels, risk assessment, SBOM delivery page), licence policy with CI check, attestation draft against SSDF.
+- **Not doing:** reachability analysis, container image scanning beyond Syft, CRA conformity assessment for critical products, FedRAMP hosting.
+- **Dependencies:** Syft or Trivy, OSV, NVD, GitHub Advisory, CISA KEV, endoflife-style support data, SPDX and CycloneDX validators, GitHub App, LLM; SOC 2 evidence expected by medtech buyers.
 - **Effort:** 8 weeks.
-- **Dependencies:** Syft or Trivy, OSV.dev, GitHub Advisory Database, SPDX licence list, ClearlyDefined, GitHub App, LLM API.
-- **Hardest part:** the harmonised standards are still being written, so the checklist must be kept current, and many SMEs do not yet know they are "manufacturers". Education is part of the marketing.
+- **Hardest part:** selling into device makers through their regulatory consultants, and the fact that the strongest calendar hooks are now EU.
 
 ### Score and verdict
-Pain 4 · Solo 4 · AI 4 · Gap 4 · WTP 4 · Reach 3 = **23/30**. The best developer-tools idea in this set: a hard regulatory deadline, an unoccupied €49–€149 price band, low-cost inputs, and document-generation AI at the core. Timing is now; the reporting obligations start this month and the full regime is fifteen months out.
+Pain 3 · Solo 4 · AI 4 · Gap 3 · WTP 4 · Reach 3 = **21/30**. Still a strong developer-tools idea, now anchored on the FDA's statutory SBOM requirement and the EU deadline rather than a federal mandate that was withdrawn. The buyer changed from "any software vendor" to "device software makers and exporters", which is smaller but pays more.
 
 ---
 
-## 24. DMARC, SPF and DKIM monitoring with guided fixes for SMBs and agencies
+## 24. DMARC, SPF and DKIM monitoring with guided fixes for SMBs and managed service providers
 
-**One-liner.** Point your DMARC reports at us; we parse them, tell you in plain language which of your sending services fail authentication, give you the exact DNS records to fix it, and alert you when something breaks.
+**One-liner.** Point your DMARC reports at us; we parse them, tell you in plain language which sending services fail authentication, give you the exact DNS records to fix it, and alert you when something breaks, with a white-label tier for managed service providers.
 
 ### Problem statement
-Since February 2024 Google requires anyone sending 5,000+ messages a day to Gmail to have SPF and DKIM, a DMARC policy, aligned From headers, one-click unsubscribe and a spam rate under 0.3%. Microsoft applied the same threshold to Outlook.com in May 2025, junk-foldering non-compliant mail first and rejecting it later. DMARC aggregate reports arrive as XML attachments that no human reads. Enterprise tools start at $5,000 a year; SMB tools exist but jump in price after two domains, which is exactly where agencies and MSPs managing 10–100 client domains sit.
+Since February 2024 Google requires anyone sending 5,000+ messages a day to have SPF and DKIM, a DMARC policy, aligned From headers, one-click unsubscribe and a spam rate under 0.3%; Microsoft applied the same threshold to Outlook.com in May 2025. DMARC aggregate reports are XML nobody reads. The US MSP channel is real and already contested: EasyDMARC and Valimail are on Pax8 (38,000 partners), PowerDMARC and Sendmarc integrate with ConnectWise, and PowerDMARC's MSP tier is about $10 a month. No pricing page fetched shows an AI "explain and fix" layer.
 
 ### Who experiences the problem
-Every SMB that sends newsletters or transactional mail, and above all agencies, MSPs and web hosts managing many client domains. The buyer is the IT admin or agency owner. No count found; the size of the G2 category and the volatility in DMARC adoption data show a large, churning population.
+US SMB senders and the MSPs and agencies managing 10–100 client domains. The buyer is the MSP owner or IT admin.
 
 ### Value of solving it
-Inbox placement. A newsletter that lands in junk at Outlook is lost revenue; a spoofed domain is a fraud risk. Nobody publishes euro figures; the sale is made by showing a customer the report of their own mail failing.
+Inbox placement and spoofing prevention; for MSPs, a resellable line item.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| dmarcian | Category veteran | Free 2 domains; Basic $24/mo; Plus $240/mo (8 domains) | Steep jump after 2 domains |
-| EasyDMARC | SMB-friendly | Free 1 domain; Plus $44.99/mo (2 domains); Premium $89.99 (4) | Per-domain cost |
-| Valimail | Enterprise | Monitor free; Enforce from $5,000/yr | Enterprise |
-| Postmark DMARC Digests | Simple weekly digest | $14/domain/mo | No agency features |
-| Red Sift OnDMARC | Enterprise with a cheap entry | Express from $9/mo (4 domains) | Upsell-driven |
-| DMARCwise (EU indie) | EU-hosted, EUR pricing | €20/mo (3 domains) to €125/mo (100 domains) | Proves the EU niche |
-| DMARCLY | Cheap multi-domain | $17.99–$199/mo; $1 per extra domain | Dated UI |
-| PowerDMARC, Sendmarc, MXToolbox | MSP-oriented | Quote-only or checkout-only | Opaque |
-
-No pricing page fetched for this category shows an AI feature; the "explain and fix" layer is open.
+| Product | Published pricing | Gap |
+|---|---|---|
+| dmarcian | $24–$600/mo | Steep jump after 2 domains |
+| EasyDMARC | Free; $36–$90/mo; MSP tier; on Pax8 | Per-domain cost |
+| PowerDMARC | Free; Basic $8/mo (5 domains); MSP $10/mo; ConnectWise integration | Cheap |
+| Valimail | Monitor free; Enforce $5,000/yr; on Pax8 | Enterprise |
+| Postmark DMARC Digests | $14 per domain | No agency features |
+| Red Sift OnDMARC, DMARCLY, DMARCwise | $9–$199/mo | Commoditised |
 
 ### Pricing model
-Per domain, agency-friendly: €19/mo for 5 domains, €49/mo for 25, €129/mo for 100, white-label reports at the top tier. Free single-domain tier as the funnel.
+Per domain, agency-friendly: $19/mo for 5 domains, $49 for 25, $129 for 100, white-label at the top; free single domain.
 
 ### Path to profitability
-At €35 ARPU you need 143 customers for €5k MRR and 286 for €10k. Costs are trivial (inbound mail parsing, DNS lookups, storage). Distribution: free DMARC checker as SEO lead magnet (the classic play in this category), MSP and web-agency partnerships in the Nordics, listings in Postmark/Resend/Mailgun docs. This is a commoditised category, so growth will be steady rather than fast; a realistic 12-month target is €3–5k MRR, with agencies driving expansion revenue.
+At $35 ARPU you need 143 customers for $5k MRR and 286 for $10k. Costs are trivial. Distribution: a free DMARC checker as lead magnet, MSP communities, listings in Postmark, Resend and Mailgun docs. Marketplace listings (Pax8, ConnectWise) require vendor onboarding, multi-tenant admin and billing hooks, which is a heavy lift for one person. Realistic 12-month target $3–5k MRR.
 
 ### Where AI is used
-- **In the product:** turning aggregate and forensic reports into "these three sources fail DKIM, here is the DNS change", identifying unknown sending sources from IP and PTR data, SPF-flattening advice, and drafting the email to the client's IT person. Modest but real; it removes the one part that needs an expert.
-- **To build it:** inbound mail parsing, XML parsing, DNS checks, and dashboards are standard. The agent can generate the parser test corpus from public DMARC report samples.
+Turning aggregate reports into "these three sources fail DKIM, here is the DNS change", identifying unknown senders, SPF-flattening advice, drafting the email to the client's IT person. Modest but removes the part that needs an expert.
 
 ### MVP
-- **Doing:** inbound report mailbox, DMARC XML parsing, per-domain dashboard with sources and pass/fail, SPF/DKIM/DMARC/MTA-STS record checks, AI "what to fix" explanations, weekly digest and alert on new failing sources, multi-domain agency view.
-- **Not doing:** hosted SPF flattening (v2), BIMI, forensic-report handling, email-warmup or deliverability testing.
+- **Doing:** inbound report mailbox, XML parsing, per-domain dashboard, record checks, AI fix explanations, weekly digest and alerts, multi-domain agency view with white-label reports.
+- **Not doing:** hosted SPF flattening (v2), BIMI, forensic reports, warm-up.
 - **Effort:** 4 weeks.
-- **Dependencies:** Postmark or SES inbound parsing, DNS resolver, IP-to-service mapping dataset, LLM API.
-- **Hardest part:** customers must edit DNS, which is a support burden, and the category is crowded, so the free-tool SEO engine must work.
+- **Dependencies:** inbound parsing, DNS, IP-to-service dataset, LLM.
+- **Hardest part:** a commoditised category with MSP marketplaces already occupied.
 
 ### Score and verdict
-Pain 4 · Solo 5 · AI 3 · Gap 2 · WTP 3 · Reach 4 = **21/30**. The fastest, cheapest build in this cluster with a platform-policy driver behind it. A good first product to learn the motions on, with a modest ceiling.
+Pain 4 · Solo 5 · AI 3 · Gap 2 · WTP 3 · Reach 3 = **20/30**. The fastest, cheapest build in the cluster with a platform-policy driver, a modest ceiling, and a channel that is harder for a solo founder in the US than it looked.
 
 ---
 
-## 25. Status page and incident communications with AI-drafted updates
+## 25. Status page and incident communications with AI-drafted updates and SLA reports
 
-**One-liner.** A hosted status page for small SaaS companies where the first customer-facing update is drafted from the alert, the timeline maintains itself, and the postmortem skeleton is written for you, in the customer's language.
+**One-liner.** A hosted status page for small SaaS companies where the first customer-facing update is drafted from the alert, the postmortem skeleton writes itself, and a monthly SLA report computes credit eligibility per customer tier, with private pages and SSO at $49 instead of $300.
 
 ### Problem statement
-Atlassian Statuspage costs $29–$1,499 a month and looks dated; monitoring suites bundle basic status pages for free; nobody in the cheap tier helps you write the update while you are also fixing the outage. NIS2 (Article 23) now requires in-scope companies to inform service recipients of significant incidents and report to regulators within 24 hours, 72 hours and one month. At the top end incident.io sells AI postmortems and agentic investigations at $25 per seat.
+Atlassian Statuspage costs $29–1,499 a month; Instatus is $20 a month until you need private pages or SSO, then $300. Enterprise SaaS contracts make uptime evidence matter: 64% commit to 99.9% availability, the modal credit is 10% of monthly fees per breach, and the status page is the evidence for credit claims. At the top end incident.io sells AI postmortems at $25 per seat; at the bottom every monitoring suite bundles a basic page free.
 
 ### Who experiences the problem
-Small SaaS and API companies, and agencies hosting client pages. The buyer is the founder or CTO. Instatus, an indie product, went from $1k MRR (February 2021) to $100k ARR (August 2022), which is the best public trajectory in this cluster.
+Small SaaS and API companies whose customer contracts carry SLAs; agencies hosting client pages. The buyer is the founder or CTO.
 
 ### Value of solving it
-Fewer support tickets during outages, calmer and faster communication, and an audit trail for NIS2. Not quantified anywhere.
+Fewer tickets during outages, calmer comms, and accurate credit accounting: a 10% credit on a $5k a month contract is $500 per breached month.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Atlassian Statuspage | Enterprise standard | $29 to $1,499/mo | Price, dated |
-| Instatus | Indie, fast pages | Free (200 subscribers); paid tiers, prices not rendered | Shows the ceiling |
-| Better Stack | Monitoring suite | 1 page free; $15/page/mo | Bundled, no AI comms at low tiers |
-| Hyperping (Paris) | Monitoring + pages | Free; $29–$299/mo; MCP server | European, credible |
-| incident.io | Incident management with AI | Free basic page; $19–$25/seat | Per seat, Slack-centric |
-| UptimeRobot, Cronitor, OnlineOrNot | Bundled pages | $12–$50/page | Free bundling |
-| Cachet | Open source, 15k stars | Free | Self-host |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Atlassian Statuspage | $29–$1,499/mo | Price, dated |
+| Instatus | Free; Pro $20; Business $300 for private pages and SSO | 15x cliff |
+| Better Stack, UptimeRobot, Cronitor, OnlineOrNot | $12–$50 per page, bundled | Free bundling |
+| Hyperping | $29–$299/mo | European, credible |
+| incident.io | $19–$25 per seat with AI | Per seat |
+| Cachet | Open source | Self-host |
 
 ### Pricing model
-Flat €19/€49/€99 by subscriber count and pages, AI drafting included. Multilingual updates (nb, da, sv, de, fr) as the tier differentiator.
+$19/$49/$99 by subscribers and pages; private pages and SSO at $49; SLA reports at $99.
 
 ### Path to profitability
-At €25 ARPU you need 200 customers for €5k MRR and 400 for €10k. Cost is tiny. Distribution: "Statuspage alternative" SEO, Hacker News launch, integrations with Better Stack/UptimeRobot/Sentry webhooks. Realistic ceiling €3–5k MRR given free bundling from every monitoring vendor.
+At $30 ARPU you need 167 customers for $5k MRR and 333 for $10k. Instatus reached about $100k ARR in two years, a plausible ceiling. Distribution: "Statuspage alternative" search, Vercel and GitHub marketplaces, Hacker News.
 
 ### Where AI is used
-- **In the product:** drafting the first update from alert and log context, keeping the timeline consistent, generating the postmortem skeleton, translating updates. Useful in the moment; incumbents at the top end already do it.
-- **To build it:** entirely standard (pages, subscribers, custom domains, webhooks, email/SMS). Four weeks is generous.
+Drafting the first update from alert context, maintaining the timeline, postmortem skeleton, translation, and the SLA credit computation (deterministic). Useful in the moment.
 
 ### MVP
-- **Doing:** hosted page on a custom domain, components and incidents, email/Slack subscribers, monitoring webhooks in, AI-drafted update with approve step, postmortem template, multilingual output.
-- **Not doing:** uptime monitoring itself, on-call, private pages with SSO (v2), SMS at launch.
+- **Doing:** hosted page on a custom domain, components and incidents, subscribers, monitoring webhooks, AI-drafted updates with approve, postmortem template, private pages with SSO, monthly SLA report.
+- **Not doing:** uptime monitoring, on-call, SMS at launch.
 - **Effort:** 4 weeks.
-- **Dependencies:** Resend/Postmark, custom-domain SSL, Slack API, monitoring vendors' webhook formats, LLM API.
-- **Hardest part:** differentiation. Everything here is a commodity except the AI comms, and incident.io is moving down-market.
+- **Dependencies:** email, custom domains, Slack, monitoring webhook formats, LLM.
+- **Hardest part:** differentiation against free bundles.
 
 ### Score and verdict
-Pain 2 · Solo 5 · AI 3 · Gap 2 · WTP 2 · Reach 4 = **18/30**. Easy, pleasant, crowded. Only worth doing bundled with idea 20 or 24 as a monitoring suite.
+Pain 2 · Solo 5 · AI 3 · Gap 2 · WTP 2 · Reach 4 = **18/30**. Easy, pleasant, crowded; the private-page price cliff and SLA reporting are a real but narrow gap. Bundle with 20 or 24.
 
 ---
 
 ## Cluster summary
 
-| # | Idea | Score | ARPU € | Customers to €10k MRR | MVP weeks |
+| # | Idea | Score | ARPU $ | Customers to $10k MRR | MVP weeks |
 |---|---|---|---|---|---|
-| 23 | SBOM / CRA evidence pack | **23** | 90 | 111 | 8 |
-| 21 | PR-driven AI localisation | **22** | 60 | 167 | 6 |
-| 24 | DMARC monitoring with guided fixes | **21** | 35 | 286 | 4 |
-| 18 | Supabase RLS auditor | **20** | 25 | 400 | 6 |
+| 21 | PR-driven AI localisation with US Spanish | **21** | 60 | 167 | 6 |
+| 23 | SBOM evidence pack for device, federal and EU markets | **21** | 149 | 67 | 8 |
+| 18 | Supabase RLS auditor and CI harness | **20** | 25 | 400 | 6 |
+| 24 | DMARC monitoring with guided fixes | **20** | 35 | 286 | 4 |
 | 20 | Cron monitoring with AI root cause | **19** | 15 | 667 | 5 |
 | 17 | AI changelog | **18** | 25 | 400 | 4 |
-| 25 | Status page with AI comms | **18** | 25 | 400 | 4 |
+| 25 | Status page with AI comms and SLA reports | **18** | 30 | 333 | 4 |
 | 22 | Webhook inbox | **17** | 40 | 250 | 6 |
 | 19 | LLM observability | **16** | 50 | 200 | 8 |
 
 ## Sources
-- https://www.worknotes.ai/blog/headway-pricing
-- https://headwayapp.co/
-- https://www.getbeamer.com/pricing
-- https://www.softwareadvice.com/marketing/launchnotes-profile/
-- https://canny.io/pricing
-- https://www.featurebase.app/pricing
-- https://olvy.co/pricing
-- https://announcekit.app/pricing
-- https://noticeable.io/pricing
-- https://www.worknotes.ai/pricing
-- https://www.worknotes.ai/blog/releaseglow-pricing
-- https://github.com/marketplace/releasepad
-- https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
-- https://www.guardlayer.io/blog/supabase-security-breaches
-- https://www.guardlayer.io/
-- https://byteiota.com/supabase-security-flaw-170-apps-exposed-by-missing-rls/
-- https://supabase.com/blog/supabase-security-2025-retro
-- https://www.cnbc.com/2026/06/04/database-startup-supabase-raises-500-million-10point5-billion-valuation.html
-- https://github.com/supabase/splinter
-- https://supabase.com/docs/guides/database/database-advisors
-- https://github.com/usebasejump/supabase-test-helpers
-- https://github.com/theory/pgtap
-- https://github.com/orgs/supabase/discussions/47191
-- https://vibeappscanner.com/
-- https://safetoship.dev/pricing
-- https://ubserve.com/pricing
-- https://supaexplorer.com/
-- https://www.bytebase.com/pricing/
-- https://github.com/langfuse/langfuse
-- https://www.helicone.ai/
-- https://github.com/Helicone/helicone
-- https://github.com/Arize-ai/phoenix
-- https://github.com/traceloop/openllmetry
-- https://dev.to/beton/langfuse-pricing-teardown-2026-2pi9
-- https://costbench.com/software/ai-observability/langsmith/
-- https://www.sentrial.com/blog/langfuse-pricing-why-your-bill-wont-match-your-estimate
-- https://www.cekura.ai/blogs/braintrust-pricing
-- https://lunary.ai/pricing
-- https://portkey.ai/pricing
-- https://laminar.sh/pricing
-- https://wandb.ai/site/pricing/
-- https://preprice.app/ai-costs/posthog
-- https://getlatka.com/companies/langfuse.com
-- https://www.cooley.com/news/insight/2026/2026-08-03-eu-ai-act-transparency-obligations-take-effect-2-august-2026
-- https://artificialintelligenceact.eu/article/12/
-- https://blog.healthchecks.io/2024/07/running-one-man-saas-9-years-in/
-- https://getlatka.com/companies/healthchecksio
-- https://healthchecks.io/pricing/
-- https://cronitor.io/about
-- https://cronitor.io/pricing
-- https://github.com/louislam/uptime-kuma
-- https://deadmanssnitch.com/plans
-- https://betterstack.com/uptime/pricing
-- https://sentry.io/pricing/
-- https://docs.sentry.io/pricing/
-- https://onlineornot.com/pricing
-- https://cronalert.com/compare/cronitor
-- https://cronsignal.io/compare/dead-mans-snitch
-- https://docs.lokalise.com/en/articles/11694835-new-price-plans-everything-you-should-know
-- https://www.locize.com/blog/phrase-lokalise-price-changes-2026
-- https://phrase.com/pricing/
-- https://costbench.com/software/localization/crowdin/
-- https://tolgee.io/pricing
-- https://github.com/tolgee/tolgee-platform
-- https://lingo.dev/en/pricing
-- https://github.com/lingodotdev/lingo.dev
-- https://github.com/languine-ai/languine
-- https://i18nexus.com/pricing
-- https://simplelocalize.io/pricing/
-- https://localazy.com/pricing
-- https://www.locize.com/pricing
-- https://www.standardwebhooks.com/
-- https://hookdeck.com/pricing
-- https://hookdeck.com/customers
-- https://www.svix.com/pricing/
-- https://github.com/svix/svix-webhooks
-- https://github.com/frain-dev/convoy
-- https://getconvoy.io/pricing
-- https://www.inngest.com/pricing
-- https://trigger.dev/pricing
-- https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+- https://www.whitehouse.gov/wp-content/uploads/2026/01/M-26-05-Adopting-a-Risk-based-Approach-to-Software-and-Hardware-Security.pdf
+- https://www.wiley.law/alert-OMB-Rescinds-Secure-Software-Development-Mandate-in-Favor-of-a-Risk-Based-Approach
+- https://www.insidegovernmentcontracts.com/2026/02/omb-rescinds-the-common-form-secure-software-attestation-requirement/
+- https://www.cisa.gov/secure-software-attestation-form
+- https://csrc.nist.gov/projects/ssdf/news
+- https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom
+- https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cybersecurity-medical-devices-quality-management-system-considerations-and-content-premarket
+- https://www.fda.gov/media/119933/download
+- https://innolitics.com/articles/2026-cybersecurity-guidance/
+- https://innolitics.com/articles/year-in-review-ai-ml-medical-device-k-clearances/
+- https://api.fda.gov/device/510k.json
+- https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/
+- https://selectusa.github.io/events/industry-snapshots/medical-device-industry-united-states.html
 - https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act
-- https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/tr-03183.html
-- https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository
-- https://github.com/anchore/syft
-- https://github.com/aquasecurity/trivy
-- https://github.com/DependencyTrack/dependency-track
+- https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+- https://www.interlynk.io/pricing
+- https://www.endorlabs.com/pricing
+- https://anchore.com/pricing/
+- https://www.chainguard.dev/pricing
+- https://xygeni.io/pricing/
+- https://sbomify.com/pricing/
 - https://snyk.io/plans/
 - https://fossa.com/pricing
 - https://socket.dev/pricing
-- https://www.mend.io/pricing/
-- https://sbomify.com/pricing/
-- https://digital-strategy.ec.europa.eu/en/policies/nis2-directive
-- https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+- https://docs.github.com/en/site-policy/github-terms/github-marketplace-developer-agreement
+- https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app
+- https://github.blog/changelog/2026-06-02-extend-github-with-agent-apps/
+- https://github.com/marketplace/ai-github-release-notes
+- https://github.com/marketplace/releasepad
+- https://releaseglow.com/blog/best-changelog-tools
+- https://vercel.com/legal/integrations-marketplace-agreement
+- https://www.checklyhq.com/blog/checkly-vercel-observability-integration/
+- https://community.vercel.com/t/tickstem-cron-jobs-uptime-monitoring-and-heartbeat-checks-for-vercel-apps/41118
+- https://vercel.com/marketplace/svix
+- https://supabase.com/changelog
+- https://supabase.com/blog/supabase-security-2025-retro
+- https://vibe-eval.com/updates/vibe-coding-security-monthly-aug-2026/
+- https://www.guardlayer.io/
+- https://vibeappscanner.com/
+- https://safetoship.dev/pricing
+- https://ubserve.com/pricing
+- https://www.graygroupintl.com/blog/soc-2-compliance-startups/
+- https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm
+- https://langfuse.com/pricing
+- https://www.helicone.ai/pricing
+- https://www.langchain.com/pricing
+- https://www.braintrust.dev/pricing
+- https://arize.com/pricing
+- https://www.datadoghq.com/pricing/list/
+- https://blog.healthchecks.io/2024/07/running-one-man-saas-9-years-in/
+- https://healthchecks.io/pricing/
+- https://cronitor.io/pricing
+- https://betterstack.com/uptime/pricing
+- https://sentry.io/pricing/
+- https://hyperping.com/blog/best-cron-job-monitoring-tools
+- https://docs.lokalise.com/en/articles/11694835-new-price-plans-everything-you-should-know
+- https://phrase.com/pricing/
+- https://tolgee.io/pricing
+- https://lingo.dev/en/pricing
+- https://techcrunch.com/2025/02/18/lingo-dev-is-an-app-localization-engine-for-developers/
+- https://usafacts.org/answers/how-many-people-speak-spanish-at-home/country/united-states/
+- https://nahrep.org/press-releases/2026/03/23/us-census-bureau-hispanics-reach-10-2-million-homeowners/
+- https://www.standardwebhooks.com/
+- https://hookdeck.com/pricing
+- https://www.svix.com/pricing/
+- https://www.svix.com/blog/new-round-of-funding-led-by-a16z
+- https://getconvoy.io/pricing
 - https://support.google.com/a/answer/81126
 - https://substrate.office.com/ip-domain-management-snds/postmaster
-- https://dmarc.org/stats/dmarc/
 - https://dmarcian.com/pricing/
 - https://easydmarc.com/pricing
+- https://easydmarc.com/blog/easydmarc-integrates-with-pax8-marketplace-to-simplify-email-security-for-msps/
+- https://www.pax8.com/en-us/news-post/valimail-and-pax8-partner-offering-automated-dmarc-solutions-to-msps/
+- https://www.barchart.com/story/news/29412863/powerdmarc-launches-its-integration-with-connectwise-at-it-nation-connect-2024-orlando
+- https://www.softwaresuggest.com/powerdmarc/pricing
 - https://www.valimail.com/pricing/
 - https://dmarcdigests.com/
 - https://redsift.com/pricing
-- https://sendmarc.com/pricing/
-- https://dmarcwise.io/pricing
-- https://dmarcly.com/pricing
-- https://www.atlassian.com/software/statuspage/pricing
-- https://www.indiehackers.com/product/instatus
+- https://vendorbenchmark.com/guides/enterprise-saas-sla-benchmark
+- https://aws.amazon.com/compute/sla/
+- https://hyperping.com/blog/instatus-pricing
 - https://instatus.com/pricing
-- https://hyperping.com/pricing
+- https://www.atlassian.com/software/statuspage/pricing
 - https://incident.io/pricing
-- https://incident.io/ai
-- https://github.com/cachethq/cachet
 - https://uptimerobot.com/pricing/

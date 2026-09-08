@@ -1,91 +1,93 @@
 # 06 — Vertical SaaS: health, education, hospitality, associations (ideas 44–50)
 
-Seven ideas in verticals where the buyer is a clinic, a teacher, a restaurant, a nonprofit, a tour operator or a volunteer board. These are the classic "vertical SaaS" plays and the research shows why most are hard for a solo founder: the buyers with money (clinics) sit behind practice-management systems that gate integrations and bundle the feature; the buyers without money (teachers, clubs) already have free or near-free tools that are loved. One idea (46) has strong clinical evidence and business-grade pricing; two (47, 48) have a specific Nordic gap; the rest are documented so they can be ruled out with reasons.
+Seven ideas in verticals where the buyer is a clinic, a teacher, a restaurant, a nonprofit, a tour operator or a volunteer board. The research shows why most are hard for a solo founder in the US: the buyers with money (clinics) sit behind practice-management systems that charge for API access and bundle the feature; the buyers without money (teachers, clubs) already have free or tip-funded tools. Two things change the picture versus a generic view: Medicare reimbursement turns the exercise app (44) from a cost into a revenue line for clinics, and California's SB 68 puts a July 2026 deadline on allergen disclosure for restaurant chains (47). The strongest idea remains clinic recall (46), with strong clinical evidence and business-grade pricing.
 
 Scores use the framework in [00-overview.md](00-overview.md#4-scoring-framework); the full ranking is in [09-scorecard.md](09-scorecard.md).
 
 ---
 
-## 44. Physiotherapy home-exercise programme builder
+## 44. Home-exercise programme builder with Remote Therapeutic Monitoring billing
 
-**One-liner.** A clinician builds a video exercise programme in two minutes from the assessment note; the patient gets an app that tracks adherence and pain; the clinician sees who is falling behind.
+**One-liner.** A physical therapist builds a video exercise programme from the evaluation note in two minutes; the patient app logs adherence and pain; the clinic bills Medicare's Remote Therapeutic Monitoring codes from the logged interactions, with the monthly note drafted automatically.
 
 ### Problem statement
-Non-adherence to home exercise is 50–70% in low-back-pain populations; only about 35% of physiotherapy patients fully complete what is prescribed. Video delivery raised adherence to 76% at three months versus 55% for paper handouts, and a meta-analysis of ten trials found digital delivery better in seven. The category is mature: Physitrack (€22.95 a month, 15,000+ videos), Rehab Guru (free to £20), SimpleSet ($11–15), MedBridge ($325 a year), and in Norway ExorLive with an AI programme builder. Sword Health paid $285 million for Kaia Health in January 2026, so consolidation is happening above. The gates are real: EU guidance (MDCG 2019-11, revised June 2025) lists "software assisting patients in performing therapy exercises" as potential medical-device software, Class I at minimum, and patient data is GDPR Article 9 health data.
+Non-adherence to home exercise runs 50–70%; video delivery lifts three-month adherence to 76% versus 55% for paper. In the US this is also a billing problem: CPT codes 98975–98981 have paid for Remote Therapeutic Monitoring since 2022, the 2026 fee schedule added new codes (98979 for shorter management, 98984–98986 for 2–15 day device supply), and vendors quote 2026 national rates of about $22 for setup, $40 for device supply and $54 for the first 20 minutes of management. One Medicare patient yields roughly $47–118 a month; claims volume is up about 400% since 2022. FDA's January 2026 general-wellness guidance confirms that exercise software without disease claims is not a device, and RTM "devices" are typically Class I. The category is consolidating: Net Health bought Keet from WebPT and now owns Limber Health; Sword paid $285 million for Kaia. Practice-management systems bundle home programmes (Prompt "Engage", WebPT), and HHS's inspector general has flagged remote-monitoring audit risk.
 
 ### Who experiences the problem
-Physiotherapists, chiropractors and occupational therapists in private practice: Norway has over 18,000 authorised physiotherapists, Denmark about 5,500 in private clinics, Sweden about 13,800; the US 283,700. The buyer is the clinic owner or solo practitioner; the users are clinician and patient.
+Outpatient physical-therapy, occupational-therapy and chiropractic clinics: 283,700 physical therapists, about 70,000 chiropractors, over 37,000 outpatient rehab clinics where the largest operator has about 5% share. The buyer is the clinic owner or biller; users are clinician and patient.
 
 ### Value of solving it
-Adherence lifts of 10–20 percentage points, and in the US billable remote therapeutic monitoring (Physitrack sells it at $30 a month plus $8 per active patient). But practitioner spend is only €120–280 a year per seat, so the argument is outcomes and minutes saved, not licence savings.
+Reimbursement: 30 active RTM patients are about $2,550–4,050 a month for a clinic, against software and admin costs of $15–40 per patient-month. The documentation for the management codes (interactive communication, minutes) is where time goes and where audits bite.
 
 ### Main competitors
-| Product | Published pricing | Gap |
-|---|---|---|
-| Physitrack (UK/Finland) | €22.95/mo; RTM add-on | Auto-logout and iOS complaints, price |
-| Rehab Guru (UK) | Free to 6 clients; £10–£20/mo; AI assistant | Sets the floor |
-| SimpleSet (Canada) | $11–$15/mo | Cheap |
-| MedBridge (US) | $325/yr individual; per-episode overage for groups | Complex |
-| ExorLive (Norway) | About NOK 400–500 per user/mo (unconfirmed); 9,510 exercises; AI builder | Nordic incumbent |
-| Physiotools, Wibbi, Exercise Pro Live, HEP2go | £109 packs to free | Long tail |
+| Product | Positioning | Published pricing | Gap |
+|---|---|---|---|
+| Physitrack | Exercise library plus RTM add-on | $23.99 per user/mo; RTM $30 per user plus $8 per active patient | Auto-logout and app complaints; no EMR |
+| MedBridge | Education plus HEP | $325/yr individual; group quote with per-episode overage | Complex |
+| Limber Health, Keet (Net Health) | RTM-first, full-service monitoring | Quote-only | Roll-up, no Epic integration listed |
+| OneStep | Phone-camera gait analysis, $48M raised | Quote | Small provider base |
+| MovementRx | RTM software or service | $15 per active patient/mo, or about 55% revenue share | Shows the two models |
+| WebPT, Prompt Health, PtEverywhere | EMRs with bundled HEP and RTM | $75–$289 per provider/mo | Bundling |
+| SimpleSet, Rehab Guru | Cheap HEP | $12–$20/mo | No billing |
 
 ### Pricing model
-Per practitioner per month at €10–25; the band is set.
+Per active RTM patient, $10 a month, plus a $29 per clinician seat for the programme builder. Aligns the price with the clinic's reimbursement.
 
 ### Path to profitability
-At €18 ARPU you need 278 clinicians for €5k MRR and 556 for €10k, against incumbents with 15,000-video libraries and association discounts. The video library is the moat and costs more than a solo founder can produce.
+At $150 ARPU (a clinic with 10–15 active RTM patients) you need 34 clinics for $5k MRR and 67 for $10k. The economics are the best in this cluster because the product pays for itself out of reimbursement. The costs are the gate: a licensed or produced exercise video library, HIPAA business-associate agreements with every vendor in the stack, and a claims export path (837P via a clearinghouse or the EMR). Distribution: state PT associations, private-practice Facebook groups, billing consultants.
 
 ### Where AI is used
-Drafting programmes from assessment notes (already shipping at ExorLive and Rehab Guru, so table stakes), auto-progression, message summarisation, voice-to-programme. Camera form-checking and "AI adjusts your rehab" push the software toward Class IIa and add liability.
+- **In the product:** drafting programmes from evaluation notes, adherence-driven progression, triaging patient messages, Spanish instructions, checking billing eligibility (16-day thresholds, one-biller rule) and drafting the monthly management note from real logged interactions. Anything that infers "minutes" that did not happen is false-claims exposure; camera form-scoring drifts toward device claims.
+- **To build it:** patient app, programme builder and dashboards are standard; the claims and HIPAA layers are not, and the video library is a content project, not a coding one.
 
 ### MVP
-- **Doing / not doing:** not recommended. The content library, the medical-device qualification and the health-data obligations make this a poor solo bet regardless of build speed.
-- **Effort:** 10 weeks plus content.
-- **Dependencies:** exercise video licence or production, patient app, clinic-system integrations (Cliniko API documented; Nordic systems not found), GDPR Article 9 processing agreements, MDR Class I self-declaration.
-- **Hardest part:** the library and the regulatory qualification.
+- **Doing:** programme builder on a licensed library, patient app with adherence and pain logging (the "device"), eligibility checks, monthly note drafting, RTM billing report and 837P export through one clearinghouse, HIPAA-compliant hosting and messaging.
+- **Not doing:** EMR replacement, telehealth, camera analysis, commercial-payer contracting.
+- **Effort:** 10 weeks plus content licensing.
+- **Dependencies:** exercise video licence, Supabase HIPAA add-on and BAA, Twilio HIPAA, clearinghouse API, LLM vendor BAA.
+- **Hardest part:** the content library and the audit exposure of billing automation.
 
 ### Score and verdict
-Pain 3 · Solo 2 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **14/30**. Mature, gated, cheap. Skip.
+Pain 3 · Solo 2 · AI 3 · Gap 2 · WTP 4 · Reach 3 = **17/30**. Reimbursement makes this a revenue product for clinics, which lifts willingness to pay, but the content, HIPAA and billing gates keep it out of solo range. Consider it only with a content partner.
 
 ---
 
 ## 45. Independent tutor and music teacher management
 
-**One-liner.** Scheduling, make-up credits, invoicing with Vipps and MobilePay, lesson notes and parent updates for a teacher with 20–60 students.
+**One-liner.** Scheduling, make-up credits, invoicing and parent updates for a teacher with 20–60 students, with reminder texts that comply with TCPA consent rules.
 
 ### Problem statement
-The incumbents are old and loved but dated: My Music Staff and TutorBird charge $16.95 a month plus $4.95 per extra teacher, have limited booking widgets, pool make-up credits and lack a native mobile app; TutorCruncher has a steep learning curve. Municipal music schools in the Nordics are served by SpeedAdmin (700 schools, 2 million users) through public procurement. The UK has about 10,000 full-time tutors and 200,000 who tutor part-time; the US self-enrichment-teacher occupation is growing 20% a decade. Nordic independent-teacher counts were not found, and marketplaces list only tens of music tutors per category in Norway.
+The incumbents are old and loved but dated: My Music Staff and TutorBird charge $16.95 a month plus $4.95 per extra teacher (an eight-teacher studio roughly triples its bill), pool make-up credits and lack a native mobile app; TutorCruncher has a steep learning curve. Automated reminder texts to parents fall under the TCPA (prior express consent; $500 per text statutory damages, trebled if wilful; revocation must be honoured within ten business days since April 2025), and under-13 users trigger COPPA. IBISWorld counts 176,000 tutoring and driving-school businesses and 20,000 online tutoring businesses.
 
 ### Who experiences the problem
-Independent teachers and 1–8 teacher studios. The buyer is the teacher; the users are teacher, parents and students.
+BLS counts 162,300 employed tutors and 272,110 self-enrichment teachers, with the latter growing 19% a decade; self-employed teachers are not in those figures. The buyer is the teacher or studio owner; users are teacher, parents and students.
 
 ### Value of solving it
-Fewer missed lessons, faster payment, less admin. No study quantifies it; willingness to pay is $15–20 a month.
+Fewer missed lessons and faster payment; willingness to pay is $15–20 a month, as the incumbents show.
 
 ### Main competitors
 | Product | Published pricing |
 |---|---|
-| My Music Staff, TutorBird | $16.95/mo + $4.95 per teacher |
+| My Music Staff, TutorBird | $16.95/mo plus $4.95 per teacher |
 | Teachworks | $16.49–$187.99/mo plus per-lesson fees |
 | TutorCruncher | $30–$80/mo plus 1% |
-| Fons, Duet | $19.95/mo; $20/mo + 1% |
-| Bizzly (UK entrant) | £19–£49/mo flat |
-| Acuity + Stripe | $20–$61/mo |
-| SpeedAdmin (Denmark) | Municipal tenders |
+| Fons, Duet | $19.95/mo; $20/mo or $99/yr plus 1% |
+| Opus1.io (schools) | $98–$325/mo |
+| Acuity plus Stripe | $20–$61/mo |
 
 ### Pricing model
-Flat $15–20 a month.
+Flat $19 a month per studio, unlimited teachers, which is the incumbents' weakness.
 
 ### Path to profitability
-At €17 ARPU you need 294 teachers for €5k MRR and 588 for €10k, against fifteen-year-old incumbents and "Calendly plus Stripe". Not attractive.
+At $18 ARPU you need 278 studios for $5k MRR and 556 for $10k, against fifteen-year-old incumbents and "Calendly plus Stripe". Not attractive.
 
 ### Where AI is used
-Lesson-note and practice-plan drafting from voice after each lesson, parent progress summaries, invoice chasing. Useful but small; recording minors raises consent issues.
+Voice lesson notes to parent summaries, practice plans, invoice chasing, make-up scheduling. Small.
 
 ### MVP
-- **Doing / not doing:** not recommended as a business; fine as a side project with Vipps and MobilePay as the Nordic hook.
+- **Doing / not doing:** not recommended as a business; a fine side project.
 - **Effort:** 5 weeks.
-- **Dependencies:** Stripe, Vipps/MobilePay, calendar sync, SMS.
+- **Dependencies:** Stripe Connect, calendar sync, Twilio with consent capture and STOP handling, QuickBooks export.
 - **Hardest part:** tiny ARPU.
 
 ### Score and verdict
@@ -95,173 +97,174 @@ Pain 2 · Solo 5 · AI 3 · Gap 2 · WTP 2 · Reach 3 = **17/30**. Easy, pleasan
 
 ## 46. Small clinic recall and no-show reduction
 
-**One-liner.** Two-way SMS recalls and reminders for dental, vet and physio clinics that understand "can I move it to Thursday", rebook automatically, and backfill cancelled slots from a waitlist, with a no-show risk score per appointment.
+**One-liner.** Two-way SMS recalls and reminders for dental, veterinary and physical-therapy practices that understand "can I move it to Thursday", rebook automatically, backfill cancelled slots from a waitlist, and keep a TCPA-safe consent ledger.
 
 ### Problem statement
-Dental no-show rates run 15–20% (up to 30% in some practices), and each missed slot costs $200–400 in production. The evidence for the fix is unusually strong: a Cochrane review of eight trials found SMS reminders raised attendance from 67.8% to 78.6%, as effective as phone calls and 55–65% cheaper. Recall (getting patients back for hygiene visits) is the revenue engine, which is why Weave and Solutionreach include it in every tier. But the US tools are quote-only, phone-bundled and on annual contracts, and the practice-management systems increasingly include basic reminders (Cliniko, Provet, Dentally). The Nordic angle: Vetstoria charges Nordic vets €249 a month for what costs €199 elsewhere in the EU, which shows both willingness to pay and thin competition; the Nordic dental systems (Opus Dental, Aspit, Physica) have no public integration terms.
+Dental no-show rates run 15–20% and each missed slot costs $200–400 of production; a Cochrane review of eight trials found SMS reminders lift attendance from 67.8% to 78.6% at 55–65% lower cost than calls. The US market is large and priced high (Weave from $199 a month plus setup fees, NexHealth from about $299, Solutionreach on annual contracts), and the practice-management systems have started bundling one-way reminders (Jane App includes unlimited free SMS reminders; Open Dental sells eConfirmations at $25 a month). Two gates define the product. First, TCPA: the FCC's healthcare exemption allows free appointment reminders without prior consent within limits (one a day, three a week, no marketing), but recall and marketing texts need prior express written consent, revocation must be honoured within ten business days, and after the Supreme Court's June 2025 McLaughlin decision courts no longer defer to FCC interpretations, so litigation risk is up. Second, integration: Dentrix charges $5,000 plus $5,000 for read and write access plus royalties, Curve has no self-serve API, while Open Dental's API is free and NexHealth's Synchronizer resells access to 15+ systems at $0.10 per call.
 
 ### Who experiences the problem
-Norway has about 4,900 dentists, 3,700 in private practice, in a NOK 13.6 billion private market; Denmark 1,358 dental clinics; Sweden 4,202 private-practice dentists; plus physio clinics (idea 44) and vet clinics (count not found). The buyer is the owner or office manager; the user is reception.
+205,088 professionally active dentists (16% in DSO-affiliated practices), over 30,000 veterinary practices mostly with one to three vets, over 37,000 outpatient rehab clinics. The buyer is the owner or office manager; the user is the front desk.
 
 ### Value of solving it
-One recovered slot a day at $200–400 is $50k+ a year; the Cochrane effect on a 20-patient day is about two slots. SMS costs cents.
+One recovered slot a day at $200–400 is $50k+ a year per dental practice; the Cochrane effect on a 20-patient day is about two slots.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| Weave (US) | Reminders, recall, payments, phones | From $199/mo; quote tiers | US, phone bundle |
-| Solutionreach, NexHealth, RevenueWell, Dental Intelligence (US) | Patient communication | Quote; annual contracts | US |
-| Vetstoria (UK/Norway) | Vet booking and reminders | Nordic €249–€449/mo per location | Premium Nordic pricing |
-| PetDesk | Vet reminders | Quote | US |
-| Provet Cloud, Cliniko, Dentally, Pabau, Semble | Practice-management systems with reminders | $45–$395/mo; £125–£320/mo | Bundling; one-way reminders |
-| Nordic PMS (Opus Dental, Aspit, Physica) | Journal systems | Integration terms not found | Gate |
+| Weave | Phones, texts, payments | From $199/mo per location; Pro $249; setup $500–750 | Phone bundle |
+| NexHealth | Scheduling, recall, waitlist via Synchronizer | About $299–350/mo | Modular quote |
+| Solutionreach, RevenueWell, Dental Intelligence | Dental engagement suites | Quote; from $189; from $399 | Annual contracts |
+| PetDesk, Vello, Otto (vet) | IDEXX-ecosystem communication partners | Quote | Ecosystem-gated |
+| Jane App, Cliniko, Open Dental | Practice systems with bundled reminders | $54–$395/mo; $25/mo add-on | One-way only |
 
 ### Pricing model
-Per location: NOK 1,290 a month including 1,000 messages, NOK 2,490 for multi-chair clinics; SMS at cost beyond.
+Per location, $149 a month including 1,000 messages, $299 for multi-provider practices; messages at cost beyond.
 
 ### Path to profitability
-At €150 ARPU you need 34 clinics for €5k MRR and 67 for €10k, from thousands of Nordic clinics that are all listed in public registers. Costs: SMS (NOK 0.7 per message) and LLM intent handling (cents). Clinics churn slowly once recall lists live in the tool. The gate is integration: without a feed from the practice-management system the tool needs CSV imports or a partnership; the first version should pick one system with an API (Cliniko for physio, Provet for vets) and one country.
+At $200 ARPU you need 25 practices for $5k MRR and 50 for $10k. Practices churn slowly once recall lists live in the tool. Costs: SMS (about 1 cent per message), NexHealth Synchronizer fees, LLM intent handling (cents). Pick one system with open or resold access (Open Dental for dental, Jane or Cliniko for PT, ezyVet with partner approval for vets) and one specialty. Distribution: state dental associations, dental Facebook groups, consultants who sell "recall systems", and the Open Dental user community.
 
 ### Where AI is used
-- **In the product:** two-way SMS intent handling (reschedule, cancel, question) with automatic rebooking and waitlist backfill, no-show risk scoring from history, personalised recall copy in the patient's language, summarising replies for reception. This is the differentiator over one-way reminders and is well within current model capability. A full voice receptionist in Nordic languages belongs to idea 43.
+- **In the product:** two-way SMS intent handling (reschedule, cancel, question) with automatic rebooking and waitlist backfill, no-show risk scoring from history, per-procedure recall copy in English and Spanish, summaries of replies for the front desk, and explicit classification of each message as healthcare (exempt) or marketing (consent required) for TCPA. This is the differentiator over bundled one-way reminders.
 - **To build it:** SMS gateway, scheduling logic and dashboards are standard; the PMS connectors are the work.
 
 ### MVP
-- **Doing:** one vertical (vet or physio) with an API-equipped system, appointment sync, reminder and recall sequences, two-way SMS with AI intent and rebooking, waitlist backfill, no-show risk flag, weekly recovered-revenue report.
-- **Not doing:** payments, phones, online booking widgets, dental until a PMS partnership exists.
+- **Doing:** one vertical with an accessible system (Open Dental first), appointment sync, reminder and recall sequences, two-way SMS with AI intent and rebooking, waitlist backfill, consent ledger with STOP handling, no-show risk flag, weekly recovered-revenue report.
+- **Not doing:** payments, phones, online booking widgets, Dentrix and Eaglesoft until revenue justifies the fees.
 - **Effort:** 7 weeks.
-- **Dependencies:** Cliniko or Provet API, Twilio or 46elks Nordic numbers, GDPR Article 9 data-processing agreement, EU hosting, Norway's health-information security code (Normen) to be checked.
-- **Hardest part:** integration access controlled by incumbents, and the fact that basic reminders are becoming free.
+- **Dependencies:** Open Dental API key (1–3 days), NexHealth Synchronizer for expansion, Twilio with 10DLC registration and a HIPAA BAA, hosting BAA, LLM vendor BAA, SOC 2 evidence for DSO buyers later.
+- **Hardest part:** API gatekeepers and TCPA litigation exposure; basic reminders are becoming free.
 
 ### Score and verdict
-Pain 4 · Solo 3 · AI 4 · Gap 2 · WTP 4 · Reach 3 = **20/30**. The best vertical idea here: clinical evidence, business-grade pricing, reachable buyers, and an AI wedge (two-way handling and backfill) that the bundled reminders do not have. The PMS gate decides it.
+Pain 4 · Solo 3 · AI 4 · Gap 2 · WTP 4 · Reach 3 = **20/30**. The best vertical idea: clinical evidence, $150–300 a month price points already paid, reachable buyers, and an AI wedge (two-way handling and backfill) the bundled reminders lack. Integration access decides it.
 
 ---
 
 ## 47. Restaurant allergen matrix and menu compliance
 
-**One-liner.** Upload supplier spec sheets and recipes; the tool extracts allergens and "may contain" warnings, builds the dish-level allergen matrix the law requires, publishes it as a QR menu, and logs staff training.
+**One-liner.** Upload supplier spec sheets and recipes; the tool extracts the nine major allergens and "may contain" warnings, builds the dish-level matrix, publishes menu disclosures and QR menus that satisfy California SB 68 and state training laws, and logs staff training.
 
 ### Problem statement
-EU Regulation 1169/2011 has required allergen information for non-prepacked food since December 2014 (14 allergens), with national enforcement; the UK's Natasha's Law added full ingredient labelling for prepacked-for-direct-sale food. Restaurants rebuild the allergen matrix by hand at every menu change. The UK tools are entrenched but dated (Nutritics reviewers call it "horrendously slow" and unchanged in years; Kafoodle has setup and sync complaints), MenuCalc is US-only, and no AI-native allergen extractor was found. Verbal disclosure remains legal in most EU states, which lowers urgency.
+Federal law requires calorie labelling for chains with 20+ locations (21 CFR 101.11, since 2018) and the Food Code requires the person in charge to know the nine major allergens (sesame since January 2023). States have layered on training and notice laws (Massachusetts, Rhode Island, Michigan, Virginia, Maryland, Illinois with gluten content from January 2026, Connecticut from January 2025, New York), and California's SB 68, signed 13 October 2025, is the first to mandate written disclosure of the nine allergens on menus for chains of 20+ locations, with compliance from 1 July 2026. Restaurants rebuild the allergen matrix by hand at every menu change; a 2025 wrongful-death suit against a Las Vegas restaurant after a disclosed shellfish allergy shows the tort exposure. The tools are recipe-costing products (meez, Galley, MarketMan) with allergen tags as a side feature, or UK-centric compliance tools; no AI-native allergen extractor was found.
 
 ### Who experiences the problem
-About 1.5 million EU food and beverage service enterprises; roughly 29,000 restaurant and catering companies in Sweden, an unverified 7,700 restaurants in Norway. The buyer is the owner or manager; the user is the chef.
+412,498 independent restaurant locations (down 2.3% in 2025) and 263,000+ chain units. Chains with 20+ units are the legally bound buyer for menu labelling and SB 68; independents are bound by Food Code and state training rules. The buyer is the owner, operations lead or franchisee; the user is the chef.
 
 ### Value of solving it
-Avoided improvement notices, prosecutions and reputational loss; hours per menu change; label reprints. Nothing quantified.
+Avoided citations and SB 68 recordkeeping burden, tort defence (a documented matrix and training log), hours per menu change. Not quantified.
 
 ### Main competitors
 | Product | Published pricing | Gap |
 |---|---|---|
-| Nutritics (Ireland) | Quote; about $21 per feature/mo | Slow, dated |
-| Kafoodle (UK) | About £20 per feature/mo | Setup complaints |
-| Erudus (UK) | Subscription; 92,000 manufacturer specs | UK data |
-| FoodDocs (Estonia) | $79–$299 per site/mo | HACCP-first |
-| MarketMan, Apicbase | $249+/mo; quote from 5 outlets | Inventory-first |
+| meez | $19–$199/mo | Recipes first; allergens as tags |
+| Galley | Free; SMB $99/mo; nutrition at enterprise | Costing first |
+| MarketMan | $199–$249/mo, 12-month contracts | Inventory first |
+| Toast | Allergen tags on online ordering; POS pricing not public | Bundled, shallow |
+| MenuCalc, Nutritics | Quote; about $21 per feature | US and UK compliance tools, dated |
+| FoodDocs | $99–$299 per site/mo | HACCP first |
 | Menu Tiger | Free to $119/mo | QR menus without allergen logic |
 
 ### Pricing model
-Per site: NOK 349 a month, NOK 690 with staff training logs and multi-site.
+Per location for independents ($49 a month) and per brand for regional chains of 20–150 units ($299–999 a month with multi-location matrix management), which is the buyer the law created.
 
 ### Path to profitability
-At €40 ARPU you need 125 restaurants for €5k MRR and 250 for €10k. Restaurants fail often and are price-sensitive, so churn is high; the association channel (NHO Reiseliv, Horesta, Visita) and the overlap with idea 40's producer tool are the distribution.
+At $120 blended ARPU you need 42 customers for $5k MRR and 84 for $10k. Ten regional chains at $499 gets you to $5k. Distribution: state restaurant associations (the California Restaurant Association is already publishing SB 68 guidance), franchise consultants, food-safety trainers, and content on the state-by-state patchwork. Independents churn with closures; chains do not.
 
 ### Where AI is used
-Extracting ingredients and allergens from supplier spec PDFs, photos and Open Food Facts into the recipe-to-dish matrix, menu translation, generating staff training quizzes. High value; human sign-off is mandatory because a missed allergen is a safety event.
+- **In the product:** extracting allergens and "may contain" statements from supplier spec PDFs, photos and USDA FoodData Central into the recipe-to-dish matrix, generating the SB 68 menu disclosure and QR output, Spanish translation, staff training quizzes. Human sign-off is mandatory because a missed allergen is a tort event.
+- **To build it:** recipe and matrix logic is standard; the rules engine needs the federal and state texts, which are short.
 
 ### MVP
-- **Doing:** spec-sheet upload and extraction, recipe builder with allergen roll-up, dish matrix PDF and QR menu, change log, staff training record.
-- **Not doing:** nutrition declarations (idea 40), inventory, POS integration.
+- **Doing:** spec-sheet upload and extraction, recipe builder with allergen roll-up, dish matrix per location with change log, SB 68 menu disclosure export and QR menu, staff training record, state-rule checklist.
+- **Not doing:** nutrition declarations (idea 40), inventory, POS integration at launch.
 - **Effort:** 6 weeks.
-- **Dependencies:** Open Food Facts API, Matvaretabellen, supplier PDFs, LLM, QR hosting.
-- **Hardest part:** liability and low willingness to pay.
+- **Dependencies:** USDA FoodData Central API (free), Open Food Facts, supplier PDFs, LLM, QR hosting, liability insurance.
+- **Hardest part:** the buyer with the legal duty (chains) buys through procurement; the buyer that is easy to reach (independents) pays little.
 
 ### Score and verdict
-Pain 3 · Solo 3 · AI 4 · Gap 3 · WTP 2 · Reach 3 = **18/30**. A real extraction problem with dated incumbents, in a customer base that churns and pays little. Better as a module of idea 40.
+Pain 3 · Solo 3 · AI 4 · Gap 3 · WTP 3 · Reach 3 = **19/30**. A dated-incumbent category with a new California deadline and an extraction problem that fits current models. Sell to regional chains, not to single restaurants.
 
 ---
 
 ## 48. Nonprofit grant discovery, deadline tracking and AI proposal drafting
 
-**One-liner.** A profile of the organisation, a searchable database of foundations and public schemes, a deadline calendar, and proposal drafts written from the organisation's past applications.
+**One-liner.** A profile of the organisation, opportunity matching across foundations and government programmes, a deadline calendar, and proposal drafts written from the organisation's own past applications and Form 990 data, priced for organisations under $500k.
 
 ### Problem statement
-In the US the category is large and funded: Instrumentl (4,500+ customers, $55 million raised in 2025, about $8.9 million ARR estimated) charges $299–999 a month; Candid Premium $219 a month; Grantable offers AI drafting from $50. In the Nordics the tooling is a decade behind: Denmark's Legatbogen is a free search engine with a DKK 129 a month premium tier, and Norway's Legathåndboken is still an annual printed book. Grant Assistant customers claim 50–90% reductions in proposal time.
+Early 2025 brought a funding shock: one third of public charities surveyed by the Urban Institute experienced government funding disruption, 21% lost a grant or contract, and disrupted organisations drew 42% of revenue from government. Demand for replacement foundation funding rose accordingly. The tools are priced for mid-size organisations: Instrumentl at $299–999 a month (4,500 customers, $55 million raised), Candid Premium at $219 a month, GrantStation at $199–699 a year; AI-native Grantable starts at $50 a month with drafting but no discovery. The long tail is enormous: 1.3 million organisations file the 990-N postcard because they have under $50k of gross receipts.
 
 ### Who experiences the problem
-Small nonprofits, associations and foundations: the US has 1.9 million nonprofits; Norway 7,354 sports clubs alone, Denmark 11,000, Sweden 18,000, plus cultural, social and religious organisations whose totals were not found. The buyer is the director or fundraiser.
+1.54 million 501(c)(3) organisations, plus 71,000 (c)(4), 59,000 (c)(6) and 46,000 (c)(7). The buyer is the executive director or development lead; the user is the grant writer or a consultant serving several organisations.
 
 ### Value of solving it
-Grants won and hours saved per proposal (unquantified but large for volunteer-run organisations). Nordic willingness to pay is anchored at DKK 129 a month by Legatbogen.
+A lost $50k grant versus $600–1,800 a year of software; vendor claims of 50–90% less proposal time.
 
 ### Main competitors
 | Product | Published pricing | Gap |
 |---|---|---|
-| Instrumentl (US) | $299–$999/mo | US data, price |
-| GrantStation, Candid (US) | $199–$699/yr; $219/mo | US data |
-| Grantable (US) | Free; $50–$150/mo; AI drafting | No Nordic data |
-| Legatbogen (Denmark) | Free; DKK 129/mo premium | Search only, no drafting |
-| Legathåndboken (Norway) | Printed book | |
+| Instrumentl | $299–$999/mo | Price for small orgs |
+| Candid | Free; Premium $219/mo; Ultimate $1,699/yr | Data owner, free tier |
+| GrantStation | $199–$699/yr | Dated |
+| Grantable | Free; $50–$150/mo; Agency Hub $300 | Drafting without discovery |
+| Grant Assistant | Quote | AI-native, enterprise |
 | Submittable, Foundant, Fluxx | Grantmaker side | |
 
 ### Pricing model
-NOK 490 a month per organisation with unlimited users; consultant tier NOK 1,490 for multiple clients.
+$79 a month per organisation with unlimited users; $249 a month consultant tier for multiple clients; 50% off under $250k budgets.
 
 ### Path to profitability
-At €60 ARPU you need 84 organisations for €5k MRR and 167 for €10k. The moat and the cost are the same: a maintained database of Norwegian foundations (the Stiftelsesregisteret is public) and public schemes, plus deadline extraction. Distribution: Frivillighet Norge, sports federations, municipal culture offices. Overlaps with idea 7 (the agricultural variant) and idea 50 (clubs).
+At $80 ARPU you need 63 organisations for $5k MRR and 125 for $10k. The data moat belongs to Candid and Instrumentl, so the product must win on the drafting workflow (organisation memory, 990 data, reporting) with discovery from free sources (Grants.gov, IRS master file, ProPublica). Distribution: TechSoup, state nonprofit associations, grant-writing consultants who need a client portal.
 
 ### Where AI is used
-Semantic matching of the organisation profile to opportunities, deadline and eligibility extraction from foundation websites, proposal drafting from an "organisation memory" of past applications, report drafting. Auto-submission and hallucinated deadlines are the risks.
+Profile-to-opportunity matching, deadline and eligibility extraction from PDFs, proposal drafting from past applications and 990 data, report drafting. Hallucinated deadlines and one-click submission are the risks.
 
 ### MVP
-- **Doing:** Norway. Foundation database from the public register enriched by scraping, profile-based matching, deadline calendar, proposal drafting with past-application memory, Word export.
-- **Not doing:** US data, submission, grantmaker features.
-- **Effort:** 7 weeks plus database build.
-- **Dependencies:** Stiftelsesregisteret, foundation websites, LLM.
-- **Hardest part:** data maintenance and volunteer organisations' willingness to pay.
+- **Doing:** organisation profile from the IRS master file and 990 data, Grants.gov and foundation matching, deadline calendar, proposal drafting with past-application memory, Word export, consultant workspace.
+- **Not doing:** Candid data licensing at launch, submission, grantmaker features.
+- **Effort:** 7 weeks.
+- **Dependencies:** Grants.gov APIs, IRS EO BMF and 990-N extracts, ProPublica Nonprofit Explorer API, foundation-site scraping, LLM.
+- **Hardest part:** the data moat and small-organisation willingness to pay.
 
 ### Score and verdict
-Pain 3 · Solo 3 · AI 4 · Gap 3 · WTP 2 · Reach 3 = **18/30**. A genuine Nordic gap (a printed book is the incumbent) with weak willingness to pay. Consider merging with idea 7 into one Nordic grant tool sold to advisors and consultants.
+Pain 3 · Solo 3 · AI 4 · Gap 2 · WTP 3 · Reach 3 = **18/30**. A large, reachable, currently distressed customer base behind two data-rich incumbents. Viable as a drafting-first product for the long tail.
 
 ---
 
 ## 49. Small tour and activity operator booking, waivers and capacity
 
-**One-liner.** Bookings, capacity, digital waivers, guide assignment and weather-driven cancellation messaging for guided hikes, kayak and boat charters and small attractions, at a flat price instead of a 6% commission.
+**One-liner.** Bookings, capacity, state-aware digital waivers, guide assignment and weather-driven cancellation messaging for guided tours, charters and outfitters, at a flat price instead of a 6% commission.
 
 ### Problem statement
-FareHarbor charges 6% per direct booking plus 1.9% + $0.30 processing, effectively 9–11% of every sale, with a further OTA fee reportedly added in 2026; operators actively search for alternatives. The alternatives are €49–249 a month plus 1–3% (Rezdy, TrekkSoft, Checkfront, Regiondo) or free tiers tied to the online travel agencies (Bókun, owned by Viator, is free with 0% on Viator bookings). The EU Package Travel Directive revision was approved by Parliament in March 2026, and Norway's package-travel law requires a travel guarantee only for arrangements over 24 hours with an overnight stay.
+FareHarbor charges 6% per direct booking plus 1.9% + $0.30 processing, effectively 9–11% of every sale, with a further OTA fee reportedly added in 2026; operators actively search for alternatives. The alternatives are $49–249 a month plus 1–3% (Rezdy, Checkfront, TrekkSoft) or free tiers tied to Viator (Bókun). Waiver law is a state patchwork: Louisiana, Montana and Virginia do not enforce pre-injury releases and 17 states reject parental waivers for minors, so a state-aware waiver engine is a genuine differentiator. The global tours and activities market is about $271 billion in 2025.
 
 ### Who experiences the problem
-Guided-activity operators, charter boats, ski and climbing guides, small attractions; counts were not found. The buyer is the owner; users are guides and customers.
+Guided tours, charters, outfitters and small attractions; US establishment counts were not retrievable this pass. The buyer is the owner; users are guides and customers.
 
 ### Value of solving it
-An operator with €200k of online sales pays about €12k a year in FareHarbor fees versus €600–3,000 on flat plans; weather cancellations are handled by hand today.
+An operator with $200k of online sales pays about $12k a year in FareHarbor fees versus $600–3,000 on flat plans; waivers cost $19+ a month separately; weather cancellations are handled by hand.
 
 ### Main competitors
 | Product | Model | Gap |
 |---|---|---|
-| FareHarbor (Booking Holdings) | 6% + processing, no monthly | Fees |
-| Peek Pro, Xola, Beyonk | 4–6% commission | Fees; weak for rentals |
-| Bókun (Viator) | Free; $49–$499/mo + 1–1.5% | OTA lock-in |
-| Rezdy, Checkfront, TrekkSoft, Regiondo | €49–€249/mo + 1–3% | Similar to each other |
-| Smartwaiver | From $19/mo | Waivers only |
+| FareHarbor (Booking Holdings) | 6% plus processing, no monthly | Fees |
+| Peek Pro, Xola | About 6%; partner fee | Weak for rentals |
+| Bókun (Viator) | Free; $49–$499/mo plus 1–1.5% | OTA lock-in |
+| Rezdy, Checkfront, TrekkSoft | $49–$249/mo plus 1–3% | Similar |
+| Smartwaiver, WaiverSign | From $19/mo | Waivers only |
 
 ### Pricing model
-NOK 590 a month flat with payment at cost, no booking fee.
+$99 a month flat with payments at cost and no booking fee; waivers included.
 
 ### Path to profitability
-At €90 ARPU you need 56 operators for €5k MRR and 111 for €10k. Seasonality is brutal (most Nordic operators earn in three months), and the online travel agencies control demand. Distribution: Visit Norway regional bodies, NHO Reiseliv, Norwegian and Danish adventure tourism associations.
+At $99 ARPU you need 51 operators for $5k MRR and 101 for $10k. Seasonality is the drag, and the online travel agencies control demand. Distribution: outfitter associations (America Outdoors), charter-boat forums, state tourism offices.
 
 ### Where AI is used
-Weather-driven cancellation and reschedule messages drafted per booking from met.no forecasts, review replies, multilingual listings, capacity forecasts. Useful but not decisive.
+Weather-driven cancellation and reschedule messages drafted per booking from the free NWS API, review replies, Spanish listings, capacity forecasting, waiver risk flags by state. Useful, not decisive.
 
 ### MVP
-- **Doing:** products and schedules, capacity, online checkout with Vipps/MobilePay/cards, digital waivers, guide assignment, met.no-driven weather alerts with drafted customer messages, iCal export.
-- **Not doing:** OTA channel management at launch (v2 via Viator or Bókun), package travel, gift cards.
+- **Doing:** products and schedules, capacity, Stripe checkout, state-aware digital waivers with minor-consent logic, guide assignment, NWS-driven weather alerts with drafted messages, iCal export.
+- **Not doing:** OTA channel management at launch (v2 via Viator), packages, gift cards.
 - **Effort:** 7 weeks.
-- **Dependencies:** Stripe, Vipps, MobilePay, met.no, e-signature, later Viator Partner API.
+- **Dependencies:** Stripe, NWS API, e-signature, later Viator Partner API.
 - **Hardest part:** seasonality and OTA-owned distribution.
 
 ### Score and verdict
@@ -269,152 +272,137 @@ Pain 3 · Solo 3 · AI 3 · Gap 2 · WTP 3 · Reach 3 = **17/30**. A fee-driven 
 
 ---
 
-## 50. Club and association membership, dues and volunteer scheduling
+## 50. Club, league and association membership, dues and volunteer scheduling
 
-**One-liner.** Members, dues with Vipps and MobilePay, events, volunteer shift scheduling and communications for sports clubs, choirs and community organisations.
+**One-liner.** Members, registration and dues at Stripe cost, events, volunteer shift scheduling and communications for youth leagues, clubs and community organisations.
 
 ### Problem statement
-The Nordics have about 36,000 sports clubs alone (7,354 in Norway with 1.86 million memberships, 11,000 in Denmark with 2.8 million, 18,000 in Sweden). Spond, the Norwegian communication app, is free and reached 3 million monthly active users in 2024, monetising through club websites (NOK 499 a month) and payments. The paid incumbents are dense and local: Rubic (NOK 600–1,800 a month plus 2.5% and an NOK 850 volunteer module), Conventus (free to DKK 175 a month), KlubModul (DKK 9,995 one-off), Foreningsadministrator (DKK 69–129), and a new Danish freemium entrant, Skøn Forening. Volunteer boards are slow, price-sensitive and turn over annually.
+The youth-sports incumbents monetise through fee stacks: SportsEngine charges $799–2,199 a year plus 3.2–4.5% and $1–2 per registration, with minimum processing volumes and setup fees reviewers put above $6,000; LeagueApps takes an undisclosed percentage per transaction. At the other end, free platforms have reset expectations: Zeffy is fully free and tip-funded (over $1 billion processed), Givebutter is free with tips or a 3% flat fee, TeamSnap is free for teams, Planning Center is free for church member records. Volunteer boards are slow, price-sensitive and turn over annually.
 
 ### Who experiences the problem
-Volunteer treasurers and boards; members, parents and volunteers.
+96,874 amateur sports clubs and leagues (29,597 under $250k revenue), 46,441 social and recreation clubs, 1.54 million 501(c)(3) organisations; Little League alone has 7,400 leagues. The buyer is the volunteer board or treasurer; users are members, parents and volunteers.
 
 ### Value of solving it
-Treasurer hours, payment-fee spread, volunteer shift scheduling (which Rubic charges NOK 850 a month for). No hours-saved study.
+Fee spread: a 500-registration league at $150 average pays about $3,400–4,400 a year in SportsEngine fees plus the subscription, against Stripe's 2.9% + 30¢. Volunteer scheduling has no priced US benchmark.
 
 ### Main competitors
 | Product | Published pricing |
 |---|---|
-| Spond (Norway) | Free; club website NOK 499/mo |
-| Rubic (Norway) | NOK 600–1,800/mo plus fees and modules |
-| Conventus, KlubModul, Foreningsadministrator, Skøn Forening (Denmark) | Free to DKK 175/mo; DKK 9,995 one-off; DKK 69–149/mo |
-| Wild Apricot, Join It, ClubExpress, Hello Club (US/NZ) | $29–$226/mo |
-| TeamSnap, MemberPress | Free to $499/yr |
+| SportsEngine (NBC Sports) | $799–$2,199/yr plus 3.2–4.5% + $1–2 per registration |
+| LeagueApps | Setup fee plus per-transaction percentage |
+| TeamSnap | Teams free; clubs quote |
+| Zeffy, Givebutter | Free, tip-funded; Givebutter 3% or $29/mo Plus |
+| Wild Apricot, Join It, ClubExpress | $29–$226/mo |
+| Bloomerang, Neon CRM | $79–$439/mo |
+| Planning Center (churches) | Free people module; $15–$239/mo modules |
 
 ### Pricing model
-Member-band flat monthly with transaction fees, matching the market.
+$49 a month flat with Stripe at cost, or free with optional supporter tips (the Zeffy model).
 
 ### Path to profitability
-At €40 ARPU you need 125 clubs for €5k MRR and 250 for €10k, against Spond free and four local incumbents. Not attractive.
+At $50 ARPU you need 100 organisations for $5k MRR and 200 for $10k, against free platforms and governing bodies that mandate SportsEngine or LeagueApps. Not attractive.
 
 ### Where AI is used
-Drafting member communications and annual-meeting minutes, dues chasing, volunteer shift matching by availability, municipal grant application drafting (overlap with idea 48). Nice, not decisive.
+Volunteer shift matching by availability and skills, dues chasing, board minutes and newsletters, roster deduplication, 990-N deadline reminders. Nice, not decisive.
 
 ### MVP
-- **Doing / not doing:** not recommended; the volunteer-scheduling module with AI matching could be sold as an add-on to existing systems instead.
+- **Doing / not doing:** not recommended; the volunteer-scheduling module with AI matching could be sold as an add-on to existing platforms.
 - **Effort:** 7 weeks.
-- **Dependencies:** Vipps MobilePay recurring payments, KID/OCR references, Danish Betalingsservice, sports-federation identity systems, SMS.
-- **Hardest part:** Spond.
+- **Dependencies:** Stripe Connect, SMS with consent, background-check partner for youth coaches, COPPA.
+- **Hardest part:** free platforms and mandated systems.
 
 ### Score and verdict
-Pain 2 · Solo 3 · AI 3 · Gap 1 · WTP 2 · Reach 4 = **15/30**. Reachable, lovable, and already served for free. Skip.
+Pain 2 · Solo 3 · AI 3 · Gap 2 · WTP 2 · Reach 3 = **15/30**. Reachable, lovable, already served for free. Skip.
 
 ---
 
 ## Cluster summary
 
-| # | Idea | Score | ARPU € | Customers to €10k MRR | MVP weeks |
+| # | Idea | Score | ARPU $ | Customers to $10k MRR | MVP weeks |
 |---|---|---|---|---|---|
-| 46 | Clinic recall and no-show reduction | **20** | 150 | 67 | 7 |
-| 47 | Restaurant allergen matrix | **18** | 40 | 250 | 6 |
-| 48 | Nonprofit grant discovery and drafting | **18** | 60 | 167 | 7 |
-| 45 | Tutor and music teacher management | **17** | 17 | 588 | 5 |
-| 49 | Tour and activity operator booking | **17** | 90 | 111 | 7 |
-| 50 | Club membership and volunteers | **15** | 40 | 250 | 7 |
-| 44 | Physio home-exercise builder | **14** | 18 | 556 | 10 |
+| 46 | Clinic recall and no-show reduction | **20** | 200 | 50 | 7 |
+| 47 | Restaurant allergen matrix (SB 68) | **19** | 120 | 84 | 6 |
+| 48 | Nonprofit grant discovery and drafting | **18** | 80 | 125 | 7 |
+| 44 | Home-exercise builder with RTM billing | **17** | 150 | 67 | 10 |
+| 45 | Tutor and music teacher management | **17** | 18 | 556 | 5 |
+| 49 | Tour and activity operator booking | **17** | 99 | 101 | 7 |
+| 50 | Club and league membership | **15** | 50 | 200 | 7 |
 
 ## Sources
+- https://www.tenovi.com/rtm-cpt-codes-2026/
+- https://www.nixonlawgroup.com/resources/cms-finalizes-2026-remote-monitoring-reimbursement-updates-what-changed-for-rpm-and-rtm
+- https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other
+- https://vmghealth.com/insights/blog/remote-therapeutic-monitoring-implications-for-physical-therapy-operators/
+- https://www.sprypt.com/blog/exploring-remote-therapeutic-monitoring-rtm-and-its-advantages-for-pt-clinics
+- https://mymovementrx.com/best-rtm-software-for-physical-therapy-clinics-2026-buyers-guide/
+- https://www.physitrack.com/insights/best-rtm-software-physical-therapy
 - https://support.physitrack.com/article/159-how-much-does-physitrack-cost
-- https://www.physitrack.com/insights/why-patients-stop-home-exercises-adherence-data
-- https://www.physitrack.com/insights/physitrack-reviews
-- https://www.physio-pedia.com/Adherence_to_Home_Exercise_Programs
-- https://www.rehabguru.com/pricing
-- https://simpleset.net/pricing/
-- https://otpotential.com/blog/medbridge-group-discounts
-- https://www.exorlive.com/no/klinikkpakke
-- https://health.ec.europa.eu/system/files/2020-09/md_mdcg_2019_11_guidance_en_0.pdf
-- https://quickbirdmedical.com/en/medical-device-class-software-app-mdr/
-- https://gdpr-info.eu/art-9-gdpr/
-- https://www.mobihealthnews.com/news/sword-health-acquires-kaia-health-285m
-- https://fysio.no/om-oss
-- https://www.fysio.dk/om-os/hvem-er-vi/medlemstal
+- https://www.cov.com/en/news-and-insights/insights/2026/01/fda-issues-revised-guidance-on-general-wellness-products
+- https://en.wikipedia.org/wiki/OneStep
+- https://www.webpt.com/products/keet
+- https://www.limberhealth.com/
+- https://www.pteverywhere.com/pricing
 - https://www.bls.gov/ooh/healthcare/physical-therapists.htm
-- https://www.mymusicstaff.com/pricing/
-- https://www.tutorbird.com/pricing/
-- https://teachworks.com/pricing
-- https://www.capterra.com/p/145838/TutorCruncher/pricing/
-- https://fons.com/pricing
-- https://www.duetpartner.com/pricing
-- https://www.bizzly.net/guides/mymusicstaff-alternatives
-- https://www.acuityscheduling.com/pricing
-- https://www.speedadmin.com/no/om-oss
-- https://www.ib-tutoring.net/how-many-tutors-are-in-the-uk
-- https://www.cochrane.org/CD007458/EPOC_mobile-phone-messaging-reminders-attendance-healthcare-appointments
-- https://clerri.com/blog/dental-patient-no-show-statistics
-- https://tensorlinks.com/blog/true-cost-of-no-show-appointments/
-- https://pmc.ncbi.nlm.nih.gov/articles/PMC9680883/
+- https://www.withorbital.com/data/how-many-chiropractors-in-the-us/
+- https://oig.hhs.gov/reports/all/2024/additional-oversight-of-remote-patient-monitoring-in-medicare-is-needed/
+- https://www.bls.gov/oes/2023/may/oes253041.htm
+- https://www.bls.gov/oes/2023/may/oes253021.htm
+- https://www.ibisworld.com/united-states/number-of-businesses/tutoring-driving-schools/1544
+- https://www.law.cornell.edu/uscode/text/47/227
+- https://bassberry.com/news/tcpa-exemptions-for-healthcare-companies/
+- https://natlawreview.com/article/upcoming-telephone-consumer-protection-act-tcpa-changes-2025
+- https://www.consumerfinancialserviceslawmonitor.com/2026/01/fcc-further-extends-effective-date-for-tcpa-revoke-all-rule/
+- https://www.faegredrinker.com/en/insights/publications/2025/6/supreme-court-decides-mclaughlin-chiropractic-associates-v-mckesson-corp
+- https://ddp.dentrix.com/pages/faq
+- https://www.opendental.com/site/apisetup.html
+- https://www.opendental.com/site/fees.html
+- https://supergood.ai/api-report-card/curve-dental
+- https://synchronizer.nexhealth.com/
+- https://developers.ezyvet.com/
+- https://software.idexx.com/neo-integrations
+- https://developers.jane.app/docs/getting-started
+- https://jane.app/pricing
 - https://www.getweave.com/pricing/
-- https://www.solutionreach.com/pricing
+- https://www.themolarreport.com/learn/weave-pricing
 - https://www.nexhealth.com/pricing
-- https://www.vetstoria.com/pricing/
-- https://www.provet.com/pricing
-- https://www.cliniko.com/pricing/
-- https://docs.api.cliniko.com/
-- https://www.dentally.com/pricing
-- https://www.twilio.com/en-us/sms/pricing/no
-- https://www.tannlegeforeningen.no/arkiv/nyhetsarkiv/nyheter/2024-06-24-ny-rapport-om-den-private-tannhelsetjenesten.html
-- https://dentamatch.dk/hvor-mange-tandlaeger-er-der-i-danmark/
-- https://ptl.se/branschfakta/tandvarden-i-siffror/
-- https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R1169
-- https://lovdata.no/dokument/SF/forskrift/2014-11-28-1497
-- https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses/allergen-guidance-for-food-businesses
-- https://www.capterra.com/p/173920/Nutritics-Labelling/
-- https://www.capterra.com/p/197380/Kafoodle-Kitchen/
-- https://www.menucalc.com/pricing
-- https://erudus.com/
-- https://www.fooddocs.com/pricing
-- https://get.apicbase.com/pricing/
-- https://www.marketman.com/pricing
-- https://www.menutiger.com/pricing
-- https://www.matvaretabellen.no/api/
-- https://openfoodfacts.github.io/openfoodfacts-server/api/
-- https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/10092.pdf
+- https://softwarefinder.com/emr-software/revenuewell
+- https://www.selecthub.com/p/dental-software/dental-intelligence/
+- https://www.ada.org/resources/research/health-policy-institute/dentist-workforce
+- https://hellopearl.com/blog/dentist-workforce-statistics-2026-trends-and-insights-pearl-ai
+- https://co.vet/post/veterinarian-facts/
+- https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/menu-labeling-requirements
+- https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies
+- https://www.fda.gov/media/164231/download
+- https://www.foodallergy.org/our-initiatives/advocacy/know-your-rights/food-allergies-and-food-service-establishments
+- https://www.gtlaw.com/en/insights/2025/9/california-poised-to-become-first-state-to-mandate-food-allergen-disclosures-for-restaurants-sb-68-awaits-gov-newsoms-signature
+- https://www.calrest.org/allergen-disclosures-sb-68
+- https://aaafoodhandler.com/food-allergen-law/
+- https://snacksafely.com/2025/01/family-sues-vegas-restaurant-for-anaphylactic-death-longhorn-sued-for-landing-diner-in-er-trigger-warning/
+- https://www.nrn.com/independent-restaurants/the-independent-restaurant-sector-shrunk-by-2-3-in-2025
+- https://www.getmeez.com/pricing
+- https://www.galleysolutions.com/blog/new-pricing-for-smb-kitchens
+- https://www.g2.com/products/marketman/pricing
+- https://support.toasttab.com/en/article/Add-Allergen-Information-to-Online-Ordering-Menu-Items
+- https://www.urban.org/research/publication/how-government-funding-disruptions-affected-nonprofits-early-2025
+- https://ministrywatch.com/data-book-brief-a-look-at-tax-exempt-activity-in-2024/
+- https://nccs.urban.org/nccs/datasets/postcard/
+- https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf
 - https://www.instrumentl.com/pricing
-- https://theaiinsider.tech/2025/04/25/instrumentl-raises-55m-from-summit-partners-to-accelerate-their-ai-grant-fundraising-platform/
-- https://getlatka.com/companies/instrumental.com
-- https://grantstation.com/
 - https://candid.org/pricing/
-- https://learning.candid.org/number-of-nonprofits-in-us/272665
 - https://www.grantable.co/pricing
-- https://www.grantassistant.ai/
-- https://www.legatbogen.dk/
-- https://www.universitetsforlaget.no/legathandboken-2026
-- https://equipdash.com/fareharbor-alternatives
-- https://orhuk.com/blog/fareharbor-alternatives-2026-tour-operators
-- https://www.reddit.com/r/smallbusiness/comments/134oz0a/experiences_with_peek_pro_or_fareharbor_or_other/
-- https://www.xola.com/pricing/
+- https://www.sportwaiver.com/waivers-for-minor-participants-statutes-relating-to-particular-activities-part-i/
+- https://nonprofitrisk.org/resources/waivers-and-young-participants/
+- https://arival.travel/research/the-outlook-for-operators-the-state-of-tours-activities-attractions/
 - https://www.bokun.io/pricing
 - https://rezdy.com/pricing/
 - https://www.checkfront.com/pricing/
-- https://www.trekksoft.com/en/pricing
-- https://go.regiondo.com/pricing
-- https://www.beyonk.com/pricing
-- https://www.smartwaiver.com/pricing
-- https://www.consilium.europa.eu/en/press/press-releases/2025/12/02/consumer-protection-council-and-parliament-strike-a-deal-on-revising-rules-on-package-travel/
-- https://lovdata.no/dokument/NL/lov/2018-06-15-32
-- https://docs.viator.com/partner-api/
-- https://api.met.no/
-- https://www.ssb.no/kultur-og-fritid/kultur/kulturstatistikk/idrett-og-friluftsliv/tabeller/tabell-1-antall-idrettslag-og-medlemskap-etter-idrettskrets
-- https://www.dst.dk/da/Statistik/nyheder-analyser-publ/nyt/NytHtml?cid=54521
-- https://idrottsstatistik.se/foreningsidrott/medlemmar/
-- https://www.spond.com/news-and-blog/spond-3-million-monthly-active-users/
-- https://help.spond.com/club/en/articles/179796-monthly-website-cost
-- https://rubic.no/priser/
-- https://web.conventus.dk/priser/
-- https://www.klubmodul.dk/priser
-- https://www.foreningsadministrator.dk/priser/
-- https://skonforening.dk/pricing
+- https://equipdash.com/fareharbor-alternatives
+- https://www.waresport.com/blog/sportsengine-pricing-2026-hidden-fees-vs-waresport
+- https://leagueapps.com/pricing/
+- https://www.teamsnap.com/pricing
+- https://www.zeffy.com/home/free-online-fundraising-platform
+- https://givebutter.com/pricing
+- https://help.planningcenter.com/en/136790-planning-center-pricing.html
+- https://www.causeiq.com/directory/amateur-sports-clubs-list/
 - https://www.wildapricot.com/pricing
 - https://www.joinit.com/pricing
-- https://helloclub.com/pricing
-- https://developer.vippsmobilepay.com/

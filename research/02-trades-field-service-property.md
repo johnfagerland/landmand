@@ -1,6 +1,6 @@
 # 02 — Trades, field service & property (ideas 8–16)
 
-Nine ideas where the buyer is a small business that does physical work or owns physical assets. The common thread is that these buyers pay business prices (per-seat $30–60 a month is normal in trades software) and drown in paperwork that phones can now capture. The common obstacle is that every one of these categories already has funded US incumbents, so the wedge must be a Nordic regulation, a Nordic data source, or a workflow the incumbents have not built yet.
+Nine ideas where the buyer is a small business that does physical work or owns physical assets. The US has 521,315 specialty-trade contractor establishments with employees (80% under ten staff) plus 1.9 million one-person trade businesses, 254,630 general-contractor establishments, 19.3 million rental properties and 373,000 community associations. These buyers pay business prices, and their paperwork can now be captured by a phone. The obstacle in every category is a funded US incumbent, so the wedge has to be a state law (California's 2025 photo mandate for deposits, Florida's condo reserve-study statute), a data source (free federal imagery and lidar), or a segment the incumbents price out (small property managers, self-managed boards).
 
 Scores use the framework in [00-overview.md](00-overview.md#4-scoring-framework); the full ranking is in [09-scorecard.md](09-scorecard.md).
 
@@ -8,309 +8,309 @@ Scores use the framework in [00-overview.md](00-overview.md#4-scoring-framework)
 
 ## 8. AI estimating and quoting for small trades from photos and voice
 
-**One-liner.** An electrician or plumber walks the job, takes five photos and talks for two minutes; the app produces an itemised quote from their own price list, in Norwegian or Danish, ready to send and e-sign.
+**One-liner.** An electrician or plumber walks the job, takes five photos and talks for two minutes; the app produces an itemised quote from their own price book, in English or Spanish, ready to send and e-sign, and pushes the accepted quote into QuickBooks.
 
 ### Problem statement
-UK surveys in 2026 put a tradesperson's business admin (quoting, invoicing, chasing payment) at 5 hours 20 minutes a week, mostly evenings and weekends, and 93% say running the business stresses them. One trade publication values 8 hours a week of admin for a self-employed electrician at over £17,000 a year of non-billable time. The incumbents have shipped AI text drafting (Jobber Copilot since October 2024, Tradify's SmartWrite on its top plan) but none does photo-and-voice site capture, and none is localised for Nordic VAT, e-invoicing and wholesaler price books. A wave of AI-native quoting apps launched in 2025–26 (QuoteIQ, VoxTrade, Trade Agent, AirQuote), all US, UK or Australian.
+Jobber's 2026 survey of 1,050 US home-service owners found quoting among the three activities that consume most daily time (37%), that only 20% of pros reply to leads within an hour while 55% of customers expect it, and that 52% of owners already use AI. Housecall Pro's 2025 report says AI adopters reclaimed over four hours a week from admin. The incumbents ship text-only quote drafting (Jobber Copilot, Tradify SmartWrite on its top plan) and no photo estimating (Housecall Pro). But a wave of AI-native tools has already arrived: QuoteIQ sells photo-to-quote with satellite measuring from $29.99 a month, Contractor+ added "Estimatic AI", and VoxTrade and AirQuote sit at $10–12 a month, which sets a low price floor. QuoteIQ's "market-accurate" pricing claim is the liability to avoid; unit prices must come from the firm's price book.
 
 ### Who experiences the problem
-The EU has 3.4 million construction enterprises, 63% of construction employment in specialised trades (electricians, plumbers, roofers, painters), and 99% are micro or small. Norway has about 40,000 construction enterprises; NHO Elektro alone has 1,950 member firms and Rørentreprenørene Norge 623. The buyer is the owner-operator of a 1–10 person firm; an office manager appears at about five staff.
+521,315 employer specialty-trade establishments (80% under ten employees), 1.92 million non-employer specialty-trade businesses, 135,337 residential remodelers. The buyer and user are the owner-operator; an office manager appears at about five staff.
 
 ### Value of solving it
-Reclaiming two of the five to eight weekly admin hours at £45–60 an hour is £4,700–6,200 a year, ten to twenty times the price of any tool in the category. Faster quotes also win more jobs; vendor claims of conversion lifting from 30–40% to 45–55% are weakly evidenced but directionally right.
+Four recovered hours a week at $75–150 billable is $15–30k a year of capacity; faster quotes win more work, though no neutral win-rate figure exists.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| Jobber | Home-services field service | $29–$299/mo; AI Receptionist add-on $29/mo | Copilot quotes from text only; no Nordic localisation |
-| Housecall Pro | Field service with "AI Team" | $59–$329/mo plus per-user fees | No photo or voice estimating |
-| Tradify | Trades job management | $47–$61 per user/mo; AI only on Plus | Per seat, AI gated |
-| Fergus, Joist | Trades, solo contractors | $12–$100/mo | No site-walk capture |
-| Minuba (Denmark) | Craftsman order management | Free to 2 users; DKK 29–289 per user/mo | No AI quoting |
-| Ordrestyring.dk (Denmark) | Order management with e-conomic | DKK 237–339 per user/mo | No AI |
-| SmartDok (Norway) | Time, HSE, projects | About NOK 499–799/mo plus per user (third party) | Not a quoting tool |
-| QuoteIQ, VoxTrade, AirQuote, Trade Agent | AI-native photo/voice quoting | Not captured; US/UK/AU | None Nordic |
+| Jobber | Field-service leader | $29–$299/mo; AI Receptionist $29 | Copilot quotes from text only |
+| Housecall Pro | Field service with "AI Team" | $59–$329/mo | No photo or voice estimating |
+| QuoteIQ | AI-native photo-to-quote with satellite measuring | $29.99–$699/mo, credit-metered | LLM-guessed "market" prices |
+| Contractor+ | Solo app with Estimatic AI | Free; $29–$58/mo with credits | Thin field-service features |
+| VoxTrade, AirQuote | Voice and AI quotes | $10–$12/mo; lifetime $119 | Set the floor |
+| Joist | Solo quoting and invoicing | $12–$100/mo | No site-walk capture |
+| Tradify, Fergus, Estimate Rocket | Trades job management | $47–$139/mo | Per seat; dated |
+| ServiceTitan | Enterprise | Quote | Overkill |
 
 ### Pricing model
-Per firm, not per seat: NOK 590 a month for one user, NOK 990 for up to five, unlimited quotes. Buyers already accept $29–49 a month AI add-ons, so an AI line item is not a barrier. An optional e-signature and deposit-collection tier.
+Per firm, not per seat: $49 a month for one user, $99 for up to five, unlimited quotes, Spanish included.
 
 ### Path to profitability
-At €70 ARPU you need 72 firms for €5k MRR and 143 for €10k. That is a rounding error in a market of tens of thousands of Nordic trade firms, and the value story is easy. Costs: speech-to-text and vision extraction are cents per quote. The hard part is distribution: trade firms do not search for software, they hear about it from their accountant, their wholesaler or a trade association. A referral deal with two accounting firms that serve craftsmen, or a listing in Tripletex/Fiken/e-conomic app marketplaces, is the realistic channel. Churn is moderate; quotes are not compliance records.
+At $59 ARPU you need 85 firms for $5k MRR and 170 for $10k. Costs: speech-to-text and vision extraction are cents per quote. Distribution: Jobber's app marketplace (350,000 pros), supply houses, trade Facebook groups, Spanish-language contractor networks. Churn is moderate; quotes are not compliance records. The US gap that existed in 2024 is closing fast.
 
 ### Where AI is used
-- **In the product:** multimodal extraction (photos plus voice memo to structured scope and quantities), matching to the firm's price book, drafting quote text in the customer's language, follow-up nudges. The trap: LLM-guessed unit prices are unusable; prices must come from the firm's list or wholesaler catalogues (EFObasen for electrical, NRF-databasen for plumbing in Norway; access terms unverified).
-- **To build it:** the app itself is standard (CRUD, PDF, e-sign, accounting hand-off). The agent should be used heavily to iterate on the extraction prompt against 50 real site walks, which you need to collect from design partners before writing much code.
+- **In the product:** photos plus voice memo to structured scope and quantities, matching to the firm's price book, bilingual quote text, follow-up nudges. The trap is invented unit prices.
+- **To build it:** the app is standard; the extraction prompt must be iterated against 50 real site walks collected from design partners before much code is written.
 
 ### MVP
-- **Doing:** price-list import (CSV and from Tripletex/Fiken/e-conomic), photo-plus-voice capture, AI draft quote with line-by-line confirm, PDF in Norwegian/Danish, send and e-sign, push accepted quote to the accounting system as an order/invoice draft.
-- **Not doing:** scheduling, dispatch, timesheets, inventory, payments (accounting systems do these), wholesaler catalogue integration at launch.
+- **Doing:** price-book import (CSV, QuickBooks items), photo-plus-voice capture, AI draft quote with line-by-line confirm, bilingual PDF, e-sign, QuickBooks Online push, SMS follow-up with TCPA consent capture.
+- **Not doing:** scheduling, dispatch, timesheets, inventory, payments, satellite measuring (idea 9).
 - **Effort:** 8 weeks.
-- **Dependencies:** Nordic-quality speech-to-text, vision LLM, Tripletex/Fiken/e-conomic/Dinero APIs, BankID/MitID e-sign via a broker (Criipto, Signicat) or a simple checkbox signature.
-- **Hardest part:** extraction accuracy on messy sites and the distribution channel. Incumbents are one release away, so the Nordic localisation and accounting integrations are the moat.
+- **Dependencies:** vision LLM, speech-to-text with Spanish, QuickBooks Online API, Stripe, e-sign, Twilio with 10DLC registration.
+- **Hardest part:** differentiating from QuoteIQ at $29.99 and from the platforms that will ship photo quoting next.
 
 ### Score and verdict
-Pain 4 · Solo 3 · AI 5 · Gap 2 · WTP 4 · Reach 3 = **21/30**. A big, validated pain with a workflow AI made possible this year. Crowded globally, empty in the Nordics. Strong candidate if the founder can get two accounting-firm partners.
+Pain 4 · Solo 3 · AI 5 · Gap 1 · WTP 3 · Reach 3 = **19/30**. A large, validated pain with a workflow AI made possible this year, but the US market already has AI-native entrants at $10–30 and the platforms are one release away. Viable only with a price-book-first accuracy story and a Jobber marketplace listing.
 
 ---
 
 ## 9. Roof, fence and solar measurement with instant quotes from aerial imagery
 
-**One-liner.** Type an address; get roof facets, pitch and area (or the fence line from the cadastre), a material take-off and a customer-ready proposal, with no per-report fee.
+**One-liner.** Type an address; get roof facets, pitch and area from free federal lidar and imagery, or the fence line from the county parcel map, a material take-off from the firm's price list, and a proposal, with no per-report fee.
 
 ### Problem statement
-Roofing measurement reports cost $13–105 each (EagleView, Roofr, Hover) and take hours to days; a contractor doing ten quotes a month spends $130–1,000 on measurements alone, and competitors advertise "no per-report fees" as a selling point, which shows the pain. Google's Solar API now covers Denmark, Norway and Sweden at 10 cm resolution and prices Building Insights at $10 per 1,000 requests, but from July 2025 accounts billed in the EEA "no longer receive certain content". National orthophotos and height models are free and open in Norway (Norge i bilder, 25 cm) and Denmark (GeoDanmark, 12.5 cm), so a Nordic entrant can build on public data.
+Roofing measurement reports cost $13–105 each (Roofr, EagleView, Hover) and take hours to days; Roofr sells an "Instant Estimator" add-on at $125–149 a month on top of a $109–349 subscription, and competitors advertise "no per-report fees", which shows the pain. Free federal data makes a low-cost entrant possible: USGS 3DEP lidar and 1-metre elevation models are free without use restrictions, USDA NAIP orthoimagery is public domain, and Google's Solar API returns roof segments and pitch at $10 per 1,000 requests. Fence tools are thin and expensive (FenceCloud from about $220 a month plus a $99 map-tracing add-on) and parcel boundaries are available from Regrid. The risk is patents: EagleView and Nearmap settled a five-year roofing-measurement patent suit on 29 May 2026 on confidential terms.
 
 ### Who experiences the problem
-Roofing, fencing and solar contractors. The EU solar workforce was 865,000 in 2024, 84% in installation, with the residential segment weakening in 2025. Per-country roofer counts were not found. The buyer is the owner or sales lead; the user is the estimator.
+25,519 roofing establishments with employees (80% under ten staff) plus a share of 299,418 non-employer exterior-trade businesses; 42,748 establishments in the "other specialty trades" code that includes fencing; 178,713 solar installation and project-development jobs. The buyer is the owner or sales lead; the user is the estimator.
 
 ### Value of solving it
-$13–105 saved per report, 2 hours to 2 days of turnaround, and the ability to quote on the first call. Accuracy of the incumbents is 2–5%, which sets the bar.
+$13–105 saved per report and instant turnaround; a contractor ordering ten reports a month spends $130–1,000.
 
 ### Main competitors
 | Product | Positioning | Published pricing | Gap |
 |---|---|---|---|
-| EagleView | Gold-standard aerial reports | $24–105 per report; subscription quote-only | Cost |
-| Roofr | Roofing CRM plus reports | $109–$349/mo plus $13–19 per report | US-centric, per-report fees |
-| Hover | Photo-to-3D | $29–139 per job; Pro $999/yr | Needs on-site photos |
-| Nearmap | Imagery plus AI layers | About $2,000+/yr | US, AU, NZ, CA only |
-| Aurora Solar | Solar design | $135–$259 per user/mo | Per seat |
-| OpenSolar | Free solar design | Free, 28,000+ pros | Sets the price of solar design at zero |
-| RoofScope | Reports and plans | $89–$279/mo plus reports | Manual-drawn |
+| Roofr | Roofing CRM plus reports | $109–$349/mo plus $13–19 per report; Instant Estimator $125–149/mo | Per-report fees on top |
+| EagleView | Aerial reports | $24–105 per report; subscription quote | Cost; litigious |
+| Hover | Photo-to-3D | $29–139 per job | Needs on-site photos |
+| Nearmap | Imagery plus AI | About $2,000+/yr | Enterprise |
+| Aurora Solar, OpenSolar | Solar design | $135–$259 per user/mo; free | Free ceiling for solar |
+| RoofScope | Manual reports | $89–$279/mo | Manual |
+| FenceCloud | Fence CRM | About $220–545/mo plus $99 GeoDraw | No native satellite measure |
+| QuoteIQ | MapMeasure Pro bundled | From $29.99/mo | Generic accuracy |
 
 ### Pricing model
-Flat subscription with unlimited reports: NOK 990 a month per firm. The absence of a per-report fee is the pitch.
+Flat $99 a month per firm with unlimited reports; fence tier at $49.
 
 ### Path to profitability
-At €120 ARPU you need 42 firms for €5k MRR and 84 for €10k. Imagery is free (public data) or cheap (Google), so gross margin is high. The Nordic roofing and solar market is small and seasonal, and the residential solar segment is contracting, so the ceiling in the Nordics is perhaps €10k MRR; expansion means Germany or the UK, where imagery licensing changes. Distribution: roofing supplier partnerships, solar installer associations, trade shows.
+At $120 ARPU you need 42 firms for $5k MRR and 84 for $10k. Imagery is free or cheap, so gross margin is high. Fence quoting from parcel lines is the simplest, least-contested wedge and needs no vision model. Distribution: roofing and fence supply distributors, contractor associations, Jobber and Housecall Pro marketplaces. Residential solar is contracting after the 2025 federal policy changes, so treat solar as a later addition.
 
 ### Where AI is used
-- **In the product:** roof-facet segmentation and pitch from orthophoto plus the digital surface model, material take-off, proposal drafting. For solar, Google already returns segments and pitch, so the AI is a wrapper; the genuine model work is roof segmentation on national imagery. Fence measurement from cadastral parcel lines is a simpler, under-served variant that needs no vision model at all.
-- **To build it:** map tiles, geometry and PDF proposals are standard. Training or fine-tuning a segmentation model is the one piece of real machine-learning work in this list, and a solo founder should start with Google's data and only build their own model if EEA restrictions bite.
+- **In the product:** roof-facet segmentation and pitch from orthophoto plus the 3DEP elevation model, material take-off, proposal drafting. Fence measurement from cadastral parcel lines is geometry, not AI. For solar, Google's data already returns segments.
+- **To build it:** map tiles, geometry and PDFs are standard; a roof-segmentation model is the one piece of real machine-learning work in this list, so start with Google's data and county lidar before training anything.
 
 ### MVP
-- **Doing:** Norway and Denmark. Address lookup, Google Solar API building insights with a fallback to manual facet drawing on the national orthophoto, pitch and area, a material calculator with the firm's price list, a proposal PDF.
-- **Not doing:** 3D models, drone imagery, solar production modelling (link to OpenSolar), CRM.
+- **Doing:** address lookup, parcel polygon from Regrid or county GIS with fence-line measurement, Google Solar API building insights with manual facet drawing on NAIP imagery as fallback, pitch and area, material calculator with the firm's price list, proposal PDF.
+- **Not doing:** 3D models, drone imagery, solar production modelling, CRM.
 - **Effort:** 8 weeks.
-- **Dependencies:** Google Maps Platform account under EEA terms (verify what is withheld), Kartverket and Dataforsyningen WMTS, national height models, cadastre APIs for parcel lines.
-- **Hardest part:** what Google withholds in the EEA, and whether accuracy on Nordic roofs (snow, steep pitches, complex forms) reaches the 2–5% bar.
+- **Dependencies:** Google Maps Platform, USGS 3DEP, NAIP, Regrid API (2,000 parcel records included on entry plans), PDF, e-sign; patent clearance advisable.
+- **Hardest part:** measurement accuracy against a 2–5% bar and EagleView's patent portfolio.
 
 ### Score and verdict
-Pain 3 · Solo 3 · AI 4 · Gap 2 · WTP 4 · Reach 3 = **19/30**. High willingness to pay and free public data, but a small, seasonal Nordic market and platform risk from Google. Worth a two-week feasibility spike on the imagery before deciding.
+Pain 3 · Solo 3 · AI 4 · Gap 2 · WTP 4 · Reach 3 = **19/30**. High willingness to pay and free public data, against entrenched, litigious incumbents. Start with fences, where nobody serious plays.
 
 ---
 
-## 10. Subcontractor compliance tracker for small general contractors
+## 10. Subcontractor certificate-of-insurance and compliance tracker for small general contractors
 
-**One-liner.** A portal where subcontractors upload insurance certificates, HSE cards and wage documentation once; AI extracts limits and expiry dates, matches them to contract requirements, and chases renewals, so the main contractor can prove compliance when the inspector arrives.
+**One-liner.** A portal where subcontractors upload insurance certificates, licences, OSHA cards and W-9s once; AI extracts limits, endorsements and expiry dates, matches them to contract requirements, and chases renewals, priced for a contractor with 5–50 subs.
 
 ### Problem statement
-Nordic main contractors carry legal duties for their subcontractors' paperwork. In Norway, byggherreforskriften requires electronic daily lists of everyone on site with HSE-card number and organisation number, kept six months after completion, and the påseplikt regulation requires systems to verify that subcontractors pay the generally applicable wage, with employment contracts, payslips and timesheets as evidence. In Sweden, sites above about SEK 232,000 need an electronic personnel ledger; Skatteverket charges SEK 12,500–25,000 per control failure, and since 2019 the main contractor is liable for a subcontractor's unpaid wages. In the US, certificate-of-insurance tracking is a mature category where Excel is the real incumbent and software costs $3–30 per insured per year. In the Nordics the supplier side is served by registries that the supplier pays for (StartBANK, Achilles) rather than by a tool for the contractor's office manager.
+General contractors carry the liability when a subcontractor's insurance lapses mid-project, and certificate tracking is mostly done in spreadsheets. Vendor-claimed statistics say seven in ten certificates arrive non-compliant in at least one area. The US category is mature but priced for enterprises: myCOI (now illumend) $1,500–3,000 minimum, CertFocus $7,500 minimum plus implementation, C2COI $800–2,000 minimum; TrustLayer's free tier stops at 50 vendors and its paid tiers are custom. Nothing is published for a $30–100 a month self-serve tool. Licence verification has no clean national API: California publishes PDFs, Florida free weekly CSVs; OSHA runs no national card database.
 
 ### Who experiences the problem
-General contractors with 5–50 subcontractors, within the EU's 3.4 million construction enterprises and Norway's roughly 40,000. The buyer is the owner or HSE lead; the user is the office manager and the subcontractors uploading documents.
+254,630 employer GC establishments (87% under ten employees), 135,337 residential remodelers, 919,062 non-employer builders. The buyer is the owner or office manager; the users are the office manager and the subcontractors uploading documents.
 
 ### Value of solving it
-Avoided Swedish control fees, Norwegian stop-work orders and wage liability, uninsured-subcontractor exposure, and a weekly hour of certificate chasing per office manager.
+Uninsured-subcontractor liability, workers'-compensation premium audits, and an hour a week of certificate chasing; incumbents' minimums price small GCs out entirely.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| TrustLayer (US) | AI certificate tracking | Free to 50 vendors; paid tiers hidden | Free tier caps the low end; US forms |
-| myCOI, Jones, Billy | US certificate tracking | Quote-only, about $1,500–3,000/yr | Hidden pricing, US |
-| Procore | Construction platform | Quote-only | Enterprise |
-| Avetta, ISNetworld | Supplier-paid prequalification networks | Hidden, supplier pays | Resented model |
-| StartBANK (Norway) | Supplier register | Supplier pays about NOK 2,700 | Not a contractor workflow |
-| Excel | The incumbent | Free | |
+| Product | Published pricing | Gap |
+|---|---|---|
+| TrustLayer | Free to 50 vendors with AI classification; Pro custom | Free tier caps the low end |
+| myCOI (illumend), CertFocus, C2COI, SmartCompliance | $30–60 per vendor/yr with $800–10,000 minimums | Minimums |
+| bcs | About $6–21 per vendor/yr, managed | Service model |
+| Jones, Billy | Enterprise real estate and construction | Hidden pricing |
+| Procore, Avetta, ISNetworld | Platforms and supplier-pays networks | Enterprise |
 
 ### Pricing model
-Per contractor: NOK 1,290 a month for 25 subcontractors, NOK 2,990 for 100. Subcontractors upload free. Never charge the supplier; that is the model the market resents.
+$49 a month for 25 subcontractors, $129 for 100; subcontractors upload free.
 
 ### Path to profitability
-At €120 ARPU you need 42 contractors for €5k MRR and 84 for €10k. Compliance records churn slowly. Costs are small (document extraction is cents per certificate). Sales cycles to contractors are slow and relationship-driven; the channel is HSE consultants, trade associations (BNL, EBA in Norway; Byggföretagen in Sweden) and accounting firms serving contractors.
+At $99 ARPU you need 51 GCs for $5k MRR and 101 for $10k. Compliance records churn slowly. Costs are small. Sales to contractors are slow and relationship-driven; the channel is insurance agents and brokers (who field the certificate requests), construction accountants, and QuickBooks and Buildertrend marketplaces.
 
 ### Where AI is used
-- **In the product:** extracting coverage limits and dates from highly variable insurance PDFs and Nordic certificates, matching to per-contract requirements, reading HSE card and ID06 photos, drafting the chase email. This is exactly the document-extraction task that current models do reliably.
-- **To build it:** portal, document store, reminders and audit export are standard. Verification lookups against Brønnøysund (free API) and the ID06 API are documented.
+- **In the product:** extracting limits, dates and the additional-insured, waiver and primary-non-contributory endorsements from ACORD 25 forms and state certificates, gap letters, expiry chasing, licence and OSHA-card OCR. Exactly the document-extraction task current models do reliably.
+- **To build it:** portal, document store, reminders and audit export are standard; state licence lookups are scrapers.
 
 ### MVP
-- **Doing:** Norway first. Contractor workspace, per-project requirement templates (insurance, HSE card, wage documentation), subcontractor upload links, AI extraction with a confirm step, expiry chasing, a one-click compliance report per project.
-- **Not doing:** the daily site attendance list itself (existing check-in apps do this; integrate later), Sweden's personnel-ledger integration (v2), payment or prequalification networks.
+- **Doing:** contractor workspace, per-project requirement templates, subcontractor upload links, AI extraction with confirm, expiry chasing, W-9 capture, one-click compliance report per project, Florida and California licence checks.
+- **Not doing:** daily site attendance, E-Verify (needs a memorandum), prequalification networks, payments.
 - **Effort:** 7 weeks.
-- **Dependencies:** LLM extraction, Brønnøysund Enhetsregisteret API, HSE-card validity lookup, email ingestion, GDPR handling for worker data.
-- **Hardest part:** selling to contractors, who buy slowly and through people they know.
+- **Dependencies:** LLM extraction, email ingestion, state licence data, QuickBooks and Buildertrend APIs.
+- **Hardest part:** selling to contractors who buy slowly and through people they know, and TrustLayer's free tier.
 
 ### Score and verdict
-Pain 4 · Solo 3 · AI 4 · Gap 3 · WTP 3 · Reach 2 = **19/30**. A Nordic-specific legal duty with no contractor-side tool, and an AI task that works today. The slow sales cycle is the drag; a founder with construction contacts should rank this higher.
+Pain 3 · Solo 3 · AI 4 · Gap 3 · WTP 3 · Reach 2 = **18/30**. A real price gap under enterprise minimums and an AI task that works today, held back by a slow buyer and no statutory driver.
 
 ---
 
 ## 11. Home inspection report generator with AI photo-to-defect narration
 
-**One-liner.** An inspector photographs and dictates on site; the app classifies findings against the standard checkpoint library, drafts the narrative, checks coverage, and outputs the report in the legally required structure.
+**One-liner.** An inspector photographs and dictates on site; the app drafts each finding from the inspector's own comment library, checks the report against the state standard of practice, and delivers a client-friendly report the same day.
 
 ### Problem statement
-Norway's 2022 regulation under the sale-of-property act sets minimum content and a required machine-readable structure for condition reports (SN-NSPEK 3477); about 107,000 reports were produced in 2022, 89% by members of Norsk takst, and 92.6% of sampled reports contained at least one TG2 finding. Denmark produced 84,017 condition reports and 76,552 electrical reports in 2024, filed through an official system, with the regulator doubling its audits. In the US, Spectora bought HomeGauge and in June 2026 launched AI Report Assist claiming 25% time savings per inspection, the strongest quantified AI benefit found in this cluster.
+About 4.06 million existing homes sold in 2025 and roughly three quarters were inspected, so inspectors write around 3 million reports a year, mostly in solo or two-person firms doing 250–600 a year. Same-day delivery is the currency of agent referrals, which bring 78% of business. Spectora launched AI Report Assist and an API in June 2026 claiming about 25% time saved, and now owns HomeGauge; 71% of inspectors already use AI somewhere. About 34 states license inspectors and some prescribe report forms; the rest follow association standards. Unlike Europe, the US market is not locked to one association system, so an independent AI-first tool can coexist with Spectora through its API.
 
 ### Who experiences the problem
-Norway has about 1,400 inspection engineers in 900 firms; the US about 30,000 inspectors doing 250–600 inspections a year; Denmark's count of authorised surveyors was not found. The buyer and user are the inspector; in Norway the estate agent often steers the choice of inspector.
+InterNACHI's 27,386 members, ASHI's 8,000+, over 30,000 active inspectors in total. The buyer and user are the inspector.
 
 ### Value of solving it
-25% of inspection time on 250–600 inspections a year is 60–300 hours; in Norway a complete, well-worded report limits liability for both seller and inspector.
+25% of report time on 250–600 inspections a year is 60–300 hours; consistency reduces errors-and-omissions exposure.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Spectora (US) | Cloud inspection software with AI | $109/mo plus $99 per extra inspector; AI Report Assist | Per-inspection add-ons; US |
-| HomeGauge | Desktop, now part of Spectora | $89/mo | Legacy |
-| GoReport (UK) | Surveyor reporting with AI | £149–£210/mo | UK only |
-| Property Inspect | Inspections with "Inspect AI" | $49–$275/mo | Generalist |
-| iVerdi (Norway) | "Most used" system for inspection engineers, tied to Norsk takst | Hidden | Closed ecosystem, 89% share |
-| Danish official huseftersyn system | Mandatory filing | | Third-party tools are pre-drafting only |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Spectora | $109/mo plus $99 per extra inspector; $4 per inspection add-ons; AI Report Assist | Now owns HomeGauge; per-inspection fees |
+| HomeGauge | $89/mo | Legacy |
+| Inspector Nexus | $50–$55/mo; $4.99 pay-as-you-go | No AI |
+| Home Inspector Pro, Horizon | $67–$89/mo | Desktop heritage |
+| ISN | $3.75–$7.25 per inspection | Back-office, not reports |
+| Property Inspect | $49–$275/mo; Inspect AI | Generalist |
 
 ### Pricing model
-NOK 990 per inspector per month. Inspectors bill NOK 8,000–15,000 per report, so the price is trivial if it saves an hour per report.
+$79 a month per inspector, AI included, no per-inspection fees.
 
 ### Path to profitability
-At €100 ARPU you need 50 inspectors for €5k MRR and 100 for €10k. The Norwegian population is only 1,400 and locked into iVerdi; Denmark requires filing through the official system; the US is Spectora's. The numbers work only if you can take 7% of Norway's inspectors from a system their association owns, which is unlikely.
+At $89 ARPU you need 56 inspectors for $5k MRR and 112 for $10k, from a population of 30,000 that already pays $89–109 a month. Distribution: InterNACHI forums and events, state associations, inspector Facebook groups, YouTube. Sales are one inspector at a time; the ceiling for the whole category is about $35–40 million a year, so this is a good business, not a large one.
 
 ### Where AI is used
-- **In the product:** an excellent fit. The standardised checkpoint library, TG grades and cost intervals make photo-and-voice-to-finding classification tractable and auditable; consistency checks catch missed rooms; narrative drafting turns terse findings into consumer-readable text. Auto-assigning grades without inspector sign-off is the one thing not to do.
-- **To build it:** standard mobile capture and PDF generation; the structured export must conform to the regulation's data structure.
+- **In the product:** photo and voice to defect narrative using the inspector's comment library, completeness checks against the state standard, plain-English summary for buyers. Auto-assigning severity without sign-off is the errors-and-omissions risk.
+- **To build it:** offline mobile capture and PDF generation are standard; state templates (Texas prescribes a form) are content work.
 
 ### MVP
-- **Doing / not doing:** if pursued, a pre-drafting layer that exports into iVerdi or the Danish system, sold to independent inspectors outside Norsk takst. Not a standalone report system.
+- **Doing:** offline capture, comment library import, AI finding drafts with confirm, standard-of-practice checklist, branded PDF, client summary, ISN and Spectora API coexistence.
+- **Not doing:** scheduling, payments, websites, agreements.
 - **Effort:** 8 weeks.
-- **Dependencies:** licence for the NS 3600 / SN-NSPEK 3477 standard from Standard Norge, Matrikkel data, being a certified surveyor to issue reports (the tool cannot).
-- **Hardest part:** the market is locked and tiny.
+- **Dependencies:** mobile app, state templates, PDF, Spectora and ISN APIs.
+- **Hardest part:** Spectora's consolidation and head start.
 
 ### Score and verdict
-Pain 3 · Solo 2 · AI 5 · Gap 1 · WTP 4 · Reach 2 = **17/30**. One of the best AI fits in the whole list attached to one of the worst markets for a newcomer.
+Pain 3 · Solo 3 · AI 5 · Gap 1 · WTP 4 · Reach 3 = **19/30**. One of the best AI fits in the list, in an open US market that the leader is consolidating. Worth it as a focused, AI-first alternative if you can get early adopters from the associations.
 
 ---
 
 ## 12. Small fleet daily vehicle inspection and defect workflow
 
-**One-liner.** A driver walk-around app with photo defect capture, repair routing and the records a roadside inspector asks for.
+**One-liner.** A driver walk-around app with photo defect capture, repair routing and the three-month records that federal regulations require.
 
 ### Problem statement
-US regulations require a written driver vehicle inspection report per vehicle per day with records kept three months; the UK requires daily walk-around checks with written defect reports kept 15 months and expects electronic records for its Earned Recognition scheme. Norway only requires that the vehicle be in proper condition, with no written-report mandate for vans, so the compliance pull in the Nordics is weak. The category is mature with free tiers.
+Federal rules require every driver to report safety defects at the end of each day per vehicle, with repairs certified before dispatch and records kept three months; failing to keep required records costs $1,544 per day up to $15,445. Enforcement is intense: one in five roadside inspections in 2025 ended in an out-of-service order, and "operating without inspection documentation" drew 158,057 citations. The category is mature: Fleetio, Whip Around and Simply Fleet charge $2–10 per vehicle with free tiers, and the telematics vendors (Motive, Samsara) bundle inspections with electronic logging at $25–45 per vehicle on multi-year contracts.
 
 ### Who experiences the problem
-The US has about 580,000 registered carriers, 91.5% with ten or fewer trucks; EU van and truck fleet counts were not retrieved. The buyer is the owner or operations manager of a 3–50 vehicle fleet (trades, delivery, plant hire); the users are drivers.
+About 580,000 active registered carriers, 91.5% with ten or fewer trucks and 70% single-truck, plus non-regulated trades fleets. The buyer is the owner or operations manager; the users are drivers.
 
 ### Value of solving it
-Avoided out-of-service orders and fines, provable records, faster defect-to-repair. Whip Around reports 50,000+ inspections a day across its base.
+Avoided daily penalties and out-of-service orders; provable records.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Fleetio | Fleet maintenance | $4–$10 per vehicle/mo | Bands of five vehicles |
-| Whip Around | Inspections-first | Free 1 asset; $5–$10 per asset | Billing complaints |
-| Simply Fleet | Cheap fleet app | Free to 5 vehicles; $2–$4 per vehicle | Sets the floor |
-| AUTOsist, Driveroo | Maintenance, inspections | $5–$7 per asset with minimums | Contracts |
-| CheckProof (Sweden) | Checklists for heavy industry | $18–$49 per user/mo | Per user |
-| Samsara, Motive | Telematics with bundled DVIR | Quote, hardware | Bundling undercuts standalone |
+| Product | Published pricing | Gap |
+|---|---|---|
+| Fleetio | $4–$10 per vehicle/mo | Bands of five |
+| Whip Around | Free 1 asset; $5–$10 per asset | Billing complaints |
+| Simply Fleet | Free to 5 vehicles; $2–$4 | The floor |
+| AUTOsist, Driveroo | $5–$7 with minimums or contracts | Minimums |
+| Motive, Samsara | $25–$45 per vehicle bundled with ELD, contracts | Bundling |
 
 ### Pricing model
-Per vehicle, $3–5 a month with a $25 minimum. The floor is $2.
+Per vehicle, $3–5 a month with a $25 minimum.
 
 ### Path to profitability
-At €40 ARPU (a ten-vehicle fleet) you need 125 fleets for €5k MRR and 250 for €10k, competing against free tiers and telematics bundles. Not attractive.
+At $40 ARPU (ten vehicles) you need 125 fleets for $5k MRR and 250 for $10k, against free tiers and bundles. Not attractive.
 
 ### Where AI is used
-Photo-based defect detection (tyres, lights, damage), severity triage, voice reporting, maintenance prediction from defect history. Useful, but the incumbents can add the same.
+Photo defect detection, severity triage, voice reporting, maintenance prediction. Incumbents can add the same.
 
 ### MVP
-- **Doing / not doing:** not recommended. If pursued, the Nordic wedge is a plant-hire and trades-van variant integrated with the Norwegian vehicle register for automatic vehicle data.
+- **Doing / not doing:** not recommended.
 - **Effort:** 5 weeks.
-- **Dependencies:** offline mobile app, national vehicle data APIs (Statens vegvesen, DMR), telematics APIs.
-- **Hardest part:** no compliance driver in the home market and a $2 price floor.
+- **Dependencies:** offline app, VIN decoding (free), telematics APIs.
+- **Hardest part:** a $2 price floor and free bundling.
 
 ### Score and verdict
-Pain 3 · Solo 4 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **16/30**. Mature, crowded, cheap. Skip.
+Pain 4 · Solo 4 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **17/30**. Strong mandate, saturated market. Skip.
 
 ---
 
-## 13. Property inventory and condition reports with AI photo comparison
+## 13. Move-in and move-out inspections with AI photo comparison and state-deadline compliance
 
-**One-liner.** Guided check-in and check-out photo capture per room, AI change detection and wear-versus-damage classification, and a signed report that survives a deposit dispute.
+**One-liner.** Guided check-in and check-out photo capture per room, AI change detection and wear-versus-damage classification, and an itemised statement generated against the right state deadline, including the photo pack California now requires.
 
 ### Problem statement
-In Denmark a landlord with more than one dwelling must hold a move-in inspection and hand over the report within two weeks, and a move-out inspection within two weeks with a week's notice; failing to do so forfeits the entire repair claim. In the UK, cleaning has been the main cause of deposit deductions for five years running and the Renters' Rights Act reshaped tenancies from 1 May 2026. Norway's tenancy tribunal has a ten-month waiting time. But Norwegian landlord platforms (Husleie.no, Hybel) and Denmark's BoligPortal bundle the handover protocol for free, and the UK incumbents are adding AI (RentCheck "AI Damage Assist", Property Inspect "Inspect AI").
+California's AB 2801 requires landlords, from 1 April 2025, to photograph units after move-out before any repair charged to the deposit and again after the work, and from 1 July 2025 to photograph at the start of every tenancy, delivering the photos with the itemised statement; bad-faith claims carry statutory damages up to twice the deposit. New York requires a pre-move-in inspection offer and return within 14 days or the landlord forfeits the deduction right; Texas presumes bad faith after 30 days with $100 plus treble damages; Georgia and Massachusetts impose treble damages; six states forfeit deductions when the deadline is missed. Only 42% of movers get their full deposit back and 41% had a move-out dispute. Incumbents are adding AI (RentCheck "AI Damage Assist"), but HappyCo requires a 500-unit minimum and the property-management suites sell inspections as $40–95 add-ons, leaving small managers with 10–500 units under-served.
 
 ### Who experiences the problem
-England has about 513,000 landlords registering deposits directly, 52% self-managing and 83% with four or fewer properties, plus letting agents and inventory clerks. Danish landlords with more than one dwelling were not counted. The buyer is the letting agent, inventory clerk or small landlord.
+19.3 million rental properties and 49.5 million units, 70% of properties owned by individual investors; 252,918 non-employer property managers; NARPM's 6,000+ members. The buyer is the small property-management company or landlord; users are staff and tenants doing self-inspections.
 
 ### Value of solving it
-In Denmark a missed inspection wipes out the claim; in the UK a time-stamped photo pair is the decisive evidence in adjudication.
+A missed deadline or missing photo forfeits the whole claim or doubles or triples exposure; timestamped photo pairs decide disputes.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Inventory Hive (UK) | Inventory plus 360° | £30/mo | No AI |
-| InventoryBase (UK) | Clerks and agents | £35–£349/mo; human transcription 35p/min | Human, not AI |
-| RentCheck (US) | Tenant self-inspections | $1–$1.75 per unit/mo; AI Damage Assist | US |
-| Property Inspect | Generalist inspections | $49–$275/mo | Generalist |
-| Husleie.no, Hybel (Norway), BoligPortal (Denmark) | Landlord platforms | Handover protocol free | Bundled |
+| Product | Published pricing | Gap |
+|---|---|---|
+| RentCheck | $1–$1.75 per unit/mo; AI Damage Assist on top tier | PM-scale focus |
+| zInspector | $15–$115/mo by units | No AI |
+| HappyCo | $1 per unit with 500-unit minimum | Excludes small PMs |
+| Property Inspect | $49–$275/mo | Generalist |
+| Buildium, AppFolio | $40–95/mo add-on; 50-unit minimum | Bundled |
 
 ### Pricing model
-Per report for small landlords (€5), per month for agents and clerks (€39–99).
+$1.50 per unit per month with a $29 minimum, or $5 per report for landlords.
 
 ### Path to profitability
-At €40 ARPU you need 125 customers for €5k MRR and 250 for €10k, from UK clerks and Danish multi-unit landlords. The Nordic bundling makes the home market hard; the UK is the real market and it is crowded. Ceiling around €5k MRR.
+At $75 ARPU (a 50-unit manager) you need 67 customers for $5k MRR and 134 for $10k. Distribution: NARPM chapters, California apartment associations (AB 2801 is a live topic), Buildium and AppFolio marketplaces, landlord Facebook groups. Churn is low once inspection history accumulates.
 
 ### Where AI is used
-Photo pairing per item, change detection, wear-versus-damage classification, dictation to report. Genuinely useful and technically achievable; the incumbents are doing it too.
+- **In the product:** photo pairing per item, change detection, wear-versus-damage classification, and drafting the itemised statement with the right state deadline and the AB 2801 photo pack. Real, and the state-rules layer is the differentiator.
+- **To build it:** guided capture, image alignment and vision-LLM comparison, a 50-state deadline table, e-sign.
 
 ### MVP
-- **Doing:** guided shot lists, check-in/check-out pairing, AI diff with human confirm, PDF with e-signature, Danish deadline reminders.
-- **Not doing:** 360° capture, property-management integrations at launch.
+- **Doing:** guided shot lists, check-in and check-out pairing, AI diff with confirm, itemised statement generator with state deadlines and penalties, AB 2801 delivery by link, tenant self-inspection links.
+- **Not doing:** 360° capture, full property-management features, PM integrations beyond CSV at launch.
 - **Effort:** 6 weeks.
-- **Dependencies:** image alignment and vision LLM, e-sign, mobile capture.
-- **Hardest part:** free bundling in the Nordics and AI parity in the UK.
+- **Dependencies:** vision LLM, e-sign, mobile capture, state rules table.
+- **Hardest part:** RentCheck at $1 per unit and the suites' bundling.
 
 ### Score and verdict
-Pain 3 · Solo 4 · AI 4 · Gap 2 · WTP 2 · Reach 3 = **18/30**. Good product, wrong market timing; the feature will be table stakes in every landlord platform within two years.
+Pain 4 · Solo 4 · AI 4 · Gap 2 · WTP 3 · Reach 3 = **20/30**. A 2025 California mandate, forfeiture and treble-damage rules in other states, and a small-manager segment the incumbents price out. Solid.
 
 ---
 
 ## 14. Small private landlord manager (1–10 units)
 
-**One-liner.** Rent collection, deposit handling, maintenance, compliant leases and notices, and a tax export for landlords with a handful of units.
+**One-liner.** Rent collection, deposit compliance, maintenance, state-specific leases and a Schedule E export for landlords with a handful of units.
 
 ### Problem statement
-The UK's Making Tax Digital for Income Tax became mandatory on 6 April 2026 for landlords with over £50,000 of qualifying income, and extends to £30,000 in 2027 and £20,000 in 2028, requiring digital records and quarterly updates via recognised software; the Renters' Rights Act adds a landlord database with penalties up to £7,000. Norway and Denmark have deposit-account, rent-increase and inspection rules but no comparable software mandate. The category is freemium everywhere: TurboTenant, Avail, Stessa and Baselane are free or near-free in the US, Husleie.no and Hybel charge NOK 79–199 per tenancy per month in Norway and give the basics away, BoligPortal's landlord tools are free in Denmark.
+Individual investors own 13.5 million rental properties, 86% single-unit, and only 16% track maintenance digitally, but the category is free: TurboTenant (nearly 900,000 landlords, up 22% in 2025), Avail (over one million), Innago and Baselane ($44 million raised) monetise renter fees, payments and interchange rather than subscriptions; Stessa and Landlord Studio charge $12–28 a month. Deposit laws (California's photo rules, New York's 14 days, Texas's treble damages) are the only pain that is growing.
 
 ### Who experiences the problem
-England's 513,000 direct-deposit landlords; US individual investors owning 14.3 million rental properties; Nordic counts not found. The buyer is the landlord.
+1.3 million non-employer lessors and 13.5 million individually owned properties. The buyer is the landlord.
 
 ### Value of solving it
-Compliance without an accountant, avoided penalties, preserved deposit claims, correctly indexed rent increases.
+Compliance without an accountant, avoided penalties, tax-time bookkeeping; Baselane claims 150 hours a year saved.
 
 ### Main competitors
-| Product | Published pricing |
-|---|---|
-| Landlord Studio (US/UK) | Free to 3 units; $12–$28/mo; AI bookkeeping |
-| Stessa, TurboTenant, Avail, Hemlane, Baselane (US) | Free tiers; $9–$36/mo paid; monetised via payments and interchange |
-| RentRedi | $12–$30/mo |
-| Husleie.no (Norway) | Free basics; NOK 99–199 per tenancy/mo |
-| Hybel (Norway) | NOK 79 per tenancy/mo, deposit account via bank partner |
-| BoligPortal (Denmark) | Free landlord tools |
+| Product | Published pricing | Monetisation |
+|---|---|---|
+| TurboTenant | Free; $149–$999/yr; AI lease audit | Renter fees, payments |
+| Avail, Innago | Free | Fees |
+| Baselane | Free; AI bookkeeping subscription | Interchange |
+| Stessa, Landlord Studio | $12–$28/mo | Subscription |
+| RentRedi, DoorLoop, Hemlane | $12–$209/mo | Subscription |
 
 ### Pricing model
-Freemium with paid tiers at €9–15 a month; in the Nordics the real money is deposit accounts, rent-default insurance and payments, which need bank and insurer partners.
+Freemium with $9–15 a month paid tiers; the money is in payments and screening, which need scale.
 
 ### Path to profitability
-At €12 ARPU you need 417 landlords for €5k MRR and 833 for €10k, against free competitors. The UK MTD angle is the only hard driver, and it requires HMRC software recognition. Not attractive for a solo founder without a bank partner.
+At $12 ARPU you need 417 landlords for $5k MRR and 833 for $10k, against three free incumbents with a million users each. Not attractive.
 
 ### Where AI is used
-Bank-feed categorisation, jurisdiction-aware lease and notice drafting, quarterly tax summaries, receipt reading. Useful but every incumbent has it.
+Bank-feed categorisation to Schedule E lines, state lease and notice drafting, deposit-deadline reminders, receipt reading. Every incumbent has it.
 
 ### MVP
-- **Doing / not doing:** not recommended. The narrowest test is a UK MTD-for-landlords quarterly filing tool, which is a different, accountant-adjacent product.
+- **Doing / not doing:** not recommended; the deposit-compliance feature belongs in idea 13.
 - **Effort:** 8 weeks.
-- **Dependencies:** open banking (TrueLayer, Neonomics, Tink), HMRC MTD API recognition, BankID/MitID, bank partner for deposit accounts; holding client money may need a payment-institution licence.
-- **Hardest part:** free incumbents and the partnerships needed for the features Nordic landlords value.
+- **Dependencies:** Plaid, Stripe Connect, FCRA-compliant screening partner, 50-state templates.
+- **Hardest part:** free incumbents.
 
 ### Score and verdict
 Pain 3 · Solo 3 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **15/30**. Free everywhere. Skip.
@@ -319,41 +319,39 @@ Pain 3 · Solo 3 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **15/30**. Free everywhe
 
 ## 15. Short-term rental turnover operations
 
-**One-liner.** Cleaner scheduling from booking calendars, photo checklists, damage reporting and supply tracking for hosts with 1–20 units.
+**One-liner.** Cleaner scheduling from booking calendars, photo checklists, damage reporting, supply tracking and city registration fields for hosts with 1–20 units.
 
 ### Problem statement
-Guest nights booked through Airbnb, Booking and Expedia in the EU reached 952 million in 2025, up 11%. EU Regulation 2024/1028 brings host registration numbers and monthly platform data-sharing from spring 2026. Turnover is the operational pain: a missed clean costs a refund and a review, damage must be documented immediately, supplies run out. But every property-management system bundles task management, and the specialists have free tiers.
+US short-term rental supply still grows 2.7–4.6% a year, but cities are formalising it: New York's Local Law 18 has approved only 3,522 hosts against 40,000 pre-law listings, and Los Angeles fines $500 a day or double the nightly rate for non-compliant ads. Turnover is the operational pain, and every property-management system bundles task management; Turno charges $8–10 per property, Hospitable and Breezeway have free tiers.
 
 ### Who experiences the problem
-Hosts and small managers with 1–20 units and their cleaners. EU host counts were not retrieved. The buyer is the host or manager; the user is the cleaner.
+Hosts and small managers with 1–20 units and their cleaners; absolute US counts were not retrievable. The buyer is the host; the user is the cleaner.
 
 ### Value of solving it
-Fewer missed cleans, better damage evidence, less coordination. Not quantified.
+Fewer missed cleans, better damage evidence, per-day fines avoided in regulated cities. Not quantified.
 
 ### Main competitors
 | Product | Published pricing |
 |---|---|
-| Turno | Free single property; $10/mo unlimited with own cleaners |
-| Breezeway | Freemium; from $19 per unit/mo |
-| Hospitable | Free tier; paid tiers plus $10–15 per extra property |
-| Guesty | $9 per listing/mo entry |
-| Lodgify | $14–$62/mo, tasks only on top tier |
-| Properly | $13–$15 per property/mo |
-| Hostaway, Operto, Doinn | Quote or hidden |
+| Turno | $8–$10 per property/mo; free single property |
+| Breezeway | Free 1 property; from $19 per unit |
+| Hospitable | Free; $29–$99/mo |
+| Guesty, Lodgify, Properly | $9–$62/mo; $13–$15 per property |
+| Hostaway, Operto | Quote |
 
 ### Pricing model
-$10–19 per property per month is the band; freemium is expected.
+$10–19 per property per month is the band.
 
 ### Path to profitability
-At €15 ARPU you need 333 hosts for €5k MRR, against free tiers, with seasonal churn. Not attractive.
+At $15 ARPU you need 333 hosts for $5k MRR against free tiers, with seasonal churn. Not attractive.
 
 ### Where AI is used
-Photo QA against a reference set (bed made, amenities present), damage diff, multilingual cleaner instructions. Real but small.
+Photo QA against a reference set, damage diff, bilingual cleaner instructions. Real but small.
 
 ### MVP
-- **Doing / not doing:** not recommended as a standalone; the photo-QA feature could be sold to cleaning companies rather than hosts.
+- **Doing / not doing:** not recommended standalone; the photo-QA feature could be sold to cleaning companies.
 - **Effort:** 5 weeks.
-- **Dependencies:** iCal feeds (free), PMS partner APIs, Stripe Connect.
+- **Dependencies:** iCal feeds, Stripe Connect and 1099 filing for cleaners, SMS consent.
 - **Hardest part:** every PMS bundles this.
 
 ### Score and verdict
@@ -361,153 +359,133 @@ Pain 2 · Solo 4 · AI 3 · Gap 1 · WTP 2 · Reach 3 = **15/30**. Crowded and b
 
 ---
 
-## 16. Housing cooperative and condominium board management
+## 16. HOA and condo board management with reserve-study and filing compliance
 
-**One-liner.** A workspace for volunteer boards of housing co-ops and condominiums (borettslag, sameie, andelsboligforening, bostadsrättsförening): documents, annual meeting with digital voting, dues, maintenance plan, and a handover brief for the next board, with AI minutes and bylaw Q&A.
+**One-liner.** A workspace for volunteer boards of self-managed associations: documents, meetings with AI minutes, dues, violations, e-voting, and a compliance calendar that tracks Florida's structural reserve studies and milestone inspections, California's three-year reserve inspections and the state filing deadlines that now carry personal liability.
 
 ### Problem statement
-Boards are volunteers who rotate annually and inherit a shoebox of documents. Sweden has required every housing co-op to hold a 50-year technical maintenance plan since 1 January 2023. Norway's building co-op federation NBBL manages over 17,500 housing companies and 650,000 dwellings; Denmark has roughly 10,000 co-ops; the US has 373,000 community associations. Statutory deliverables (annual meeting, accounts, maintenance plan) recur every year. Nordic tools exist (Styreportalen at NOK 175 a month, Boappa at SEK 3,900–13,900 a year, ProBo with 200,000 users, OBOS's Vibbo) but none has AI minutes, decision search or maintenance-plan drafting, and the managing-agent portals lock boards into the agent.
+Boards are volunteers who rotate annually and inherit a shoebox of documents. The legal stakes rose after Surfside: Florida requires every condominium of three or more storeys to complete a Structural Integrity Reserve Study (first study by 31 December 2025, or 2026 with a milestone inspection), bans waiving reserves for structural items in budgets adopted from December 2024, treats wilful failure as a breach of a director's fiduciary duty, and since HB 913 requires every association to open a state online account and file the study within 45 days. Florida has 27,537 condo associations and 1.53 million condo units, three quarters of the small buildings built before 1990. California requires visual reserve inspections every three years; Hawaii, Nevada, Utah, Virginia and Maryland have their own cycles. Nationally there are about 373,000 associations with 2.5 million volunteer board members, 30–40% self-managed. The incumbents are cheap but thin (PayHOA from $54 a month, TownSq $90 plus add-ons) or built for management companies (CINC, Vantaca, AppFolio with a 50-unit minimum), and none tracks statutory deadlines with AI minutes and bylaw search.
 
 ### Who experiences the problem
-At least 17,500 housing companies in Norway, over 10,000 co-ops in Sweden's largest association alone, about 10,000 in Denmark. The buyer is the board chair; the decision is often shared with the managing agent. Every one of them is listed in the national business register with the chair's name, which makes them unusually reachable.
+373,000 associations (377,000 by end-2026), 78 million residents, 9–10,000 management companies. The buyer is the board president or treasurer of a self-managed association, or a small management company.
 
 ### Value of solving it
-Statutory compliance, fewer paid managing-agent hours, continuity at handover. Not quantified.
+Personal fiduciary exposure for missed studies and filings, special assessments from reserve shortfalls, and continuity at handover. Not quantified.
 
 ### Main competitors
-| Product | Positioning | Published pricing | Gap |
-|---|---|---|---|
-| Styreportalen (Norway) | Board portal | NOK 175/mo plus NOK 49–309 add-ons | No AI |
-| Boappa (Sweden) | Resident communication | SEK 3,900–13,900/yr by units | Communication-first |
-| ProBo (Denmark) | Co-op platform, 200,000 users | Hidden | |
-| Vibbo (OBOS, Norway), Nabo (Sweden) | Managing-agent portals | Hidden or unreachable | Lock-in to the agent |
-| Buildium, AppFolio, HOALife, Condo Control (US) | Association management | $62–$400/mo or quote | US |
+| Product | Published pricing | Gap |
+|---|---|---|
+| PayHOA | $54–$275/mo by units | Accounting-first |
+| TownSq | $90–$435/mo plus $20–250 add-ons | Add-on stacking |
+| HOALife | From $199/mo; AI features | Price floor |
+| Condo Control | Quote; AI assistant add-on | Hidden |
+| Buildium, AppFolio | $62–$400/mo; 50-unit minimum | PM-oriented |
+| CINC, Vantaca, FRONTSTEPS, Enumerate | Management-company platforms | Channel-locked |
+| Effortless HOA (new) | $3 per home/mo | Unproven |
 
 ### Pricing model
-Per association per year, banded by units: NOK 2,990 (under 30 units), NOK 5,990 (30–100), NOK 9,990 (100+). Annual billing matches how boards budget.
+Per association per year, banded by units: $588 (under 50 units), $1,188 (50–150), $1,988 (150+); management-company tier per door.
 
 ### Path to profitability
-At €40 ARPU (about NOK 5,000 a year) you need 125 associations for €5k MRR and 250 for €10k, out of tens of thousands in Norway and Sweden. Boards decide once a year, so the sales calendar is lumpy (before the annual meeting season, March to May). Churn is low: documents and decisions accumulate. Distribution: the business register gives you every association and its chair; direct mail and LinkedIn to chairs, plus partnerships with independent (non-OBOS) accountants and managing agents who want a modern portal.
+At $79 ARPU you need 63 associations for $5k MRR and 127 for $10k, out of 100,000+ self-managed associations. Boards decide once a year, so sales are lumpy around budget season. Churn is low. Distribution: Florida's public condo registrations (every association and its officers are on file), CAI chapters, reserve-study firms and condo attorneys as referrers.
 
 ### Where AI is used
-- **In the product:** minutes from recorded meetings, Q&A over bylaws and past decisions, drafting the 50-year maintenance plan from building data and inspection photos, handover briefs, dues chasing letters. Real and differentiating; none of the Nordic incumbents has it.
-- **To build it:** documents, meetings, voting and dues are standard; BankID/MitID for digital voting via a broker; accounting integrations later.
+- **In the product:** meeting minutes from recordings, Q&A over bylaws and CC&Rs and past decisions, violation letters, deadline tracking with filing prompts, board handover briefs. The reserve study itself must be done by a licensed engineer or reserve specialist; the tool tracks it.
+- **To build it:** documents, meetings, voting and dues are standard; Florida and California statute rules are a content layer; Stripe and QuickBooks integrations are documented.
 
 ### MVP
-- **Doing:** Norway first. Document archive with AI search, meeting recorder with AI minutes and decision log, annual meeting module with digital voting (BankID via Criipto or Signicat), maintenance plan template with AI drafting, handover brief, resident notice board.
-- **Not doing:** accounting and dues invoicing (integrate with Fiken/Tripletex/Visma in v2), managing-agent features, Sweden's specific requirements until v2.
+- **Doing:** Florida first. Document archive with AI search, meeting recorder with AI minutes and decision log, compliance calendar (SIRS, milestone inspections, state account and filings, website rule), e-voting, dues via Stripe ACH, violation and architectural-request workflow, handover brief.
+- **Not doing:** full accounting (QuickBooks integration), management-company features, other states' rules until v2.
 - **Effort:** 8 weeks.
-- **Dependencies:** Brønnøysund register API (free), BankID broker, speech-to-text with Norwegian, LLM.
-- **Hardest part:** the managing agents (OBOS, USBL) control most relationships; the market is the independent associations and the agents who compete with OBOS.
+- **Dependencies:** Stripe ACH, QuickBooks Online, Florida statute rules, e-sign, speech-to-text.
+- **Hardest part:** management companies own most relationships; the market is the self-managed third.
 
 ### Score and verdict
-Pain 3 · Solo 4 · AI 4 · Gap 2 · WTP 3 · Reach 3 = **19/30**. Reachable buyers, recurring statutory needs, sticky data and a clear AI differentiator. Slower to sell than a business product, but a solid Nordic candidate.
+Pain 4 · Solo 4 · AI 4 · Gap 2 · WTP 3 · Reach 3 = **20/30**. Statutory deadlines with personal liability for 27,537 Florida boards, reachable buyers, sticky data and a clear AI differentiator. Slow to sell, solid once sold.
 
 ---
 
 ## Cluster summary
 
-| # | Idea | Score | ARPU € | Customers to €10k MRR | MVP weeks |
+| # | Idea | Score | ARPU $ | Customers to $10k MRR | MVP weeks |
 |---|---|---|---|---|---|
-| 8 | AI trades quoting from photos and voice | **21** | 70 | 143 | 8 |
-| 9 | Aerial roof/fence/solar measurement quotes | **19** | 120 | 84 | 8 |
-| 10 | Subcontractor compliance tracker | **19** | 120 | 84 | 7 |
-| 16 | Housing co-op board management | **19** | 40 | 250 | 8 |
-| 13 | Property inventory with AI photo comparison | **18** | 40 | 250 | 6 |
-| 11 | Home inspection report generator | **17** | 100 | 100 | 8 |
-| 12 | Small fleet vehicle inspections | **16** | 40 | 250 | 5 |
+| 13 | Move-in/out inspections with state-deadline compliance | **20** | 75 | 134 | 6 |
+| 16 | HOA and condo board management with compliance calendar | **20** | 79 | 127 | 8 |
+| 8 | AI trades quoting from photos and voice | **19** | 59 | 170 | 8 |
+| 9 | Aerial roof/fence measurement quotes | **19** | 120 | 84 | 8 |
+| 11 | Home inspection report generator | **19** | 89 | 112 | 8 |
+| 10 | Subcontractor COI tracker | **18** | 99 | 101 | 7 |
+| 12 | Small fleet vehicle inspections | **17** | 40 | 250 | 5 |
 | 14 | Small private landlord manager | **15** | 12 | 833 | 8 |
 | 15 | Short-term rental turnover ops | **15** | 15 | 667 | 5 |
 
 ## Sources
-- https://www.installeronline.co.uk/news/93-of-uk-tradespeople-say-running-their-business-is-stressing-them-out-new-national-report-finds/
-- https://phamnews.co.uk/nine-in-ten-tradespeople-stressed-by-running-their-business-survey-finds/
-- https://www.electricaltimes.co.uk/uk-tradespeople-losing-ten-working-weeks-a-year-to-admin-they-could-automate-survey-finds/
-- https://powerednow.com/powered-now-admin-calculator/
-- https://www.simplybusiness.co.uk/knowledge/trades/unpaid-tasks-costing-uk-tradespeople/
-- https://www.prnewswire.com/news-releases/jobber-launches-copilot-the-first-of-several-ai-powered-products-aimed-at-making-home-service-business-ownership-simpler-than-ever-before-302264047.html
-- https://contractortoolstack.com/software/housecall-pro/
+- https://www.getjobber.com/home-service-trends-report/
+- https://www.prnewswire.com/news-releases/70-of-home-service-professionals-now-use-ai-to-cut-admin-work-not-field-jobs-housecall-pro-report-finds-302468294.html
+- https://www2.census.gov/programs-surveys/cbp/datasets/2023/cbp23us.zip
+- https://www2.census.gov/programs-surveys/nonemployer-statistics/datasets/2022/historical-datasets/nonemp22us.zip
+- https://www.cpwr.com/wp-content/uploads/DataBulletin-April2026.pdf
+- https://myquoteiq.com/pricing/
+- https://contractorplus.app/pricing
+- https://airquote.co/faq
 - https://getjobber.com/pricing/
 - https://www.housecallpro.com/pricing/
-- https://www.tradifyhq.com/pricing
-- https://fergus.com/pricing/
 - https://www.joist.com/pricing/
-- https://minuba.dk/pris/
-- https://ordrestyring.dk/priser/
-- https://drifti.no/cms/comparisons/sammenligning-av-programvaresystem-svenn-smartdok-og-dextro
-- https://myquoteiq.com/ai-estimator/
-- https://voxtrade.app/blog/best-quoting-apps-tradespeople
-- https://airquote.co/ai-quoting
-- https://ec.europa.eu/eurostat/cache/htmlpub/key-figures-on-european-business-2022/construction.html
-- https://www.nhoelektro.no/om-oss/om-nho-elektro/medlemmene/
-- https://www.rornorge.no/om-oss/
-- https://squarecount.io/eagleview-pricing
-- https://roofingsoftwareguide.com/reviews/eagleview-review/
-- https://roofr.com/pricing
+- https://www.roofr.com/pricing
+- https://www.globenewswire.com/news-release/2026/05/29/3303611/0/en/eagleview-and-nearmap-reach-settlement-in-patent-dispute.html
+- https://www.usgs.gov/3d-elevation-program
 - https://developers.google.com/maps/documentation/solar/usage-and-billing
-- https://developers.google.com/maps/documentation/solar/coverage
-- https://developers.google.com/maps/documentation/solar/release-notes
-- https://kartkatalog.geonorge.no/metadata/norge-i-bilder-wms-ortofoto/dcee8bf4-fdf3-4433-a91b-209c7d9b0b0f
-- https://datafordeler.dk/dataoversigt/geodanmark-ortofoto/ortofoto-foraar-wmts/
-- https://www.solarpowereurope.org/press-releases/new-report-eu-solar-workforce-reaches-record-heights-in-2024-but-growth-expected-to-stall-in-2025
-- https://aurorasolar.com/pricing/
-- https://www.opensolar.com/
-- https://roofscope.com/page/pricing
-- https://www.arbeidstilsynet.no/hms/hms-kort/
-- https://www.arbeidstilsynet.no/hms/hms-i-bygg-og-anlegg/byggherreforskriften/elektroniske-oversiktslister/
-- https://lovdata.no/dokument/SF/forskrift/2007-03-30-366
-- https://lovdata.no/dokument/SF/forskrift/2008-02-22-166
-- https://www.skatteverket.se/foretag/arbetsgivare/personalliggare/personalliggarebyggbranschen.4.7be5268414bea0646949797.html
-- https://id06.se/support/vad-hander-om-lagen-om-personalliggare-inte-foljs/
-- https://lagen.nu/2018:1472
+- https://support.regrid.com/changelog/self-serve-api-plans
+- https://fervorstudio.ca/news/fence-cloud-review-pricing-alternatives/
+- https://irecusa.org/census-about/
 - https://www.vertikalrms.com/article/how-much-does-coi-tracking-software-cost-2026-pricing-guide/
 - https://www.trustlayer.io/plans
-- https://www.achilles.com/app/uploads/2024/12/StartBank_Krav-til-registrering.pdf
-- https://lovdata.no/dokument/SF/forskrift/2021-06-08-1850/KAPITTEL_2
-- https://www.ssb.no/bygg-bolig-og-eiendom/bolig-og-boforhold/artikler/tilstandsrapporter/_/attachment/inline/c677d4a3-8852-4bb8-b6a7-3808bb529215:8162103592713896ffde0689f8844e90ebe62e65/NOT2023-52.pdf
-- https://www.sik.dk/erhverv/huseftersynsordningen/nyheder-statistik-og-informationsmoeder/statistik/statistik-over-bygningseftersyn
+- https://getjones.com/pricing/
+- https://www.cslb.ca.gov/consumers/data.aspx
+- https://www2.myfloridalicense.com/instant-public-records/
+- https://inspectordata.com/blog/home-inspector-license-requirements-by-state.html
+- https://www.nachi.org/
 - https://www.spectora.com/pricing
-- https://www.businesswire.com/news/home/20260609736918/en/Spectora-Introduces-New-AI-Tools-Reimagining-How-a-Home-Inspection-Gets-Done
-- https://www.goreport.com/pricing/
-- https://propertyinspect.com/pricing/
-- https://www.iverdi.no/
+- https://www.spectora.com/r/the-home-inspection-industry-is-changing-what-it-means-for-your-business
+- https://www.inspectionsupport.com/october-2025-housing-forecasts-for-home-inspectors/
+- https://www.inspectornexus.com/pricing
 - https://www.law.cornell.edu/cfr/text/49/396.11
-- https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles
-- https://www.trucking.org/economics-and-industry-data
+- https://www.federalregister.gov/documents/2024/12/30/2024-30608/revisions-to-civil-penalty-amounts-2025
+- https://uscomplianceservices.org/1-in-5-roadside-inspections-put-motor-carriers-out-of-service-in-2025/
+- https://www.freightwaves.com/news/there-are-292000-shippers-in-america-and-97-of-carriers-have-10-trucks-or-less-the-match-has-been-right-in-front-of-you-the-whole-time
 - https://www.fleetio.com/pricing
-- https://www.softwareadvice.com/inspection/whip-around-profile/
 - https://www.simplyfleet.app/pricing-plan
-- https://www.autosist.com/pricing/
-- https://www.checkproof.com/pricing
-- https://danskelove.dk/lejeloven
-- https://housinghub.campaign.gov.uk/renting-is-changing/
-- https://www.gov.uk/government/publications/guide-to-the-renters-rights-act/guide-to-the-renters-rights-act
-- https://www.depositprotection.com/
-- https://lovdata.no/dokument/NL/lov/1999-03-26-17
-- https://www.htu.no/
-- https://www.gov.uk/government/statistics/english-private-landlord-survey-2024-main-report/english-private-landlord-survey-2024-main-report
-- https://www.inventoryhive.co.uk/pricing/
-- https://inventorybase.co.uk/pricing/
-- https://getrentcheck.com/pricing
-- https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax
-- https://www.landlordstudio.com/pricing
-- https://www.stessa.com/pricing/
-- https://www.turbotenant.com/pricing/
-- https://www.husleie.no/utleier
-- https://hybel.no/premium
-- https://www.boligportal.dk/
-- https://eur-lex.europa.eu/eli/reg/2024/1028/oj
-- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Short-stay_accommodation_offered_via_online_collaborative_economy_platforms
-- https://www.breezeway.io/pricing
-- https://hospitable.com/pricing/
-- https://www.guesty.com/pricing/
-- https://www.getproperly.com/pricing
-- https://lagen.nu/1991:614
-- https://www.nbbl.no/om-oss/
-- https://www.abf-rep.dk/om-abf/
-- https://foundation.caionline.org/publications/statistical-review/
+- https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240AB2801
+- https://www.nysenate.gov/legislation/laws/GOB/7-108
+- https://texas.public.law/statutes/tex._prop._code_section_92.109
+- https://www.depositdeadline.com/security-deposit-return-by-state
+- https://www.zillow.com/research/renters-housing-trends-report-2024-34387/
+- https://archives.hud.gov/news/2022/pr22-242.cfm
+- https://www.getrentcheck.com/pricing
+- https://happy.co/pricing/inspections/
 - https://www.buildium.com/pricing/
-- https://hoalife.com/pricing/
-- https://www.styreportalen.no/priser/
-- https://www.probo.dk/
-- https://boappa.se/priser
+- https://www.rentledger.org/blog/small-landlord-statistics-2026/
+- https://www.turbotenant.com/pricing/
+- https://www.prnewswire.com/news-releases/turbotenant-wraps-2025-with-nearly-900-000-landlords-and-3b-in-rent-processed-302647408.html
+- https://www.prnewswire.com/news-releases/baselane-announces-34m-in-new-funding-debuts-ai-powered-tools-to-automate-banking-and-bookkeeping-for-real-estate-investors-302572023.html
+- https://www.nyc.gov/site/specialenforcement/news/new-yorkers-registered-to-host-surpassed-3500-for-first-time.page
+- https://www.minut.com/blog/los-angeles-short-term-rental-laws
+- https://www.prnewswire.com/news-releases/steady-demand-and-slower-new-supply-define-us-short-term-rentals-in-2026-airdna-finds-302820776.html
+- https://help.turno.com/en/articles/5607345-how-do-paid-subscriptions-work-for-hosts-on-turno
+- https://www.breezeway.io/pricing
+- https://help.hospitable.com/en/articles/4596748-hospitable-pricing-subscription-costs
+- http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0718/Sections/0718.112.html
+- http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0553/Sections/0553.899.html
+- https://condos.myfloridalicense.com/inspections/
+- https://www.caionline.org/getmedia/bfa0f496-1d0d-45c2-88ef-30948da996cb/Florida-Condominium-Datarevised.pdf
+- https://castlegroup.com/blog/floridas-new-sirs-law-hb-913-the-key-2025-deadline-extension-reserve-rule-changes-you-need-to-know/
+- https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=5550
+- https://hoastart.com/hoa-reserve-study-requirements-by-state/
+- https://nowackhoward.com/fincen-permanently-ends-corporate-transparency-act/
+- https://foundation.caionline.org/research/industry-data/
+- https://ipropertymanagement.com/research/hoa-statistics
+- https://www.payhoa.com/pricing/
+- https://townsq.io/pricing/
+- https://www.hoalife.com/pricing
+- https://www.condocontrol.com/pricing/
+- https://effortlesshoa.com/blog/hoa-software-pricing-guide
