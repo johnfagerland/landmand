@@ -25,7 +25,7 @@ You asked for deep research on a new SaaS product you could build yourself, with
 - Building anything. No code, prototypes, or landing pages are in this repository.
 - Customer interviews or surveys. All demand evidence is secondary (regulator sites, pricing pages, statistics offices, founder revenue posts, review sites). Every shortlisted idea needs 10–20 real conversations before code is written.
 - Legal advice. Regulatory dates, thresholds and penalties are quoted from official sources where we found them, but a lawyer or accountant should confirm anything that gates a launch (HIPAA business-associate obligations, TCPA consent, state licensing, sales-tax nexus).
-- Consumer apps, marketplaces that need two-sided liquidity, hardware, or anything requiring a licence a single person cannot get (banking, insurance carrier, medical device Class II+). These are excluded on principle because they are not solo-buildable to profitability.
+- **Marketplaces that need two-sided liquidity** — a supply side and a demand side that must both show up before either one sees value. This is the one exclusion kept from version 3 onward: AI does not solve the cold-start liquidity problem, and clearing it usually takes funding and manual relationship-building on both sides at once, which does not fit a solo founder bootstrapping with AI assistance alone. (Version 1–3 also excluded consumer apps, hardware and anything needing a licence a single person cannot get. The founder lifted those three from version 4 onward: they are not excluded on principle any more, and any real friction they add — a longer sales cycle, a licensing gate, a lower willingness to pay — is scored honestly on solo-buildability and reachability instead of ruled out up front.)
 - Ideas that depend on beating a well-funded horizontal incumbent on its core feature. Where a category is crowded we say so, and we only keep the idea if there is a defensible wedge (a regulation, a data source, a segment or a workflow the incumbents ignore).
 - Financial projections beyond simple unit economics. We give the numbers needed to sanity-check a path to $5k and $10k MRR; we do not build a five-year model.
 
@@ -42,10 +42,12 @@ You asked for deep research on a new SaaS product you could build yourself, with
 |---|---|---|
 | **Pain & urgency** | Nice-to-have; nobody is fined, sued or losing money without it | A legal deadline, an audit, a lawsuit risk, or a direct revenue loss forces a purchase this year |
 | **Solo-buildability** | Needs certification, hardware, field sales, or many deep integrations | A CRUD app plus one or two APIs and an LLM; no gatekeeper |
-| **AI leverage** | AI is a chatbot bolted on | AI removes the main labour cost of the workflow or makes the product possible at all |
+| **AI leverage** | AI is a chatbot bolted on for its own sake | AI removes the main labour cost of the workflow, makes the product possible at all, or does something a human reviewer could not do as well or as cheaply — prediction, forecasting, optimization, computer vision, personalized generation, real-time coaching, matching — not only document extraction and drafting |
 | **Competitive gap** | Several funded, AI-native competitors already sell to the same segment at the same price | Incumbents are enterprise-priced, pre-AI, or absent from the segment |
 | **Willingness to pay** | Under $15/month and price-sensitive | $100+/month with a clear ROI story, or per-unit pricing that scales with the customer |
 | **Reachability** | Buyers are hard to identify or need field sales | Buyers cluster in public registers, licensing boards, associations, marketplaces, or communities a solo founder can reach with SEO and email |
+
+**Version 4 broadens the AI-leverage criterion** beyond document extraction and drafting, at the founder's request, to score any genuinely impactful use of AI — including ones with a bigger ceiling and more technical risk, such as computer vision or predictive modelling. This does not change the scores of ideas 1–65, which were judged fairly under the original, narrower definition; it applies going forward to new ideas.
 
 ## 5. Assumptions used in every "path to profitability"
 
