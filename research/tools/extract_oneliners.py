@@ -4,7 +4,7 @@ import json, re, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 ideas = json.loads((ROOT / "scores.json").read_text())
 oneliners = {}
-for md in list(ROOT.glob("0[1-6]-*.md")) + list(ROOT.glob("1[0-2]-*.md")):
+for md in list(ROOT.glob("0[1-6]-*.md")) + list(ROOT.glob("1[0-2]-*.md")) + list(ROOT.glob("1[45]-*.md")):
     text = md.read_text()
     for m in re.finditer(r"^## (\d+)\. .*?\n\n\*\*One-liner\.\*\* (.*?)\n", text, re.M | re.S):
         oneliners[int(m.group(1))] = m.group(2).strip()

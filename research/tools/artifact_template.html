@@ -98,7 +98,7 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
     <h1>Landmand Idea Scorecard</h1>
     <p class="sub">Fifty SaaS products one developer could build with AI assistance, researched for a US-first market, scored on six criteria and ranked. Click a row for the one-line pitch, the verdict, and a link to the full write-up.</p>
   </div>
-  <div class="meta">Research date 8 Sep 2026 (v3)<br>Solo founder · US-first · location-independent · 65 ideas</div>
+  <div class="meta">Research date 8 Sep 2026 (v4)<br>Solo founder · US-first · location-independent · 77 ideas</div>
 </header>
 
 <section class="thesis" id="thesis" aria-label="Shortlist"></section>
@@ -154,16 +154,17 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
 <script>
 const DATA = /*DATA*/[]/*END*/;
 const REPO = "https://github.com/johnfagerland/landmand/blob/claude/saas-product-research-1364ib/research/";
-const CLUSTERS = {A:"Agriculture, rural & land",B:"Trades, field service & property",C:"Developer & technical tools",D:"Compliance, finance, legal & HR",E:"Marketing, sales & content",F:"Health, education, hospitality, associations",H:"Sports and athletics",I:"Short-term rental industry",J:"Healthcare staffing"};
-const SHORT = {A:"Agriculture",B:"Trades & property",C:"Dev tools",D:"Compliance",E:"Marketing & sales",F:"Vertical SaaS",H:"Sports",I:"Short-term rental",J:"Healthcare staffing"};
+const CLUSTERS = {A:"Agriculture, rural & land",B:"Trades, field service & property",C:"Developer & technical tools",D:"Compliance, finance, legal & HR",E:"Marketing, sales & content",F:"Health, education, hospitality, associations",H:"Sports and athletics",I:"Short-term rental industry",J:"Healthcare staffing",K:"Golf industry",L:"Healthcare workforce planning"};
+const SHORT = {A:"Agriculture",B:"Trades & property",C:"Dev tools",D:"Compliance",E:"Marketing & sales",F:"Vertical SaaS",H:"Sports",I:"Short-term rental",J:"Healthcare staffing",K:"Golf",L:"Workforce planning"};
 const PICKS = [
   {n:30, role:"Primary pick"},
   {n:26, role:"Second product, same channel"},
+  {n:67, role:"Highest score of all 77 (golf, v4)"},
+  {n:72, role:"2nd-highest score (healthcare workforce, v4)"},
   {n:42, role:"Highest ceiling (needs SOC 2)"},
   {n:27, role:"Fastest first revenue"},
   {n:21, role:"GitHub-native route"},
-  {n:1,  role:"The agriculture route"},
-  {n:61, role:"Best of the 3 new areas (sports, STR, healthcare staffing)"}
+  {n:1,  role:"The agriculture route"}
 ];
 function slug(s){return s.toLowerCase().split("").filter(c=>/[a-z0-9 \-]/.test(c)||/[^\x00-\x7f]/.test(c)).join("").replace(/ /g,"-");}
 function href(i){return REPO+i.file+"#"+slug(i.n+". "+i.name);}

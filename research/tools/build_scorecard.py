@@ -27,6 +27,8 @@ CLUSTERS = {
     "H": "Sports and athletics",
     "I": "Short-term rental industry",
     "J": "Healthcare staffing",
+    "K": "Golf industry",
+    "L": "Healthcare workforce planning",
 }
 
 def gh_slug(text):
