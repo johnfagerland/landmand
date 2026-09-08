@@ -24,6 +24,9 @@ CLUSTERS = {
     "D": "Compliance, finance, legal & HR admin",
     "E": "Marketing, sales & content",
     "F": "Vertical SaaS: health, education, hospitality, associations",
+    "H": "Sports and athletics",
+    "I": "Short-term rental industry",
+    "J": "Healthcare staffing",
 }
 
 def gh_slug(text):
@@ -36,7 +39,7 @@ def link(i):
     return f"[{i['n']}. {i['name']}]({i['file']}#{gh_slug(str(i['n']) + '. ' + i['name'])})"
 
 out = []
-out.append("# 09 — Scorecard: all 50 ideas\n")
+out.append(f"# 09 — Scorecard: all {len(ideas)} ideas\n")
 out.append("Six criteria, each 1–5, summed to a score out of 30. Definitions are in [00-overview.md](00-overview.md#4-scoring-framework). "
            "ARPU is the realistic average monthly revenue per customer in US dollars used in that idea's path-to-profitability section; "
            "\"to $5k\" / \"to $10k\" is the number of paying customers needed at that ARPU. MVP weeks are solo-developer weeks with AI assistance, "

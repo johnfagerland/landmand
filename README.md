@@ -1,19 +1,20 @@
 # landmand — SaaS product research
 
-Deep research on **50 SaaS products a single developer could build with AI assistance**, evaluated for problem, customer, value, competition, pricing, path to profitability, and what it takes to reach an MVP.
+Deep research on **65 SaaS products a single developer could build with AI assistance**, evaluated for problem, customer, value, competition, pricing, path to profitability, and what it takes to reach an MVP.
 
-Research date: September 2026 (version 2). Founder assumption: one developer building with AI coding tools; the United States is the primary market and every idea is written to hold regardless of the founder's location. Version 1 (6 September) assumed a Nordic founder and is kept in the git history.
+Research date: September 2026 (version 3). Founder assumption: one developer building with AI coding tools; the United States is the primary market and every idea is written to hold regardless of the founder's location. Version 1 (6 September) assumed a Nordic founder and is kept in the git history. Version 2 rewrote all 50 ideas for a US-first buyer. Version 3 adds 15 more ideas (51–65) across three areas the founder asked about — sports, short-term rentals and healthcare staffing — plus a stand-alone deep dive on idea 9, the founder's pick from the original 50.
 
 ## Start here
 
 | File | What it is |
 |---|---|
 | [research/00-overview.md](research/00-overview.md) | Scope (what we are / are not doing), method, scoring framework, **shortlist and recommendation** |
-| [research/09-scorecard.md](research/09-scorecard.md) | All 50 ideas scored on six criteria; a sortable, filterable version is published at https://claude.ai/code/artifact/c9482619-c4d7-4d87-8231-1f979cde0c1a |
+| [research/09-scorecard.md](research/09-scorecard.md) | All 65 ideas scored on six criteria; a sortable, filterable version is published at https://claude.ai/code/artifact/c9482619-c4d7-4d87-8231-1f979cde0c1a |
+| [research/13-deep-dive-idea-09.md](research/13-deep-dive-idea-09.md) | Deep dive on idea 9 (fence, roof and solar measurement): patents, data sources, live competitors, a validation plan and a week-by-week MVP spec |
 | [research/07-building-with-ai.md](research/07-building-with-ai.md) | Where AI is used to *build* the product, the reference stack, costs, and the generic MVP playbook |
-| [research/08-regulatory-calendar.md](research/08-regulatory-calendar.md) | EU regulatory dates 2025–2027 that create demand for several ideas |
+| [research/08-regulatory-calendar.md](research/08-regulatory-calendar.md) | US federal and state regulatory dates 2025–2028 that create demand for several ideas |
 
-## The 50 ideas, by cluster
+## The 65 ideas, by cluster
 
 | # | Cluster | File |
 |---|---|---|
@@ -23,6 +24,9 @@ Research date: September 2026 (version 2). Founder assumption: one developer bui
 | 26–35 | Compliance, finance, legal & HR admin | [research/04-compliance-finance-legal-hr.md](research/04-compliance-finance-legal-hr.md) |
 | 36–43 | Marketing, sales & content | [research/05-marketing-sales-content.md](research/05-marketing-sales-content.md) |
 | 44–50 | Vertical SaaS: health, education, hospitality, associations | [research/06-vertical-saas.md](research/06-vertical-saas.md) |
+| 51–55 | Sports and athletics | [research/10-sports.md](research/10-sports.md) |
+| 56–60 | Short-term rental industry | [research/11-short-term-rental.md](research/11-short-term-rental.md) |
+| 61–65 | Healthcare staffing | [research/12-healthcare-staffing.md](research/12-healthcare-staffing.md) |
 
 Every idea follows the same template so they can be compared side by side:
 
@@ -52,4 +56,4 @@ To change a score: edit `research/scores.json`, then run the three scripts in th
 
 ## Method and limits
 
-Research was done in September 2026 by web search and direct fetches of pricing pages, regulator sites and statistics offices, then written up against a fixed template. Version 2 rewrote all 50 ideas for a US-first buyer and replaced seven ideas that only existed because of EU or Nordic regulation. Every fact that could be sourced has a URL in the chapter's source list; facts that could not be verified are marked as estimates or "not found" in the text. Scores are judgement calls informed by that research, meant to make the ranking arguable rather than to measure it. No customer interviews were done; the overview says what to validate before building anything.
+Research was done in September 2026 by web search and direct fetches of pricing pages, regulator sites and statistics offices, then written up against a fixed template. Version 2 rewrote all 50 ideas for a US-first buyer and replaced seven ideas that only existed because of EU or Nordic regulation. Version 3 added 15 ideas across sports, short-term rentals and healthcare staffing, and a deep dive on idea 9; the original 50 ideas and their scores are unchanged. Every fact that could be sourced has a URL in the chapter's source list; facts that could not be verified are marked as estimates or "not found" in the text. Scores are judgement calls informed by that research, meant to make the ranking arguable rather than to measure it. No customer interviews were done; the overview says what to validate before building anything.
