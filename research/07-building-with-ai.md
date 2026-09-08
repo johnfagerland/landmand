@@ -33,27 +33,27 @@ Practical rule: a solo developer with an agent gets roughly a **3–5x throughpu
 - **Security by omission.** Missing RLS, unvalidated webhooks, secrets in client bundles. Mitigation: a written checklist run before every release; test as a second tenant; use the platform's advisors (e.g. Supabase security advisor).
 - **Sprawl.** Agents add code faster than you can read it. Mitigation: keep the codebase small enough to read in a day; delete generated code you do not understand.
 - **Fragile prompts in production.** The in-product AI feature works on your 10 samples and fails on customer number 12's PDF. Mitigation: log every AI input/output, build an eval set from real failures, and design the UI as "AI drafts, human confirms" so failures are annoying rather than dangerous.
-- **Timezones, currencies, and locale.** These are the most common class of bugs in agent-generated Nordic/EU business apps (week numbers, VAT rates, decimal commas, DST). Test them explicitly.
+- **Timezones, dates, and tax.** These are the most common class of bugs in agent-generated business apps (DST across four US time zones, fiscal years, sales-tax rules by state, date formats for international customers). Test them explicitly.
 
 ## 2. Reference stack for a solo SaaS
 
-The stack below is the default for all 50 ideas unless an idea says otherwise. It is chosen for: one language end to end, managed everything, generous free tiers, EU data residency available, and strong coding-agent familiarity.
+The stack below is the default for all 50 ideas unless an idea says otherwise. It is chosen for: one language end to end, managed everything, generous free tiers, US regions by default with EU regions available for exporters, and strong coding-agent familiarity.
 
 | Layer | Default | Alternatives | Notes |
 |---|---|---|---|
-| App framework | Next.js (App Router) on Vercel | SvelteKit, Remix, Rails | Agents know Next.js best. Vercel has EU regions. |
-| Database, auth, storage | Supabase (Postgres, EU region) | Neon + Clerk, PlanetScale, Turso | RLS gives multi-tenant isolation in the database itself. |
+| App framework | Next.js (App Router) on Vercel | SvelteKit, Remix, Rails | Agents know Next.js best. |
+| Database, auth, storage | Supabase (Postgres, US East) | Neon + Clerk, PlanetScale, Turso | RLS gives multi-tenant isolation in the database itself. HIPAA products need Supabase's HIPAA add-on and a BAA. |
 | Background jobs | Inngest, Trigger.dev, or Supabase cron + edge functions | Temporal (overkill), a worker on Railway/Fly | Needed for any idea with polling, scheduled reports or long AI jobs. |
-| Payments and VAT | Paddle or Lemon Squeezy (merchant of record) | Stripe direct + Stripe Tax; Polar | MoR handles EU VAT/OSS, invoices, and B2B reverse charge. |
+| Payments and sales tax | Stripe + Stripe Tax (US seller) | Paddle, Lemon Squeezy or Polar as merchant of record | About 20 states tax SaaS; Stripe Tax computes it, a merchant of record also files it. See section 4.4. |
 | Transactional email | Resend or Postmark | AWS SES | Set up SPF/DKIM/DMARC on day one (also an idea in this list). |
-| SMS/voice | Twilio, Telnyx, or 46elks (Nordic) | Bird, Sinch | Nordic sender-ID registration rules apply. |
+| SMS/voice | Twilio or Telnyx | Bird, Sinch | US A2P 10DLC brand and campaign registration is required before sending business SMS; TCPA consent rules apply to marketing texts. |
 | LLM | Claude (Sonnet/Haiku tier) or OpenAI/Gemini equivalents | Local models for privacy-sensitive verticals | Use structured outputs; cache; batch where latency does not matter. |
 | Document/OCR | LLM vision directly, or Azure Document Intelligence / Google Document AI for tables | Textract, Mistral OCR | Vision LLMs are enough for most receipts, forms and photos. |
 | PDF | React-PDF or Playwright HTML-to-PDF | Gotenberg | |
 | Monitoring | Sentry + Better Stack/Axiom | Highlight, OpenTelemetry | |
 | Analytics | PostHog (EU cloud) | Plausible | |
-| E-signature | Documenso (open source) or embedded via Dropbox Sign | Scrive (Nordic, BankID) | Nordic BankID/MitID signing needs a broker (Criipto, Signicat). |
-| i18n | next-intl + AI-assisted translation | | |
+| E-signature | Documenso (open source) or embedded via Dropbox Sign | DocuSign eSignature API | ESIGN/UETA make click-wrap and e-signatures valid for most business documents; notarised documents are the exception. |
+| i18n | next-intl + AI-assisted translation | | Spanish is the second language that matters for US service-business products. |
 
 Running-cost tables at 0, 100 and 1,000 customers are in section 4, from the cross-cutting research pass.
 

@@ -1,6 +1,6 @@
 # 00 — Overview, scope, method and recommendation
 
-*Research date: 6 September 2026.*
+*Research date: 8 September 2026 (version 2). Version 1, dated 6 September, assumed a Nordic-based founder; the founder has since said the market is most likely the United States and the list must hold regardless of location. This version rewrites all 50 ideas for a US-first buyer with global applicability noted, and replaces seven ideas that only existed because of EU or Nordic regulation. Version 1 remains in the git history.*
 
 ## 1. What this research is for
 
@@ -11,24 +11,26 @@ You asked for deep research on a new SaaS product you could build yourself, with
 **We are doing**
 
 - Generating 50 distinct product ideas that one developer can plausibly build to a paying MVP in 4–16 weeks of focused work with AI coding assistance.
-- Researching each idea against the same nine-part template so they can be compared, with published competitor prices, regulatory dates and demand evidence, and a URL for every fact we could source.
+- Treating the United States as the primary market: US regulation, US buyer counts (Census, BLS, IRS, trade associations), US competitors with published US prices, and US distribution channels. Where a product is global by nature (developer tools, most marketing tools) we say so; where an EU or UK rule matters for a US company that exports, it gets one line.
+- Researching each idea against the same nine-part template so they can be compared, with a URL for every fact we could source.
 - Scoring every idea on six criteria and ranking them, then recommending a shortlist of five and one primary pick.
 - Describing the reference stack, the concrete ways AI is used in the *build* (not just in the product), the running costs at 0, 100 and 1,000 customers, and a generic MVP playbook.
-- Biasing toward the founder's situation: a Nordic-based solo developer, EU market first, able to sell globally later. Several ideas use Danish or Norwegian regulation as the wedge because local rules create urgency and keep the big US incumbents out.
+
+**Seven ideas were replaced between version 1 and version 2** because they only existed because of an EU or Nordic law: the EU whistleblower channel, Danish working-time registration, EU e-invoicing, VSME sustainability reporting, a Nordic cap table, a Nordic-language phone receptionist, and Nordic forest-owner management. Their replacements are US-regulation-driven: product compliance for small consumer brands (Prop 65, MoCRA), the IRS written-information-security-plan rule for tax preparers, CMMC readiness for small defense subcontractors, the HIPAA Security Rule for small practices, sales-tax exemption certificate management, business licence and permit renewals, and FSMA 204 food traceability. The other 43 keep their numbers and are reframed for a US buyer.
 
 **We are not doing**
 
 - Building anything. No code, prototypes, or landing pages are in this repository.
 - Customer interviews or surveys. All demand evidence is secondary (regulator sites, pricing pages, statistics offices, founder revenue posts, review sites). Every shortlisted idea needs 10–20 real conversations before code is written.
-- Legal advice. Regulatory dates and thresholds are quoted from official sources where we found them, but a lawyer or accountant should confirm anything that gates a launch (e.g. Peppol access-point certification, health-data processing, e-signature validity).
-- Consumer apps, marketplaces that need two-sided liquidity, hardware, or anything requiring a licence a single person cannot get (banking, insurance carrier, medical device Class IIa+). These are excluded on principle because they are not solo-buildable to profitability.
-- Ideas that depend on beating a well-funded horizontal incumbent on its core feature. Where a category is crowded we say so, and we only keep the idea if there is a defensible wedge (a country, a regulation, a data source, a language, or a segment the incumbents ignore).
-- Financial projections beyond simple unit economics. We give the numbers needed to sanity-check a path to €5k and €10k MRR; we do not build a five-year model.
+- Legal advice. Regulatory dates, thresholds and penalties are quoted from official sources where we found them, but a lawyer or accountant should confirm anything that gates a launch (HIPAA business-associate obligations, TCPA consent, state licensing, sales-tax nexus).
+- Consumer apps, marketplaces that need two-sided liquidity, hardware, or anything requiring a licence a single person cannot get (banking, insurance carrier, medical device Class II+). These are excluded on principle because they are not solo-buildable to profitability.
+- Ideas that depend on beating a well-funded horizontal incumbent on its core feature. Where a category is crowded we say so, and we only keep the idea if there is a defensible wedge (a regulation, a data source, a segment or a workflow the incumbents ignore).
+- Financial projections beyond simple unit economics. We give the numbers needed to sanity-check a path to $5k and $10k MRR; we do not build a five-year model.
 
 ## 3. Method
 
-1. **Ideation.** We started from four sources of demand: (a) EU regulation with 2025–2027 deadlines that forces small organisations to buy software, (b) niches where incumbents are US-centric, enterprise-priced or pre-AI, (c) workflows where large language models turn a data-entry chore into a review step, and (d) segments close to the founder's context (agriculture and rural business, given this repository's name, plus Nordic SMEs). We generated ~80 candidates, removed duplicates and anything failing the exclusions above, and kept 50.
-2. **Research.** Six parallel research passes (one per cluster) plus one cross-cutting pass, each running web searches and fetching pricing and regulator pages directly. Facts without a source are labelled as estimates.
+1. **Ideation.** We started from four sources of demand: (a) US federal and state regulation with 2025–2028 deadlines that forces small organisations to buy software, (b) niches where incumbents are enterprise-priced or pre-AI, (c) workflows where large language models turn a data-entry chore into a review step, and (d) segments close to the founder's stated interests (this repository is named after farming, so agriculture keeps a cluster). We generated ~80 candidates, removed duplicates and anything failing the exclusions above, and kept 50.
+2. **Research.** Six parallel research passes (one per cluster) plus one cross-cutting pass, each running web searches and fetching pricing and regulator pages directly. Version 2 reused the competitor pricing already gathered in version 1 (most competitors are US products) and spent its budget on US evidence. Facts without a source are labelled as estimates.
 3. **Scoring.** Each idea is scored 1–5 on six criteria (below), summed to a score out of 30. Scores are judgement calls informed by the research, not measurements; they are there to make the ranking arguable.
 4. **Synthesis.** A per-idea write-up in the shared template, a scorecard, a shortlist, and a recommendation.
 
@@ -36,20 +38,20 @@ You asked for deep research on a new SaaS product you could build yourself, with
 
 | Criterion | 1 | 5 |
 |---|---|---|
-| **Pain & urgency** | Nice-to-have; nobody is fined or losing money without it | A legal deadline, an audit, or a direct revenue loss forces a purchase this year |
-| **Solo-buildability** | Needs certification, hardware, on-site sales, or many deep integrations | A CRUD app plus one or two APIs and an LLM; no gatekeeper |
+| **Pain & urgency** | Nice-to-have; nobody is fined, sued or losing money without it | A legal deadline, an audit, a lawsuit risk, or a direct revenue loss forces a purchase this year |
+| **Solo-buildability** | Needs certification, hardware, field sales, or many deep integrations | A CRUD app plus one or two APIs and an LLM; no gatekeeper |
 | **AI leverage** | AI is a chatbot bolted on | AI removes the main labour cost of the workflow or makes the product possible at all |
-| **Competitive gap** | Several funded, AI-native competitors already sell to the same segment at the same price | Incumbents are enterprise-priced, pre-AI, or absent from the founder's market/language |
-| **Willingness to pay** | Under €15/month and price-sensitive | €100+/month with a clear ROI story, or per-unit pricing that scales with the customer |
-| **Reachability** | Buyers are hard to identify or need field sales | Buyers cluster in searchable directories, associations, marketplaces, or communities a solo founder can reach with SEO and email |
+| **Competitive gap** | Several funded, AI-native competitors already sell to the same segment at the same price | Incumbents are enterprise-priced, pre-AI, or absent from the segment |
+| **Willingness to pay** | Under $15/month and price-sensitive | $100+/month with a clear ROI story, or per-unit pricing that scales with the customer |
+| **Reachability** | Buyers are hard to identify or need field sales | Buyers cluster in public registers, licensing boards, associations, marketplaces, or communities a solo founder can reach with SEO and email |
 
 ## 5. Assumptions used in every "path to profitability"
 
-- Fixed monthly cost of running a small SaaS: about €150–400 at launch (hosting, database, email, domain, error tracking, LLM usage), rising to roughly €800–2,000 at 1,000 customers. See [07-building-with-ai.md](07-building-with-ai.md) for the itemised stack.
-- Payment processing via a merchant of record (Paddle, Lemon Squeezy, Polar) at roughly 4–5% + fixed fee, which also handles EU VAT/OSS. Stripe direct is cheaper but you handle VAT yourself.
-- Milestones: **break-even** at ~€1k MRR, **ramen-profitable** at €5k MRR, **full-time replacement** at €10k MRR. For each idea we show customers needed at its realistic ARPU to hit €5k and €10k MRR.
+- Fixed monthly cost of running a small SaaS: about $150–400 at launch (hosting, database, email, domain, error tracking, LLM usage), rising to roughly $800–2,000 at 1,000 customers. See [07-building-with-ai.md](07-building-with-ai.md) for the itemised stack.
+- Payment processing via Stripe (about 2.9% + 30¢ plus Stripe Tax) for a US-based seller, or a merchant of record (Paddle, Lemon Squeezy, Polar) at roughly 4–5% + fixed fee if the founder is outside the US or wants sales tax handled.
+- Milestones: **break-even** at ~$1k MRR, **ramen-profitable** at $5k MRR, **full-time replacement** at $10k MRR. For each idea we show customers needed at its realistic ARPU to hit $5k and $10k MRR.
 - Churn for SMB SaaS of 3–5% per month unless the product holds compliance records (then 1–2%). This matters: at 5% monthly churn you must add 50 customers a month just to hold 1,000.
-- Founder time is free in year one; the goal is to reach €5k MRR within 12 months of launch.
+- Founder time is free in year one; the goal is to reach $5k MRR within 12 months of launch.
 
 ## 6. What the research found
 

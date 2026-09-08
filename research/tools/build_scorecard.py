@@ -38,12 +38,12 @@ def link(i):
 out = []
 out.append("# 09 — Scorecard: all 50 ideas\n")
 out.append("Six criteria, each 1–5, summed to a score out of 30. Definitions are in [00-overview.md](00-overview.md#4-scoring-framework). "
-           "ARPU is the realistic average monthly revenue per customer in euros used in that idea's path-to-profitability section; "
-           "\"to €5k\" / \"to €10k\" is the number of paying customers needed at that ARPU. MVP weeks are solo-developer weeks with AI assistance, "
+           "ARPU is the realistic average monthly revenue per customer in US dollars used in that idea's path-to-profitability section; "
+           "\"to $5k\" / \"to $10k\" is the number of paying customers needed at that ARPU. MVP weeks are solo-developer weeks with AI assistance, "
            "build only (see [07-building-with-ai.md](07-building-with-ai.md#3-the-generic-mvp-playbook-12-weeks)).\n")
 
 out.append("## Ranked by total score\n")
-out.append("| Rank | Idea | Cluster | Pain | Solo | AI | Gap | WTP | Reach | **Total** | ARPU € | to €5k | to €10k | MVP wks |")
+out.append("| Rank | Idea | Cluster | Pain | Solo | AI | Gap | WTP | Reach | **Total** | ARPU $ | to $5k | to $10k | MVP wks |")
 out.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for rank, i in enumerate(sorted(ideas, key=lambda x: (-x["total"], x["n"])), 1):
     out.append(f"| {rank} | {link(i)} | {i['cluster']} | {i['pain']} | {i['solo']} | {i['ai']} | {i['gap']} | {i['wtp']} | {i['reach']} | **{i['total']}** | {i['arpu_eur']} | {i['to5k']} | {i['to10k']} | {i['mvp_weeks']} |")
@@ -51,7 +51,7 @@ for rank, i in enumerate(sorted(ideas, key=lambda x: (-x["total"], x["n"])), 1):
 out.append("\n## By cluster\n")
 for c, cname in CLUSTERS.items():
     out.append(f"### {c} — {cname}\n")
-    out.append("| # | Idea | Total | ARPU € | to €10k | MVP wks | Verdict |")
+    out.append("| # | Idea | Total | ARPU $ | to $10k | MVP wks | Verdict |")
     out.append("|---|---|---|---|---|---|---|")
     for i in sorted([x for x in ideas if x["cluster"] == c], key=lambda x: x["n"]):
         out.append(f"| {i['n']} | {link(i)} | **{i['total']}** | {i['arpu_eur']} | {i['to10k']} | {i['mvp_weeks']} | {i['verdict']} |")

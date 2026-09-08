@@ -97,7 +97,7 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
     <h1>Landmand Idea Scorecard</h1>
     <p class="sub">Fifty SaaS products one developer could build with AI assistance, scored on six criteria and ranked. Click a row for the one-line pitch, the verdict, and a link to the full write-up.</p>
   </div>
-  <div class="meta">Research date 6 Sep 2026<br>Solo founder · Nordic base · EU first</div>
+  <div class="meta">Research date 8 Sep 2026 (v2)<br>Solo founder · US-first · location-independent</div>
 </header>
 
 <section class="thesis" id="thesis" aria-label="Shortlist"></section>
@@ -113,7 +113,7 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
       <option value="wtp">Willingness to pay</option>
       <option value="reach">Reachability</option>
       <option value="arpu_eur">ARPU</option>
-      <option value="to10k">Fewest customers to €10k MRR</option>
+      <option value="to10k">Fewest customers to $10k MRR</option>
       <option value="mvp_weeks">Shortest MVP</option>
       <option value="n">Idea number</option>
     </select></div>
@@ -135,8 +135,8 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
     <th class="crit"><button data-k="wtp" title="Willingness to pay">WTP</button></th>
     <th class="crit"><button data-k="reach" title="Reachability">Reach</button></th>
     <th class="num"><button data-k="total">Total /30</button></th>
-    <th class="num"><button data-k="arpu_eur">ARPU €/mo</button></th>
-    <th class="num"><button data-k="to10k">To €10k MRR</button></th>
+    <th class="num"><button data-k="arpu_eur">ARPU $/mo</button></th>
+    <th class="num"><button data-k="to10k">To $10k MRR</button></th>
     <th class="num"><button data-k="mvp_weeks">MVP wks</button></th>
   </tr></thead>
   <tbody id="rows"></tbody>
@@ -146,7 +146,7 @@ footer{margin-top:28px;color:var(--ink-3);font-size:12px;max-width:70ch}
   <span><i style="background:var(--tier-top)"></i>21–30 shortlist-grade</span>
   <span><i style="background:var(--tier-mid)"></i>18–20 viable with a condition</span>
   <span><i style="background:var(--tier-low)"></i>17 and below, structural problems</span>
-  <span>Criteria are 1–5 each; definitions in the overview chapter. ARPU is realistic monthly revenue per customer used in each idea's path to profitability. MVP weeks are solo-developer build weeks with AI assistance.</span>
+  <span>Criteria are 1–5 each; definitions in the overview chapter. ARPU is realistic monthly revenue per customer in US dollars used in each idea's path to profitability. MVP weeks are solo-developer build weeks with AI assistance.</span>
 </div>
 <footer>Full write-ups (problem, buyer, value, competitors with published pricing, pricing model, path to profitability, AI use, MVP scope) live in the research folder of the repository linked from each row. Scores are judgement calls informed by sourced research, meant to make the ranking arguable rather than to measure it.</footer>
 </div>
@@ -189,7 +189,7 @@ function render(){
     const d=document.createElement("tr"); d.className="detail"; d.id="d"+i.n; d.hidden=!state.open.has(i.n);
     d.innerHTML=`<td colspan="13"><div class="detail"><div class="detail-grid">
       <div><div class="lbl">In one line</div><p>${esc(i.oneliner)}</p>
-        <div class="lbl">Path to €10k MRR</div><p>About ${i.to10k.toLocaleString("en")} paying customers at €${i.arpu_eur} per month; €5k MRR at ${Math.round(5000/i.arpu_eur).toLocaleString("en")}. Build estimate ${i.mvp_weeks} solo weeks before the 12-week launch playbook.</p></div>
+        <div class="lbl">Path to $10k MRR</div><p>About ${i.to10k.toLocaleString("en")} paying customers at $${i.arpu_eur} per month; $5k MRR at ${Math.round(5000/i.arpu_eur).toLocaleString("en")}. Build estimate ${i.mvp_weeks} solo weeks before the 12-week launch playbook.</p></div>
       <div><div class="lbl">Verdict</div><p class="verdict">${esc(i.verdict)}.</p>
         <a href="${href(i)}" target="_blank" rel="noopener">Read the full write-up in ${i.file} ↗</a></div>
     </div></div></td>`;
@@ -204,7 +204,7 @@ function renderPicks(){
   PICKS.forEach((p,k)=>{const i=DATA.find(x=>x.n===p.n); if(!i)return;
     const div=document.createElement("div"); div.className="pick"+(k===0?" primary":"");
     div.innerHTML=`<div class="role">${p.role}</div><div class="name"><button>${i.n}. ${esc(i.name)}</button></div>
-      <div class="nums"><span>Score <b>${i.total}</b></span><span>ARPU <b>€${i.arpu_eur}</b></span><span>To €10k <b>${i.to10k}</b></span></div>`;
+      <div class="nums"><span>Score <b>${i.total}</b></span><span>ARPU <b>$${i.arpu_eur}</b></span><span>To $10k <b>${i.to10k}</b></span></div>`;
     div.querySelector("button").addEventListener("click",()=>{state.open.add(i.n);state.q="";document.getElementById("q").value="";state.clusters.clear();renderChips();render();document.getElementById("d"+i.n).previousElementSibling.scrollIntoView({block:"center"});});
     el.appendChild(div);});
 }

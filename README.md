@@ -2,7 +2,7 @@
 
 Deep research on **50 SaaS products a single developer could build with AI assistance**, evaluated for problem, customer, value, competition, pricing, path to profitability, and what it takes to reach an MVP.
 
-Research date: September 2026. Founder assumption: one developer, Nordic-based, EU market first, building with AI coding tools.
+Research date: September 2026 (version 2). Founder assumption: one developer building with AI coding tools; the United States is the primary market and every idea is written to hold regardless of the founder's location. Version 1 (6 September) assumed a Nordic founder and is kept in the git history.
 
 ## Start here
 
@@ -52,4 +52,4 @@ To change a score: edit `research/scores.json`, then run the three scripts in th
 
 ## Method and limits
 
-Research was done in September 2026 by web search and direct fetches of pricing pages, regulator sites and statistics offices, then written up against a fixed template. Every fact that could be sourced has a URL in the chapter's source list; facts that could not be verified are marked as estimates or "not found" in the text. Scores are judgement calls informed by that research, meant to make the ranking arguable rather than to measure it. No customer interviews were done; the overview says what to validate before building anything.
+Research was done in September 2026 by web search and direct fetches of pricing pages, regulator sites and statistics offices, then written up against a fixed template. Version 2 rewrote all 50 ideas for a US-first buyer and replaced seven ideas that only existed because of EU or Nordic regulation. Every fact that could be sourced has a URL in the chapter's source list; facts that could not be verified are marked as estimates or "not found" in the text. Scores are judgement calls informed by that research, meant to make the ranking arguable rather than to measure it. No customer interviews were done; the overview says what to validate before building anything.
