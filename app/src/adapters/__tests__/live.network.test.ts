@@ -86,7 +86,9 @@ describe("live: USGS elevation", () => {
   });
 
   it("EPQS returns a finite value for one point", async () => {
-    const r = await new EpqsElevationProvider().sample([points[0]], signal());
+    // EPQS is the slow fallback (1–12 s per point in practice); the production 8 s timeout is
+    // deliberate, but this test checks parsing against the live service, not its latency.
+    const r = await new EpqsElevationProvider(25_000).sample([points[0]], signal());
     expect(r.source).toBe("epqs");
     expect(Number.isFinite(r.elevationsFt[0])).toBe(true);
     expect(r.elevationsFt[0] as number).toBeGreaterThan(200);

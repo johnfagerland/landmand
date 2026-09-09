@@ -1,7 +1,7 @@
 "use client";
 /**
- * Two-pane quote editor: map on the left, panels on the right. The take-off panel (owned by another
- * module) mounts into <div data-testid="takeoff-slot" /> in wave 2.
+ * Two-pane quote editor: map on the left, panels on the right. TakeOffSection mounts the
+ * price-book take-off into the takeoff-slot and feeds the result to ProposalButton via the store.
  */
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import Toolbar from "@/components/editor/Toolbar";
 import ParcelPicker from "@/components/quote/ParcelPicker";
 import ProposalButton from "@/components/quote/ProposalButton";
 import QuoteSummary from "@/components/quote/QuoteSummary";
+import TakeOffSection from "@/components/takeoff/TakeOffSection";
 import { Button } from "@/components/ui/Button";
 import { useQuoteStore } from "@/lib/store/quoteStore";
 
@@ -85,7 +86,9 @@ export default function QuoteWorkspace({ id }: { id: string }) {
             <SetbackControl />
             <SegmentList />
             <GatePanel />
-            <div data-testid="takeoff-slot" className="flex flex-col gap-3" />
+            <div data-testid="takeoff-slot" className="flex flex-col gap-3">
+              <TakeOffSection />
+            </div>
             <ProposalButton />
           </>
         )}
