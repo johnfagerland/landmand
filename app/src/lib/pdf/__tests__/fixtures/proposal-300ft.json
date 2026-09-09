@@ -1,0 +1,469 @@
+{
+  "quote": {
+    "schemaVersion": 1,
+    "id": "6f1c2a4e-0b7d-4c8e-9a21-5d3e7f8a9b10",
+    "createdAt": "2026-09-08T15:00:00.000Z",
+    "updatedAt": "2026-09-08T15:30:00.000Z",
+    "address": {
+      "line1": "1823 White Oak Rd",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27608",
+      "matched": "1823 WHITE OAK RD, RALEIGH, NC, 27608",
+      "countyFips": "37183"
+    },
+    "geocode": [
+      -78.6473,
+      35.8067
+    ],
+    "parcel": {
+      "id": "county:37183:1704581656",
+      "source": "county",
+      "providerId": "county:37183",
+      "attribution": "Lot lines: Wake County GIS",
+      "apn": "1704581656",
+      "siteAddress": "1823 WHITE OAK RD",
+      "ring": [
+        [
+          -78.6475033,
+          35.8066038
+        ],
+        [
+          -78.6470967,
+          35.8066038
+        ],
+        [
+          -78.6470967,
+          35.8067962
+        ],
+        [
+          -78.6475033,
+          35.8067962
+        ]
+      ],
+      "holes": [],
+      "areaSqFt": 8400,
+      "origin": [
+        -78.6473,
+        35.8067
+      ],
+      "fetchedAt": "2026-09-08T15:01:00.000Z"
+    },
+    "parcelStatus": "found",
+    "fence": {
+      "vertices": [
+        [
+          -78.6474694,
+          35.8066313
+        ],
+        [
+          -78.6471306,
+          35.8066313
+        ],
+        [
+          -78.6471306,
+          35.8067687
+        ],
+        [
+          -78.6474694,
+          35.8067687
+        ]
+      ],
+      "closed": true,
+      "gates": [
+        {
+          "id": "g1",
+          "anchor": [
+            -78.6473949,
+            35.8066313
+          ],
+          "widthFt": 4,
+          "kind": "single"
+        }
+      ],
+      "styleId": "wood-privacy-6",
+      "heightFt": 6
+    },
+    "profiles": {},
+    "priceBookId": "pb-sample",
+    "takeoff": {
+      "styleId": "wood-privacy-6",
+      "heightFt": 6,
+      "flatLengthFt": 300,
+      "correctedLengthFt": 300,
+      "fenceLengthFt": 296,
+      "slopeFactor": 1,
+      "posts": {
+        "corner": 4,
+        "end": 0,
+        "line": 35,
+        "gate": 2,
+        "total": 41
+      },
+      "sections": 40,
+      "gates": 1,
+      "segments": [
+        {
+          "segmentIndex": 0,
+          "flatFt": 100,
+          "correctedFt": 100,
+          "fenceFt": 96,
+          "slopeFactor": 1,
+          "linePosts": 11,
+          "sections": 13,
+          "gateIds": [
+            "g1"
+          ]
+        },
+        {
+          "segmentIndex": 1,
+          "flatFt": 50,
+          "correctedFt": 50,
+          "fenceFt": 50,
+          "slopeFactor": 1,
+          "linePosts": 6,
+          "sections": 7,
+          "gateIds": []
+        },
+        {
+          "segmentIndex": 2,
+          "flatFt": 100,
+          "correctedFt": 100,
+          "fenceFt": 100,
+          "slopeFactor": 1,
+          "linePosts": 12,
+          "sections": 13,
+          "gateIds": []
+        },
+        {
+          "segmentIndex": 3,
+          "flatFt": 50,
+          "correctedFt": 50,
+          "fenceFt": 50,
+          "slopeFactor": 1,
+          "linePosts": 6,
+          "sections": 7,
+          "gateIds": []
+        }
+      ],
+      "lines": [
+        {
+          "sku": "WP-LP",
+          "description": "4x4x8 pressure-treated pine line post",
+          "category": "post",
+          "unit": "each",
+          "qty": 37,
+          "unitPriceCents": 1498,
+          "extendedCents": 55426,
+          "basis": "35 line posts + 5 % waste",
+          "taxable": true
+        },
+        {
+          "sku": "WP-TP",
+          "description": "4x4x10 pressure-treated pine corner/end post",
+          "category": "post",
+          "unit": "each",
+          "qty": 5,
+          "unitPriceCents": 1948,
+          "extendedCents": 9740,
+          "basis": "4 corner posts + 5 % waste",
+          "taxable": true
+        },
+        {
+          "sku": "WP-GP",
+          "description": "6x6x10 pressure-treated pine gate post",
+          "category": "post",
+          "unit": "each",
+          "qty": 3,
+          "unitPriceCents": 4200,
+          "extendedCents": 12600,
+          "basis": "2 gate posts + 5 % waste",
+          "taxable": true
+        },
+        {
+          "sku": "WP-RAIL",
+          "description": "2x4x8 pressure-treated rail",
+          "category": "rail",
+          "unit": "each",
+          "qty": 126,
+          "unitPriceCents": 698,
+          "extendedCents": 87948,
+          "basis": "40 sections x 3 rails + 5 % waste",
+          "taxable": true
+        },
+        {
+          "sku": "WP-PKT",
+          "description": "1x6x6 dog-ear pressure-treated picket",
+          "category": "picket",
+          "unit": "each",
+          "qty": 622,
+          "unitPriceCents": 268,
+          "extendedCents": 166696,
+          "basis": "296 ft at 6 in per picket + 5 % waste",
+          "taxable": true
+        },
+        {
+          "sku": "CONC-50",
+          "description": "50 lb fast-setting concrete mix",
+          "category": "concrete",
+          "unit": "bag",
+          "qty": 47,
+          "unitPriceCents": 648,
+          "extendedCents": 30456,
+          "basis": "35 line x 1 + 6 terminal x 2",
+          "taxable": true
+        },
+        {
+          "sku": "WP-GATE-S",
+          "description": "4 ft wood privacy walk gate (single)",
+          "category": "gate",
+          "unit": "each",
+          "qty": 1,
+          "unitPriceCents": 18900,
+          "extendedCents": 18900,
+          "basis": "1 single gate",
+          "taxable": true
+        },
+        {
+          "sku": "HW-GATE-WOOD",
+          "description": "Gate hinge and latch kit for wood gates",
+          "category": "hardware",
+          "unit": "each",
+          "qty": 1,
+          "unitPriceCents": 3498,
+          "extendedCents": 3498,
+          "basis": "1 per gate",
+          "taxable": true
+        },
+        {
+          "sku": "LAB-WOOD-FT",
+          "description": "Install labor - wood privacy (per linear foot)",
+          "category": "labor",
+          "unit": "ft",
+          "qty": 296,
+          "unitPriceCents": 1200,
+          "extendedCents": 355200,
+          "basis": "296 ft of fence",
+          "taxable": false
+        },
+        {
+          "sku": "LAB-GATE",
+          "description": "Install labor - gate hang and adjust (per gate)",
+          "category": "labor",
+          "unit": "each",
+          "qty": 1,
+          "unitPriceCents": 8500,
+          "extendedCents": 8500,
+          "basis": "1 gate",
+          "taxable": false
+        }
+      ],
+      "subtotalCents": 748964,
+      "taxCents": 27932,
+      "totalCents": 776896,
+      "warnings": [
+        "Slope not applied on 4 segment(s)"
+      ],
+      "computedAt": "2026-09-08T15:30:00.000Z"
+    },
+    "customer": {
+      "name": "Jane Homeowner",
+      "phone": "(919) 555-0142",
+      "email": "jane@example.com"
+    },
+    "notes": "Remove and haul away the old chain-link on the north side."
+  },
+  "takeoff": {
+    "styleId": "wood-privacy-6",
+    "heightFt": 6,
+    "flatLengthFt": 300,
+    "correctedLengthFt": 300,
+    "fenceLengthFt": 296,
+    "slopeFactor": 1,
+    "posts": {
+      "corner": 4,
+      "end": 0,
+      "line": 35,
+      "gate": 2,
+      "total": 41
+    },
+    "sections": 40,
+    "gates": 1,
+    "segments": [
+      {
+        "segmentIndex": 0,
+        "flatFt": 100,
+        "correctedFt": 100,
+        "fenceFt": 96,
+        "slopeFactor": 1,
+        "linePosts": 11,
+        "sections": 13,
+        "gateIds": [
+          "g1"
+        ]
+      },
+      {
+        "segmentIndex": 1,
+        "flatFt": 50,
+        "correctedFt": 50,
+        "fenceFt": 50,
+        "slopeFactor": 1,
+        "linePosts": 6,
+        "sections": 7,
+        "gateIds": []
+      },
+      {
+        "segmentIndex": 2,
+        "flatFt": 100,
+        "correctedFt": 100,
+        "fenceFt": 100,
+        "slopeFactor": 1,
+        "linePosts": 12,
+        "sections": 13,
+        "gateIds": []
+      },
+      {
+        "segmentIndex": 3,
+        "flatFt": 50,
+        "correctedFt": 50,
+        "fenceFt": 50,
+        "slopeFactor": 1,
+        "linePosts": 6,
+        "sections": 7,
+        "gateIds": []
+      }
+    ],
+    "lines": [
+      {
+        "sku": "WP-LP",
+        "description": "4x4x8 pressure-treated pine line post",
+        "category": "post",
+        "unit": "each",
+        "qty": 37,
+        "unitPriceCents": 1498,
+        "extendedCents": 55426,
+        "basis": "35 line posts + 5 % waste",
+        "taxable": true
+      },
+      {
+        "sku": "WP-TP",
+        "description": "4x4x10 pressure-treated pine corner/end post",
+        "category": "post",
+        "unit": "each",
+        "qty": 5,
+        "unitPriceCents": 1948,
+        "extendedCents": 9740,
+        "basis": "4 corner posts + 5 % waste",
+        "taxable": true
+      },
+      {
+        "sku": "WP-GP",
+        "description": "6x6x10 pressure-treated pine gate post",
+        "category": "post",
+        "unit": "each",
+        "qty": 3,
+        "unitPriceCents": 4200,
+        "extendedCents": 12600,
+        "basis": "2 gate posts + 5 % waste",
+        "taxable": true
+      },
+      {
+        "sku": "WP-RAIL",
+        "description": "2x4x8 pressure-treated rail",
+        "category": "rail",
+        "unit": "each",
+        "qty": 126,
+        "unitPriceCents": 698,
+        "extendedCents": 87948,
+        "basis": "40 sections x 3 rails + 5 % waste",
+        "taxable": true
+      },
+      {
+        "sku": "WP-PKT",
+        "description": "1x6x6 dog-ear pressure-treated picket",
+        "category": "picket",
+        "unit": "each",
+        "qty": 622,
+        "unitPriceCents": 268,
+        "extendedCents": 166696,
+        "basis": "296 ft at 6 in per picket + 5 % waste",
+        "taxable": true
+      },
+      {
+        "sku": "CONC-50",
+        "description": "50 lb fast-setting concrete mix",
+        "category": "concrete",
+        "unit": "bag",
+        "qty": 47,
+        "unitPriceCents": 648,
+        "extendedCents": 30456,
+        "basis": "35 line x 1 + 6 terminal x 2",
+        "taxable": true
+      },
+      {
+        "sku": "WP-GATE-S",
+        "description": "4 ft wood privacy walk gate (single)",
+        "category": "gate",
+        "unit": "each",
+        "qty": 1,
+        "unitPriceCents": 18900,
+        "extendedCents": 18900,
+        "basis": "1 single gate",
+        "taxable": true
+      },
+      {
+        "sku": "HW-GATE-WOOD",
+        "description": "Gate hinge and latch kit for wood gates",
+        "category": "hardware",
+        "unit": "each",
+        "qty": 1,
+        "unitPriceCents": 3498,
+        "extendedCents": 3498,
+        "basis": "1 per gate",
+        "taxable": true
+      },
+      {
+        "sku": "LAB-WOOD-FT",
+        "description": "Install labor - wood privacy (per linear foot)",
+        "category": "labor",
+        "unit": "ft",
+        "qty": 296,
+        "unitPriceCents": 1200,
+        "extendedCents": 355200,
+        "basis": "296 ft of fence",
+        "taxable": false
+      },
+      {
+        "sku": "LAB-GATE",
+        "description": "Install labor - gate hang and adjust (per gate)",
+        "category": "labor",
+        "unit": "each",
+        "qty": 1,
+        "unitPriceCents": 8500,
+        "extendedCents": 8500,
+        "basis": "1 gate",
+        "taxable": false
+      }
+    ],
+    "subtotalCents": 748964,
+    "taxCents": 27932,
+    "totalCents": 776896,
+    "warnings": [
+      "Slope not applied on 4 segment(s)"
+    ],
+    "computedAt": "2026-09-08T15:30:00.000Z"
+  },
+  "firm": {
+    "name": "Oak City Fence Co.",
+    "addressLines": [
+      "4120 Atlantic Ave, Suite 110",
+      "Raleigh, NC 27604"
+    ],
+    "phone": "(919) 555-0100",
+    "email": "quotes@oakcityfence.example",
+    "licenseNo": "NC-88213",
+    "taxRatePct": 7.25,
+    "defaultSetbackFt": 0.5,
+    "terms": "This proposal is valid for 30 days. Measurements are derived from county lot lines and the contractor's on-map adjustments; final layout is confirmed on site. Price excludes permits and utility locates unless listed. 50 % deposit at signing, balance on completion."
+  }
+}
