@@ -11,6 +11,8 @@ Research date: September 2026 (version 4). Founder assumption: one developer bui
 | [research/00-overview.md](research/00-overview.md) | Scope (what we are / are not doing), method, scoring framework, **shortlist and recommendation** |
 | [research/09-scorecard.md](research/09-scorecard.md) | All 77 ideas scored on six criteria; a sortable, filterable version is published at https://claude.ai/code/artifact/c9482619-c4d7-4d87-8231-1f979cde0c1a |
 | [research/13-deep-dive-idea-09.md](research/13-deep-dive-idea-09.md) | Deep dive on idea 9 (fence, roof and solar measurement): patents, data sources, live competitors, a validation plan and a week-by-week MVP spec |
+| [research/16-healthcare-workforce-calendar.md](research/16-healthcare-workforce-calendar.md) | Every weekly, monthly, quarterly and annual task in healthcare workforce planning, mapped against ideas 61–65 and 72–77 — an audit that found no new idea, and says why |
+| [research/17-deep-dive-idea-74.md](research/17-deep-dive-idea-74.md) | Deep dive on idea 74 (nurse schedule optimization): a corrected BAA/data-access answer, a sourced forecasting and scheduling-algorithm recommendation, a liability/disclaimer design, a validation plan and a week-by-week MVP spec |
 | [research/07-building-with-ai.md](research/07-building-with-ai.md) | Where AI is used to *build* the product, the reference stack, costs, and the generic MVP playbook |
 | [research/08-regulatory-calendar.md](research/08-regulatory-calendar.md) | US federal and state regulatory dates 2025–2028 that create demand for several ideas |
 
