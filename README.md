@@ -4,6 +4,10 @@ Deep research on **77 SaaS products a single developer could build with AI assis
 
 Research date: September 2026 (version 4). Founder assumption: one developer building with AI coding tools; the United States is the primary market and every idea is written to hold regardless of the founder's location. Version 1 (6 September) assumed a Nordic founder and is kept in the git history. Version 2 rewrote all 50 ideas for a US-first buyer. Version 3 added 15 more ideas (51–65) across three areas the founder asked about — sports, short-term rentals and healthcare staffing — plus a stand-alone deep dive on idea 9, the founder's pick from the original 50. Version 4 added 12 more ideas (66–77) across golf and healthcare workforce planning, the founder's own stated interests, after the founder said none of the version-3 picks were exciting; two rules loosened for this round (only two-sided marketplaces stay excluded, and AI credit is no longer limited to document extraction), and under those rules **idea 67 (golf-course turf-disease prediction) now scores 23/30, the highest of all 77 ideas**.
 
+## Building it: Fenceline (idea 9)
+
+The first idea taken past research is idea 9, the fence-first measurement and instant-quote tool from [research/13-deep-dive-idea-09.md](research/13-deep-dive-idea-09.md). Its code lives under [app/](app/) as **Fenceline**, a Next.js app: type a US address, get the lot lines from free county parcel data on public-domain USGS imagery, adjust the fence line, add gates, apply your own price book with slope-corrected quantities, and download a proposal PDF. See [app/README.md](app/README.md) for how to run it and what is deliberately left for later phases (accounts, billing, e-sign, roofing).
+
 ## Start here
 
 | File | What it is |
