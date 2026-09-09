@@ -11,6 +11,7 @@ export * from "./geo/offset";
 export * from "./geo/snap";
 export * from "./fence/gates";
 export * from "./fence/posts";
+export * from "./fence/spacing";
 export * from "./elevation/profile";
 export * from "./takeoff/money";
 export * from "./takeoff/takeoff";

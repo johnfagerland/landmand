@@ -466,7 +466,13 @@ export const useQuoteStore = create<QuoteState>()((set, get) => {
       const coalesceMs = opts.coalesceMs ?? (source === "editor" ? EDITOR_COALESCE_MS : 0);
       const now = Date.now();
 
-      const vertices = tidyVertices(next.vertices, next.closed);
+      const tidied = tidyVertices(next.vertices, next.closed);
+      // A closed perimeter is stored normalised (counter-clockwise, no slivers) so that side indices shown
+      // in the panel, elevation cache keys and per-side setbacks all refer to the same ring.
+      const vertices =
+        next.closed && tidied.length >= 3 && plane
+          ? safeEngine("normalizeRing", () => normalizeRing(tidied, plane), tidied)
+          : tidied;
       let fence: FenceLine = { ...next, vertices };
       const draft: Quote = { ...quote, fence };
       const summary = computeSummary(draft, plane);

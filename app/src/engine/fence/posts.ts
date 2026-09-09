@@ -1,6 +1,7 @@
 import type { FenceLine, FenceSegment, LocalPlane, Post, StyleRule } from "../types";
 import { deflectionDeg } from "../geo/segments";
 import { GATE_POST_MERGE_FT, runsOf, type GatePlacement } from "./gates";
+import { effectiveSpacingFt } from "./spacing";
 
 /**
  * Tolerance for rounding quantities up: lengths carry ~1e-8 ft of floating error from the lon/lat round
@@ -92,7 +93,7 @@ export function layoutPosts(
   if (segments.length === 0) return posts;
   const byIndex = new Map(segments.map((s) => [s.index, s]));
   const runs = runsOf(segments, placements, fence.closed);
-  const spacing = rule.postSpacingFt;
+  const spacing = effectiveSpacingFt(rule);
 
   for (const run of runs) {
     const seg = byIndex.get(run.segmentIndex);

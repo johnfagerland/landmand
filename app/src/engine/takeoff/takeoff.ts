@@ -17,6 +17,7 @@ import { placeGates, runsOf, type GatePlacement, type Run } from "../fence/gates
 import { ceilQty, classifyVertexPosts, sectionsFor } from "../fence/posts";
 import { segmentsOf } from "../geo/segments";
 import { extendedCents, taxCents } from "./money";
+import { effectiveSpacingFt } from "../fence/spacing";
 
 export const DEFAULT_CORNER_THRESHOLD_DEG = 15;
 export const MAX_GRADE_WARN_PCT = 25;
@@ -114,7 +115,7 @@ export function computeTakeOff(input: TakeOffInput): TakeOff {
   const { fence, plane, profiles, priceBook, rule, taxRatePct, now } = input;
   const summary = summarizeFence(fence, plane, profiles, rule.cornerThresholdDeg);
   const warnings = summary.warnings.slice();
-  const spacing = rule.postSpacingFt;
+  const spacing = effectiveSpacingFt(rule);
 
   // Per-segment counts.
   const segTakeOffs: SegmentTakeOff[] = summary.segments.map((seg) => ({
