@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "counties": [
+    {
+      "fips": "37183",
+      "name": "Wake County, NC",
+      "state": "NC",
+      "provider": "arcgis",
+      "url": "https://maps.wakegov.com/arcgis/rest/services/Property/Parcels/MapServer/0",
+      "idField": "PIN_NUM",
+      "addressField": "SITE_ADDRESS",
+      "outFields": ["PIN_NUM", "SITE_ADDRESS", "CALC_AREA"],
+      "bbox": [-78.995, 35.52, -78.25, 36.08],
+      "nearbyMeters": 40,
+      "attribution": "Lot lines: Wake County GIS",
+      "verifiedOn": "2026-09-08",
+      "notes": "Native SR 2264; outSR=4326 and f=geojson work. Geocoded points sit on the street centreline, so the address query must run first. Test: 1823 WHITE OAK RD returns two parcels (PIN 1704581656, 1704581587)."
+    },
+    {
+      "fips": "04013",
+      "name": "Maricopa County, AZ",
+      "state": "AZ",
+      "provider": "arcgis",
+      "url": "https://gis.maricopa.gov/arcgis/rest/services/Reference/ParcelCityCounty/MapServer/0",
+      "idField": "APN",
+      "addressField": "PropertyFullStreetAddress",
+      "outFields": ["APN", "PropertyFullStreetAddress"],
+      "bbox": [-113.34, 32.5, -111.04, 34.05],
+      "nearbyMeters": 40,
+      "attribution": "Lot lines: Maricopa County Assessor",
+      "verifiedOn": "2026-09-08",
+      "notes": "Native SR 3857. Point geometry MUST be sent as JSON ({x,y,spatialReference}); the lon,lat shorthand returns no features. Test: point -112.0740,33.4484 returns APN 11221086 (2 N CENTRAL AVE)."
+    }
+  ]
+}
