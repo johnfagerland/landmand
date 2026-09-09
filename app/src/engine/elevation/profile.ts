@@ -29,7 +29,11 @@ export function stationPoints(
   return out;
 }
 
-/** Fill null elevations by linear interpolation between neighbours; leading/trailing nulls copy the nearest value. */
+/**
+ * Fill null elevations by linear interpolation between neighbours. buildProfile trims the series to the
+ * covered span first, so leading/trailing nulls (which would copy the nearest value and flatten the end
+ * intervals) do not normally reach this function.
+ */
 function interpolateNulls(stations: number[], z: (number | null)[]): number[] | null {
   const n = z.length;
   const known: number[] = [];
@@ -60,6 +64,9 @@ function interpolateNulls(stations: number[], z: (number | null)[]): number[] | 
 /**
  * Build a profile from samples: 3-point moving average on interior samples, null gaps interpolated,
  * corrected length = Σ sqrt(Δs² + Δz²), slopeFactor = corrected / flat. If every sample is null, source "none".
+ *
+ * The factor is measured over the COVERED span (first to last non-null sample) and applied to the whole
+ * segment: a NoData sample at an end must not be treated as a flat interval.
  */
 export function buildProfile(
   segment: FenceSegment,
@@ -68,13 +75,14 @@ export function buildProfile(
   resolutionM?: number,
 ): ElevationProfile {
   const sorted = samples.slice().sort((a, b) => a.stationFt - b.stationFt);
-  const stations = sorted.map((s) => s.stationFt);
-  const filled = interpolateNulls(
-    stations,
-    sorted.map((s) => s.elevFt),
-  );
-  const validCount = sorted.filter((s) => s.elevFt !== null && Number.isFinite(s.elevFt)).length;
-  const coveredFlat = sorted.length >= 2 ? stations[stations.length - 1] - stations[0] : 0;
+  const isValid = (s: ElevationSample) => s.elevFt !== null && Number.isFinite(s.elevFt);
+  const firstValid = sorted.findIndex(isValid);
+  const lastValid = sorted.length - 1 - sorted.slice().reverse().findIndex(isValid);
+  const validCount = sorted.filter(isValid).length;
+  const covered = validCount >= 2 ? sorted.slice(firstValid, lastValid + 1) : [];
+  const stations = covered.map((s) => s.stationFt);
+  const filled = covered.length >= 2 ? interpolateNulls(stations, covered.map((s) => s.elevFt)) : null;
+  const coveredFlat = stations.length >= 2 ? stations[stations.length - 1] - stations[0] : 0;
   if (!filled || validCount < 2 || coveredFlat <= 0) {
     return { ...flatProfile(segment), samples: sorted, resolutionM };
   }

@@ -72,13 +72,15 @@ function isValidOffset(original: XY[], offset: XY[]): boolean {
   return kinks(poly).features.length === 0;
 }
 
-function toPlanarCCW(ring: LonLat[], plane: LocalPlane): XY[] | null {
+/** Planar points forced CCW; `reversed` says whether the input order was flipped. */
+function toPlanarCCW(ring: LonLat[], plane: LocalPlane): { pts: XY[]; reversed: boolean } | null {
   if (ring.length < 3) return null;
   const pts = ring.map((p) => plane.toXY(p));
   const area = signedArea(pts);
   if (Math.abs(area) < 1e-6) return null;
-  if (area < 0) pts.reverse();
-  return pts;
+  const reversed = area < 0;
+  if (reversed) pts.reverse();
+  return { pts, reversed };
 }
 
 function largestRing(feature: Feature<Polygon | MultiPolygon>): Position[] | null {
@@ -106,8 +108,9 @@ function largestRing(feature: Feature<Polygon | MultiPolygon>): Position[] | nul
  */
 export function offsetRing(ring: LonLat[], inwardFt: number, plane: LocalPlane): OffsetResult {
   if (!Number.isFinite(inwardFt)) return { ok: false, reason: "invalid" };
-  const pts = toPlanarCCW(ring, plane);
-  if (!pts) return { ok: false, reason: "invalid" };
+  const planar = toPlanarCCW(ring, plane);
+  if (!planar) return { ok: false, reason: "invalid" };
+  const pts = planar.pts;
   if (inwardFt === 0) return { ok: true, ring: pts.map((p) => roundLonLat(plane.toLonLat(p))) };
 
   const offsets = pts.map(() => inwardFt);
@@ -149,15 +152,21 @@ function bufferFallback(pts: XY[], inwardFt: number, plane: LocalPlane): OffsetR
 }
 
 /**
- * Move only the listed edges (by index, edge i runs from vertex i to i+1) inward by the given feet.
- * The two vertices adjacent to each moved edge are recomputed as intersections of the neighbouring edge lines.
- * No buffer fallback: a self-intersecting or reversed result is reported as "kinks".
+ * Move only the listed edges (by index, edge i runs from vertex i to i+1 IN THE INPUT ORDER) inward by
+ * the given feet. The two vertices adjacent to each moved edge are recomputed as intersections of the
+ * neighbouring edge lines. No buffer fallback: a self-intersecting or reversed result is reported as "kinks".
+ * A CW input is treated as CCW (reversed) first and the result is always CCW, so vertex indices of the
+ * result differ from the input's for CW rings; the edge indices are interpreted on the input as given.
  */
 export function offsetEdges(ring: LonLat[], inwardFtByEdge: Record<number, number>, plane: LocalPlane): OffsetResult {
-  const pts = toPlanarCCW(ring, plane);
-  if (!pts) return { ok: false, reason: "invalid" };
+  const planar = toPlanarCCW(ring, plane);
+  if (!planar) return { ok: false, reason: "invalid" };
+  const { pts, reversed } = planar;
+  const n = pts.length;
   const offsets = pts.map((_, i) => {
-    const v = inwardFtByEdge[i];
+    // Reversing [v0..v(n-1)] maps input edge e (v_e -> v_e+1) to reversed edge (n - 2 - e) mod n.
+    const inputEdge = reversed ? (((n - 2 - i) % n) + n) % n : i;
+    const v = inwardFtByEdge[inputEdge];
     return typeof v === "number" && Number.isFinite(v) ? v : 0;
   });
   if (offsets.every((o) => o === 0)) return { ok: true, ring: pts.map((p) => roundLonLat(plane.toLonLat(p))) };

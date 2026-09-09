@@ -27,15 +27,17 @@ function dist(a: XY, b: XY): number {
 }
 
 /**
- * Drop a repeated closing vertex, merge consecutive vertices closer than minEdgeFt (the last-to-first
- * edge included), force counter-clockwise order, round to 7 dp. Throws RingError if fewer than 3 remain
+ * Round to 7 dp, drop a repeated closing vertex, merge consecutive vertices closer than minEdgeFt (the
+ * last-to-first edge included), force counter-clockwise order. Throws RingError if fewer than 3 remain
  * or the ring has (near) zero area.
  *
+ * Rounding happens BEFORE the edge-length filter so the stored (rounded) ring satisfies the rule and
+ * normalising it again is a no-op; rounding afterwards could shrink a ~1 ft edge below the threshold.
  * Merging keeps the earlier vertex of a too-short edge and drops the later one.
  */
 export function normalizeRing(ring: LonLat[], plane: LocalPlane, opts?: NormalizeOptions): LonLat[] {
   const minEdge = opts?.minEdgeFt ?? DEFAULT_MIN_EDGE_FT;
-  const input = ring.slice();
+  const input = ring.map(roundLonLat);
   if (input.length >= 2) {
     const first = input[0];
     const last = input[input.length - 1];
@@ -63,7 +65,7 @@ export function normalizeRing(ring: LonLat[], plane: LocalPlane, opts?: Normaliz
     throw new RingError("Ring has zero area", "degenerate");
   }
   if (area < 0) kept.reverse();
-  return kept.map((k) => roundLonLat(k.lonLat));
+  return kept.map((k) => k.lonLat);
 }
 
 /** Shoelace area of an unclosed ring in the local plane, square feet (always positive). */
